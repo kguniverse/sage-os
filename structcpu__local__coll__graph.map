@@ -1,0 +1,7 @@
+<map id="cpu_local" name="cpu_local">
+<area shape="rect" id="node1" title=" " alt="" coords="115,184,193,211"/>
+<area shape="rect" id="node2" href="$struct_addr_space.html" title=" " alt="" coords="5,95,92,121"/>
+<area shape="rect" id="node3" href="$struct_area.html" title=" " alt="" coords="24,5,73,32"/>
+<area shape="rect" id="node4" href="$struct_seg_desc.html" title=" " alt="" coords="117,95,191,121"/>
+<area shape="rect" id="node5" href="$structkernel__stack.html" title=" " alt="" coords="215,95,311,121"/>
+</map>

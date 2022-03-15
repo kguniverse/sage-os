@@ -1,0 +1,233 @@
+<!-- HTML header for doxygen 1.8.17-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SageOS: abstract-machine/am/include/am.h 源文件</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeDarkModeToggle.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeParagraphLink.init()
+    </script>
+</head>
+<body>
+    <div id="top">
+        <!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">SageOS
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('am_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">am.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="am_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef AM_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define AM_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include ARCH_H </span><span class="comment">// this macro is defined in $CFLAGS</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>                <span class="comment">// examples: &quot;arch/x86-qemu.h&quot;, &quot;arch/native.h&quot;, ...</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// Memory protection flags</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="am_8h.html#a023457bfeedf132cb142caa6cc7510da">   11</a></span><span class="preprocessor">#define MMAP_NONE  0x00000000 </span><span class="comment">// no access</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="am_8h.html#aaac92690c27f51de056a8426980ae58c">   12</a></span><span class="preprocessor">#define MMAP_READ  0x00000001 </span><span class="comment">// can read</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="am_8h.html#aca6e19a22e066f499969af59a49b8638">   13</a></span><span class="preprocessor">#define MMAP_WRITE 0x00000002 </span><span class="comment">// can write</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Memory area for [@start, @end)</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_area.html">   16</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_area.html#aad168ddc204737fe1805492e33d0e904">   17</a></span>  <span class="keywordtype">void</span> *start, *<a class="code hl_variable" href="struct_area.html#aad168ddc204737fe1805492e33d0e904">end</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>} <a class="code hl_struct" href="struct_area.html">Area</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// Arch-dependent processor context</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_context.html">Context</a> <a class="code hl_struct" href="struct_context.html">Context</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// An event of type @event, caused by @cause of pointer @ref</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_event.html">   24</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_event.html#a06fc87d81c62e9abb8790b6e5713c55bafc8e2e36b7d0f732f5f52e0a94155c7a">   26</a></span>    EVENT_NULL = 0,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_event.html#a06fc87d81c62e9abb8790b6e5713c55baa45fa5ecff86270d410d4c89c527898a">   27</a></span>    EVENT_YIELD, EVENT_SYSCALL, EVENT_PAGEFAULT, <a class="code hl_enumvalue" href="struct_event.html#a06fc87d81c62e9abb8790b6e5713c55baa45fa5ecff86270d410d4c89c527898a">EVENT_ERROR</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_event.html#a06fc87d81c62e9abb8790b6e5713c55ba8e0b318feed5bbb8d40f2d824c4fc2f7">   28</a></span>    EVENT_IRQ_TIMER, <a class="code hl_enumvalue" href="struct_event.html#a06fc87d81c62e9abb8790b6e5713c55ba8e0b318feed5bbb8d40f2d824c4fc2f7">EVENT_IRQ_IODEV</a>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_event.html#a6363bb7485aba8ae7d44b5d8d17240d0">   29</a></span>  } event;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_event.html#a9a0869529fdace29e611a6511efcee29">   30</a></span>  uintptr_t <a class="code hl_variable" href="struct_event.html#a9a0869529fdace29e611a6511efcee29">cause</a>, ref;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_event.html#a2c3cb87d009c003069b9a90f020f8a9f">   31</a></span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="struct_event.html#a2c3cb87d009c003069b9a90f020f8a9f">msg</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>} <a class="code hl_struct" href="struct_event.html">Event</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// A protected address space with user memory @area</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// and arch-dependent @ptr</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_addr_space.html">   36</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_addr_space.html#a302861b24e8ab5f7b4fedb9cab2e0bb3">   37</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_addr_space.html#a302861b24e8ab5f7b4fedb9cab2e0bb3">pgsize</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_addr_space.html#a9e51120c21b30588bebcc16e111b164c">   38</a></span>  <a class="code hl_struct" href="struct_area.html">Area</a> <a class="code hl_variable" href="struct_addr_space.html#a9e51120c21b30588bebcc16e111b164c">area</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_addr_space.html#add9af9569af79ec26dd741fb226b38ba">   39</a></span>  <span class="keywordtype">void</span> *<a class="code hl_variable" href="struct_addr_space.html#add9af9569af79ec26dd741fb226b38ba">ptr</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <a class="code hl_struct" href="struct_addr_space.html">AddrSpace</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// ----------------------- TRM: Turing Machine -----------------------</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">extern</span>   <a class="code hl_struct" href="struct_area.html">Area</a>        <a class="code hl_variable" href="am_8h.html#a1e1b7250fe486b4222868bcc45cadd10">heap</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#a6351d8706733262e7e325926b1a9aab7">putch</a>       (<span class="keywordtype">char</span> ch);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#aa453ababfe5c8b513a3038f6e7c9e5df">halt</a>        (<span class="keywordtype">int</span> code) <a class="code hl_function" href="amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c">__attribute__</a>((__noreturn__));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// -------------------- IOE: Input/Output Devices --------------------</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">bool</span>     <a class="code hl_function" href="am_8h.html#ae60b46e44a4d942c97f93c0c3749abc9">ioe_init</a>    (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#a9e4d8844a1b291f3594ac00297a918a4">ioe_read</a>    (<span class="keywordtype">int</span> <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a6b91636401516a477989a336376d7b40">reg</a>, <span class="keywordtype">void</span> *buf);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#ad1964375eeefa10b564a3bf2bd322db0">ioe_write</a>   (<span class="keywordtype">int</span> <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a6b91636401516a477989a336376d7b40">reg</a>, <span class="keywordtype">void</span> *buf);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;<a class="code" href="amdev_8h.html">amdev.h</a>&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">// ---------- CTE: Interrupt Handling and Context Switching ----------</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="am_8h.html#a38b6faa9eb5efb72008f8077e4adbcb3">   58</a></span><span class="keywordtype">bool</span>     <a class="code hl_function" href="am_8h.html#a38b6faa9eb5efb72008f8077e4adbcb3">cte_init</a>    (<a class="code hl_struct" href="struct_context.html">Context</a> *(*handler)(<a class="code hl_struct" href="struct_event.html">Event</a> ev, <a class="code hl_struct" href="struct_context.html">Context</a> *ctx));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#a7cb51f5c2b5cad3766f19eb69c92793b">yield</a>       (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">bool</span>     <a class="code hl_function" href="am_8h.html#a3f6c12acf02136e3eb91a94ef479d538">ienabled</a>    (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#a4a139958742786c5085172be1f69bfd0">iset</a>        (<span class="keywordtype">bool</span> enable);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_struct" href="struct_context.html">Context</a> *<a class="code hl_function" href="am_8h.html#a90a17e3cfc268f5b8ed0a92ffda13a58">kcontext</a>    (<a class="code hl_struct" href="struct_area.html">Area</a> kstack, <span class="keywordtype">void</span> (*entry)(<span class="keywordtype">void</span> *), <span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// ----------------------- VME: Virtual Memory -----------------------</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">bool</span>     <a class="code hl_function" href="am_8h.html#ad494a936062fad2d199a556be02e2233">vme_init</a>    (<span class="keywordtype">void</span> *(*<a class="code hl_variable" href="native_2vme_8c.html#ad973ba9d2c761c9f6c9311de8d92a6b3">pgalloc</a>)(<span class="keywordtype">int</span>), <span class="keywordtype">void</span> (*<a class="code hl_variable" href="native_2vme_8c.html#a1b62164406004ff9a9f11a4bc4dbad1e">pgfree</a>)(<span class="keywordtype">void</span> *));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#a58aa01621c117472b782593a1cbf4fde">protect</a>     (<a class="code hl_struct" href="struct_addr_space.html">AddrSpace</a> *as);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#a3bf203e266e0adcf43ea137b5926463e">unprotect</a>   (<a class="code hl_struct" href="struct_addr_space.html">AddrSpace</a> *as);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span>     <a class="code hl_function" href="am_8h.html#a48560940e9ec2600b147fe67df0a1ddc">map</a>         (<a class="code hl_struct" href="struct_addr_space.html">AddrSpace</a> *as, <span class="keywordtype">void</span> *vaddr, <span class="keywordtype">void</span> *paddr, <span class="keywordtype">int</span> prot);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_struct" href="struct_context.html">Context</a> *<a class="code hl_function" href="am_8h.html#a8e53eed544a985d22d8c1df4c4d7df2c">ucontext</a>    (<a class="code hl_struct" href="struct_addr_space.html">AddrSpace</a> *as, <a class="code hl_struct" href="struct_area.html">Area</a> kstack, <span class="keywordtype">void</span> *entry);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// ---------------------- MPE: Multi-Processing ----------------------</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">bool</span>     <a class="code hl_function" href="am_8h.html#a2e4a724e2d067425ff3fd49bc0bf42e1">mpe_init</a>    (<span class="keywordtype">void</span> (*entry)());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">int</span>      <a class="code hl_function" href="am_8h.html#a3aabad488d868ff0fb4032368f3141f0">cpu_count</a>   (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">int</span>      <a class="code hl_function" href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">int</span>      <a class="code hl_function" href="am_8h.html#aaaad47c97c82065cf463f83b98b23c30">atomic_xchg</a> (<span class="keywordtype">int</span> *addr, <span class="keywordtype">int</span> newval);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aam_8h_html_a1e1b7250fe486b4222868bcc45cadd10"><div class="ttname"><a href="am_8h.html#a1e1b7250fe486b4222868bcc45cadd10">heap</a></div><div class="ttdeci">Area heap</div><div class="ttdef"><b>Definition:</b> trm.c:22</div></div>
+<div class="ttc" id="aam_8h_html_a2e4a724e2d067425ff3fd49bc0bf42e1"><div class="ttname"><a href="am_8h.html#a2e4a724e2d067425ff3fd49bc0bf42e1">mpe_init</a></div><div class="ttdeci">bool mpe_init(void(*entry)())</div><div class="ttdef"><b>Definition:</b> mpe.c:8</div></div>
+<div class="ttc" id="aam_8h_html_a38b6faa9eb5efb72008f8077e4adbcb3"><div class="ttname"><a href="am_8h.html#a38b6faa9eb5efb72008f8077e4adbcb3">cte_init</a></div><div class="ttdeci">bool cte_init(Context *(*handler)(Event ev, Context *ctx))</div></div>
+<div class="ttc" id="aam_8h_html_a3aabad488d868ff0fb4032368f3141f0"><div class="ttname"><a href="am_8h.html#a3aabad488d868ff0fb4032368f3141f0">cpu_count</a></div><div class="ttdeci">int cpu_count(void)</div><div class="ttdef"><b>Definition:</b> mpe.c:40</div></div>
+<div class="ttc" id="aam_8h_html_a3bf203e266e0adcf43ea137b5926463e"><div class="ttname"><a href="am_8h.html#a3bf203e266e0adcf43ea137b5926463e">unprotect</a></div><div class="ttdeci">void unprotect(AddrSpace *as)</div><div class="ttdef"><b>Definition:</b> vme.c:51</div></div>
+<div class="ttc" id="aam_8h_html_a3f6c12acf02136e3eb91a94ef479d538"><div class="ttname"><a href="am_8h.html#a3f6c12acf02136e3eb91a94ef479d538">ienabled</a></div><div class="ttdeci">bool ienabled(void)</div><div class="ttdef"><b>Definition:</b> cte.c:187</div></div>
+<div class="ttc" id="aam_8h_html_a48560940e9ec2600b147fe67df0a1ddc"><div class="ttname"><a href="am_8h.html#a48560940e9ec2600b147fe67df0a1ddc">map</a></div><div class="ttdeci">void map(AddrSpace *as, void *vaddr, void *paddr, int prot)</div><div class="ttdef"><b>Definition:</b> vme.c:85</div></div>
+<div class="ttc" id="aam_8h_html_a4a139958742786c5085172be1f69bfd0"><div class="ttname"><a href="am_8h.html#a4a139958742786c5085172be1f69bfd0">iset</a></div><div class="ttdeci">void iset(bool enable)</div><div class="ttdef"><b>Definition:</b> cte.c:194</div></div>
+<div class="ttc" id="aam_8h_html_a58aa01621c117472b782593a1cbf4fde"><div class="ttname"><a href="am_8h.html#a58aa01621c117472b782593a1cbf4fde">protect</a></div><div class="ttdeci">void protect(AddrSpace *as)</div><div class="ttdef"><b>Definition:</b> vme.c:37</div></div>
+<div class="ttc" id="aam_8h_html_a6351d8706733262e7e325926b1a9aab7"><div class="ttname"><a href="am_8h.html#a6351d8706733262e7e325926b1a9aab7">putch</a></div><div class="ttdeci">void putch(char ch)</div><div class="ttdef"><b>Definition:</b> trm.c:11</div></div>
+<div class="ttc" id="aam_8h_html_a7cb51f5c2b5cad3766f19eb69c92793b"><div class="ttname"><a href="am_8h.html#a7cb51f5c2b5cad3766f19eb69c92793b">yield</a></div><div class="ttdeci">void yield(void)</div><div class="ttdef"><b>Definition:</b> cte.c:183</div></div>
+<div class="ttc" id="aam_8h_html_a8e53eed544a985d22d8c1df4c4d7df2c"><div class="ttname"><a href="am_8h.html#a8e53eed544a985d22d8c1df4c4d7df2c">ucontext</a></div><div class="ttdeci">Context * ucontext(AddrSpace *as, Area kstack, void *entry)</div><div class="ttdef"><b>Definition:</b> vme.c:123</div></div>
+<div class="ttc" id="aam_8h_html_a90a17e3cfc268f5b8ed0a92ffda13a58"><div class="ttname"><a href="am_8h.html#a90a17e3cfc268f5b8ed0a92ffda13a58">kcontext</a></div><div class="ttdeci">Context * kcontext(Area kstack, void(*entry)(void *), void *arg)</div><div class="ttdef"><b>Definition:</b> cte.c:166</div></div>
+<div class="ttc" id="aam_8h_html_a9e4d8844a1b291f3594ac00297a918a4"><div class="ttname"><a href="am_8h.html#a9e4d8844a1b291f3594ac00297a918a4">ioe_read</a></div><div class="ttdeci">void ioe_read(int reg, void *buf)</div><div class="ttdef"><b>Definition:</b> ioe.c:78</div></div>
+<div class="ttc" id="aam_8h_html_aa453ababfe5c8b513a3038f6e7c9e5df"><div class="ttname"><a href="am_8h.html#aa453ababfe5c8b513a3038f6e7c9e5df">halt</a></div><div class="ttdeci">void halt(int code) __attribute__((__noreturn__))</div><div class="ttdef"><b>Definition:</b> trm.c:15</div></div>
+<div class="ttc" id="aam_8h_html_aaaad47c97c82065cf463f83b98b23c30"><div class="ttname"><a href="am_8h.html#aaaad47c97c82065cf463f83b98b23c30">atomic_xchg</a></div><div class="ttdeci">int atomic_xchg(int *addr, int newval)</div><div class="ttdef"><b>Definition:</b> mpe.c:49</div></div>
+<div class="ttc" id="aam_8h_html_ab701de78cad32896c923ce900087e714"><div class="ttname"><a href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a></div><div class="ttdeci">int cpu_current(void)</div><div class="ttdef"><b>Definition:</b> mpe.c:45</div></div>
+<div class="ttc" id="aam_8h_html_ad1964375eeefa10b564a3bf2bd322db0"><div class="ttname"><a href="am_8h.html#ad1964375eeefa10b564a3bf2bd322db0">ioe_write</a></div><div class="ttdeci">void ioe_write(int reg, void *buf)</div><div class="ttdef"><b>Definition:</b> ioe.c:79</div></div>
+<div class="ttc" id="aam_8h_html_ad494a936062fad2d199a556be02e2233"><div class="ttname"><a href="am_8h.html#ad494a936062fad2d199a556be02e2233">vme_init</a></div><div class="ttdeci">bool vme_init(void *(*pgalloc)(int), void(*pgfree)(void *))</div><div class="ttdef"><b>Definition:</b> vme.c:30</div></div>
+<div class="ttc" id="aam_8h_html_ae60b46e44a4d942c97f93c0c3749abc9"><div class="ttname"><a href="am_8h.html#ae60b46e44a4d942c97f93c0c3749abc9">ioe_init</a></div><div class="ttdeci">bool ioe_init(void)</div><div class="ttdef"><b>Definition:</b> ioe.c:51</div></div>
+<div class="ttc" id="aamdev_8h_html"><div class="ttname"><a href="amdev_8h.html">amdev.h</a></div></div>
+<div class="ttc" id="aamdev_8h_html_ab31b92691e50ae7e3b7d50598fad2e8c"><div class="ttname"><a href="amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c">__attribute__</a></div><div class="ttdeci">struct gpu_texturedesc __attribute__((packed))</div></div>
+<div class="ttc" id="anative_2vme_8c_html_a1b62164406004ff9a9f11a4bc4dbad1e"><div class="ttname"><a href="native_2vme_8c.html#a1b62164406004ff9a9f11a4bc4dbad1e">pgfree</a></div><div class="ttdeci">static void(* pgfree)(void *)</div><div class="ttdef"><b>Definition:</b> vme.c:28</div></div>
+<div class="ttc" id="anative_2vme_8c_html_ad973ba9d2c761c9f6c9311de8d92a6b3"><div class="ttname"><a href="native_2vme_8c.html#ad973ba9d2c761c9f6c9311de8d92a6b3">pgalloc</a></div><div class="ttdeci">static void *(* pgalloc)(int)</div><div class="ttdef"><b>Definition:</b> vme.c:27</div></div>
+<div class="ttc" id="astruct_addr_space_html"><div class="ttname"><a href="struct_addr_space.html">AddrSpace</a></div><div class="ttdef"><b>Definition:</b> am.h:36</div></div>
+<div class="ttc" id="astruct_addr_space_html_a302861b24e8ab5f7b4fedb9cab2e0bb3"><div class="ttname"><a href="struct_addr_space.html#a302861b24e8ab5f7b4fedb9cab2e0bb3">AddrSpace::pgsize</a></div><div class="ttdeci">int pgsize</div><div class="ttdef"><b>Definition:</b> am.h:37</div></div>
+<div class="ttc" id="astruct_addr_space_html_a9e51120c21b30588bebcc16e111b164c"><div class="ttname"><a href="struct_addr_space.html#a9e51120c21b30588bebcc16e111b164c">AddrSpace::area</a></div><div class="ttdeci">Area area</div><div class="ttdef"><b>Definition:</b> am.h:38</div></div>
+<div class="ttc" id="astruct_addr_space_html_add9af9569af79ec26dd741fb226b38ba"><div class="ttname"><a href="struct_addr_space.html#add9af9569af79ec26dd741fb226b38ba">AddrSpace::ptr</a></div><div class="ttdeci">void * ptr</div><div class="ttdef"><b>Definition:</b> am.h:39</div></div>
+<div class="ttc" id="astruct_area_html"><div class="ttname"><a href="struct_area.html">Area</a></div><div class="ttdef"><b>Definition:</b> am.h:16</div></div>
+<div class="ttc" id="astruct_area_html_aad168ddc204737fe1805492e33d0e904"><div class="ttname"><a href="struct_area.html#aad168ddc204737fe1805492e33d0e904">Area::end</a></div><div class="ttdeci">void * end</div><div class="ttdef"><b>Definition:</b> am.h:17</div></div>
+<div class="ttc" id="astruct_context_html"><div class="ttname"><a href="struct_context.html">Context</a></div><div class="ttdef"><b>Definition:</b> mips32-nemu.h:4</div></div>
+<div class="ttc" id="astruct_event_html"><div class="ttname"><a href="struct_event.html">Event</a></div><div class="ttdef"><b>Definition:</b> am.h:24</div></div>
+<div class="ttc" id="astruct_event_html_a06fc87d81c62e9abb8790b6e5713c55ba8e0b318feed5bbb8d40f2d824c4fc2f7"><div class="ttname"><a href="struct_event.html#a06fc87d81c62e9abb8790b6e5713c55ba8e0b318feed5bbb8d40f2d824c4fc2f7">Event::EVENT_IRQ_IODEV</a></div><div class="ttdeci">@ EVENT_IRQ_IODEV</div><div class="ttdef"><b>Definition:</b> am.h:28</div></div>
+<div class="ttc" id="astruct_event_html_a06fc87d81c62e9abb8790b6e5713c55baa45fa5ecff86270d410d4c89c527898a"><div class="ttname"><a href="struct_event.html#a06fc87d81c62e9abb8790b6e5713c55baa45fa5ecff86270d410d4c89c527898a">Event::EVENT_ERROR</a></div><div class="ttdeci">@ EVENT_ERROR</div><div class="ttdef"><b>Definition:</b> am.h:27</div></div>
+<div class="ttc" id="astruct_event_html_a2c3cb87d009c003069b9a90f020f8a9f"><div class="ttname"><a href="struct_event.html#a2c3cb87d009c003069b9a90f020f8a9f">Event::msg</a></div><div class="ttdeci">const char * msg</div><div class="ttdef"><b>Definition:</b> am.h:31</div></div>
+<div class="ttc" id="astruct_event_html_a9a0869529fdace29e611a6511efcee29"><div class="ttname"><a href="struct_event.html#a9a0869529fdace29e611a6511efcee29">Event::cause</a></div><div class="ttdeci">uintptr_t cause</div><div class="ttdef"><b>Definition:</b> am.h:30</div></div>
+<div class="ttc" id="ax86_2qemu_2ioe_8c_html_a6b91636401516a477989a336376d7b40"><div class="ttname"><a href="x86_2qemu_2ioe_8c.html#a6b91636401516a477989a336376d7b40">reg</a></div><div class="ttdeci">uint32_t reg</div><div class="ttdef"><b>Definition:</b> ioe.c:0</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_57953e885fa30d3cda66aaff14f5e717.html">abstract-machine</a></li><li class="navelem"><a class="el" href="dir_221aa689d77dcd1abd530cb13a599f6c.html">am</a></li><li class="navelem"><a class="el" href="dir_211194ca62e5b7f591f877ce92090548.html">include</a></li><li class="navelem"><a class="el" href="am_8h.html">am.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

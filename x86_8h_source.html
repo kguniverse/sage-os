@@ -1,0 +1,558 @@
+<!-- HTML header for doxygen 1.8.17-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SageOS: abstract-machine/am/src/x86/x86.h 源文件</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeDarkModeToggle.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeParagraphLink.init()
+    </script>
+</head>
+<body>
+    <div id="top">
+        <!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">SageOS
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('x86_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">x86.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="x86_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// CPU rings</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="x86_8h.html#abd4f23d07daac5199e37ea7180e5b24e">    2</a></span><span class="preprocessor">#define DPL_KERN       0x0     </span><span class="comment">// Kernel (ring 0)</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="x86_8h.html#a060d4d4e32af81cab881fe77e58d7b78">    3</a></span><span class="preprocessor">#define DPL_USER       0x3     </span><span class="comment">// User (ring 3)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Application Segment type bits</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="x86_8h.html#af30c683a434e0712fd83781307239cb9">    6</a></span><span class="preprocessor">#define STA_X          0x8     </span><span class="comment">// Executable segment</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="x86_8h.html#a9321b5b232838b8b230c6b681be9a882">    7</a></span><span class="preprocessor">#define STA_W          0x2     </span><span class="comment">// Writeable (non-executable segments)</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="x86_8h.html#a6545a48f34a3fae1b04cf265f13bc8f3">    8</a></span><span class="preprocessor">#define STA_R          0x2     </span><span class="comment">// Readable (executable segments)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// System Segment type bits</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="x86_8h.html#a1b27d53cef04c198f3b048345d28016c">   11</a></span><span class="preprocessor">#define STS_T32A       0x9     </span><span class="comment">// Available 32-bit TSS</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="x86_8h.html#ae459351ebd406535d96968d8bc1b15a1">   12</a></span><span class="preprocessor">#define STS_IG         0xe     </span><span class="comment">// 32/64-bit Interrupt Gate</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="x86_8h.html#a52ec5ba90269a2040fc29d6a11e5c14c">   13</a></span><span class="preprocessor">#define STS_TG         0xf     </span><span class="comment">// 32/64-bit Trap Gate</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// EFLAGS register</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="x86_8h.html#ab481068357bb42797aafe91864a2d085">   16</a></span><span class="preprocessor">#define FL_IF          0x00000200  </span><span class="comment">// Interrupt Enable</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Control Register flags</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="x86_8h.html#aa899fa0a2a7dd414343fb2fada767622">   19</a></span><span class="preprocessor">#define CR0_PE         0x00000001  </span><span class="comment">// Protection Enable</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="x86_8h.html#a4f3b70ba40d96e55cae6026acc12cfed">   20</a></span><span class="preprocessor">#define CR0_PG         0x80000000  </span><span class="comment">// Paging</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="x86_8h.html#a1ca5cfd0c966d604caca75537046dd84">   21</a></span><span class="preprocessor">#define CR4_PAE        0x00000020  </span><span class="comment">// Physical Address Extension</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// Page table/directory entry flags</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="x86_8h.html#a89bd860de64c44cd8ebaca8dc311b5ac">   24</a></span><span class="preprocessor">#define PTE_P          0x001   </span><span class="comment">// Present</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="x86_8h.html#a058fcbcc3e1eab2c09c68b3e5221c545">   25</a></span><span class="preprocessor">#define PTE_W          0x002   </span><span class="comment">// Writeable</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="x86_8h.html#adced9836a1dc98d72849361e6ab03cda">   26</a></span><span class="preprocessor">#define PTE_U          0x004   </span><span class="comment">// User</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="x86_8h.html#ab499d5acd1363559590a7cfdcfadab46">   27</a></span><span class="preprocessor">#define PTE_PS         0x080   </span><span class="comment">// Large Page (1 GiB or 2 MiB)</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// GDT selectors</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="x86_8h.html#ab3e07b1b3b2b295b8caacd0f0989cd38">   30</a></span><span class="preprocessor">#define KSEL(seg)      (((seg) &lt;&lt; 3) | DPL_KERN)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="x86_8h.html#a0c89aeca9ab959fde3684812c2971625">   31</a></span><span class="preprocessor">#define USEL(seg)      (((seg) &lt;&lt; 3) | DPL_USER)</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// Interrupts and exceptions</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="x86_8h.html#a17129100154901eb81be6e438843a0e1">   34</a></span><span class="preprocessor">#define T_IRQ0         32</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="x86_8h.html#a85fc66e3edd4ed6a4db6e455feaba8ca">   35</a></span><span class="preprocessor">#define IRQ_TIMER      0</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="x86_8h.html#a0b7569cda71298859ffb6ea55c03a36a">   36</a></span><span class="preprocessor">#define IRQ_KBD        1</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="x86_8h.html#a603b478f70a928f442e33fefba73494a">   37</a></span><span class="preprocessor">#define IRQ_COM1       4</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="x86_8h.html#a7546e682900c4558b1f8c4f0633bc7b9">   38</a></span><span class="preprocessor">#define IRQ_ERROR      19</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="x86_8h.html#a0e95f09d5e5653670eede10844d73875">   39</a></span><span class="preprocessor">#define IRQ_SPURIOUS   31</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="x86_8h.html#a91f6f4c389eaafffb036f301add50f4f">   40</a></span><span class="preprocessor">#define EX_DE          0</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="x86_8h.html#a8882e9ab78461ce7c19e02577cea96e8">   41</a></span><span class="preprocessor">#define EX_UD          6</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="x86_8h.html#a5cdbe20ed5d0f0cf4907ccc4a644c826">   42</a></span><span class="preprocessor">#define EX_NM          7</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="x86_8h.html#aa355176d1d778943a3ef9a7955d72790">   43</a></span><span class="preprocessor">#define EX_DF          8</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="x86_8h.html#ad4a20e3e9af655aa7296a7a72032235f">   44</a></span><span class="preprocessor">#define EX_TS          10</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="x86_8h.html#afdb027acf3cca15e30c9ef5531e6fc5e">   45</a></span><span class="preprocessor">#define EX_NP          11</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="x86_8h.html#aeea6d234e0c506679bb57fd61597fe9e">   46</a></span><span class="preprocessor">#define EX_SS          12</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="x86_8h.html#afeb1f59de11ca9179ac64b4f41a6f8a5">   47</a></span><span class="preprocessor">#define EX_GP          13</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="x86_8h.html#a088d223e5a784751f770570ff5893065">   48</a></span><span class="preprocessor">#define EX_PF          14</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="x86_8h.html#a5751a28760c69bb91ff607be475c88bd">   49</a></span><span class="preprocessor">#define EX_MF          15</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="x86_8h.html#a81e2e49506fc3c6e2cd17684b4964944">   50</a></span><span class="preprocessor">#define EX_SYSCALL     0x80</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="x86_8h.html#aea32654b41634bf4562a448c2be4a7eb">   51</a></span><span class="preprocessor">#define EX_YIELD       0x81</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// List of interrupts and exceptions (#irq, DPL, hardware errorcode)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="x86_8h.html#a8f92e94008a06241236c73a2ed091109">   54</a></span><span class="preprocessor">#define IRQS(_) \</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">  _(  0, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">  _(  1, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">  _(  2, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">  _(  3, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">  _(  4, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">  _(  5, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">  _(  6, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">  _(  7, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">  _(  8, KERN,   ERR) \</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">  _(  9, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">  _( 10, KERN,   ERR) \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">  _( 11, KERN,   ERR) \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">  _( 12, KERN,   ERR) \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">  _( 13, KERN,   ERR) \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">  _( 14, KERN,   ERR) \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">  _( 15, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">  _( 16, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">  _( 19, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">  _( 31, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">  _( 32, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">  _( 33, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">  _( 34, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">  _( 35, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">  _( 36, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">  _( 37, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">  _( 38, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">  _( 39, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">  _( 40, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">  _( 41, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">  _( 42, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">  _( 43, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">  _( 44, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">  _( 45, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">  _( 46, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">  _( 47, KERN, NOERR) \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">  _(128, USER, NOERR) \</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">  _(129, USER, NOERR)</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">// AM-specific configurations</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="x86_8h.html#a163aa934e4e42ebaea98661d54c0af08">   94</a></span><span class="preprocessor">#define MAX_CPU       8</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="x86_8h.html#ac521cb17ae679a95547e6981812db7be">   95</a></span><span class="preprocessor">#define BOOTREC_ADDR  0x07000</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="x86_8h.html#ab6f32236e4a77c81a095ad8a1dac9165">   96</a></span><span class="preprocessor">#define MAINARG_ADDR  0x10000</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">// Below are only visible to c/c++ files</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#ifndef __ASSEMBLER__</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">// Segment Descriptor</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="struct_seg_desc.html">  104</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#ae87cd878f1dfb05b9ea7385aab0c0f95">  105</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#ae87cd878f1dfb05b9ea7385aab0c0f95">lim_15_0</a>   : 16; <span class="comment">// Low bits of segment limit</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a787ad265c36d7901836de80f51849e2b">  106</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a787ad265c36d7901836de80f51849e2b">base_15_0</a>  : 16; <span class="comment">// Low bits of segment base address</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a86c681617566161f0b1f0ccc66ff5636">  107</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a86c681617566161f0b1f0ccc66ff5636">base_23_16</a> :  8; <span class="comment">// Middle bits of segment base address</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#ad44b615021ed3ccb734fcaf583ef4a03">  108</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#ad44b615021ed3ccb734fcaf583ef4a03">type</a>       :  4; <span class="comment">// Segment type (see STS_ constants)</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a2dee666f0c1fe072c549ff86b1d0a8ab">  109</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a2dee666f0c1fe072c549ff86b1d0a8ab">s</a>          :  1; <span class="comment">// 0 = system, 1 = application</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a60ddd92edfaca845a48488f7d294f0a6">  110</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a60ddd92edfaca845a48488f7d294f0a6">dpl</a>        :  2; <span class="comment">// Descriptor Privilege Level</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">  111</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">p</a>          :  1; <span class="comment">// Present</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a780643ea4031fcade7261a59d02caf7f">  112</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a780643ea4031fcade7261a59d02caf7f">lim_19_16</a>  :  4; <span class="comment">// High bits of segment limit</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a16eb11c869751ae18d8b77466933a526">  113</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a16eb11c869751ae18d8b77466933a526">avl</a>        :  1; <span class="comment">// Unused (available for software use)</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a1b064e2f6a6eae2b71e0444d64736a36">  114</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a1b064e2f6a6eae2b71e0444d64736a36">l</a>          :  1; <span class="comment">// 64-bit segment</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a3b4809fdd6e26f84f6bf889aabea82a8">  115</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a3b4809fdd6e26f84f6bf889aabea82a8">db</a>         :  1; <span class="comment">// 32-bit segment</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a1fab8d68d051eca3d118d5408e1200ca">  116</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a1fab8d68d051eca3d118d5408e1200ca">g</a>          :  1; <span class="comment">// Granularity: limit scaled by 4K when set</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="struct_seg_desc.html#a2eb230347b872886f0919559966383ae">  117</a></span>  uint32_t <a class="code hl_variable" href="struct_seg_desc.html#a2eb230347b872886f0919559966383ae">base_31_24</a> :  8; <span class="comment">// High bits of segment base address</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>} <a class="code hl_struct" href="struct_seg_desc.html">SegDesc</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">// Gate descriptors for interrupts and traps</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html">  121</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#aa327cf2984f25a01a5a8e3d4188b3cab">  122</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#aa327cf2984f25a01a5a8e3d4188b3cab">off_15_0</a>  : 16; <span class="comment">// Low 16 bits of offset in segment</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#a8519dc239502dfcbac171b3128dc7054">  123</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#a8519dc239502dfcbac171b3128dc7054">cs</a>        : 16; <span class="comment">// Code segment selector</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#acef4e7778f4539b08a274ba9f95860fd">  124</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#acef4e7778f4539b08a274ba9f95860fd">args</a>      :  5; <span class="comment">// # args, 0 for interrupt/trap gates</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#a815e2cd61a2dcdf08fcbe28120d938f8">  125</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#a815e2cd61a2dcdf08fcbe28120d938f8">rsv1</a>      :  3; <span class="comment">// Reserved(should be zero I guess)</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#ad44b615021ed3ccb734fcaf583ef4a03">  126</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#ad44b615021ed3ccb734fcaf583ef4a03">type</a>      :  4; <span class="comment">// Type(STS_{TG,IG32,TG32})</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#a2dee666f0c1fe072c549ff86b1d0a8ab">  127</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#a2dee666f0c1fe072c549ff86b1d0a8ab">s</a>         :  1; <span class="comment">// Must be 0 (system)</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#a60ddd92edfaca845a48488f7d294f0a6">  128</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#a60ddd92edfaca845a48488f7d294f0a6">dpl</a>       :  2; <span class="comment">// Descriptor(meaning new) privilege level</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">  129</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">p</a>         :  1; <span class="comment">// Present</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="struct_gate_desc32.html#ac4eda34e0186fdd496030d660371342e">  130</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc32.html#ac4eda34e0186fdd496030d660371342e">off_31_16</a> : 16; <span class="comment">// High bits of offset in segment</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>} <a class="code hl_struct" href="struct_gate_desc32.html">GateDesc32</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html">  133</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#aa327cf2984f25a01a5a8e3d4188b3cab">  134</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#aa327cf2984f25a01a5a8e3d4188b3cab">off_15_0</a>  : 16;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#a8519dc239502dfcbac171b3128dc7054">  135</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#a8519dc239502dfcbac171b3128dc7054">cs</a>        : 16;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#abf959d43bd7cc11467eaf24680a6c333">  136</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#abf959d43bd7cc11467eaf24680a6c333">isv</a>       :  3;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#aec7509bf6847788fe8aa7eabc848ff8d">  137</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#aec7509bf6847788fe8aa7eabc848ff8d">zero1</a>     :  5;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#ad44b615021ed3ccb734fcaf583ef4a03">  138</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#ad44b615021ed3ccb734fcaf583ef4a03">type</a>      :  4;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#a0d2831d72593d18076f5421cb1dd3c50">  139</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#a0d2831d72593d18076f5421cb1dd3c50">zero2</a>     :  1;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#a60ddd92edfaca845a48488f7d294f0a6">  140</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#a60ddd92edfaca845a48488f7d294f0a6">dpl</a>       :  2;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">  141</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">p</a>         :  1;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#ac4eda34e0186fdd496030d660371342e">  142</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#ac4eda34e0186fdd496030d660371342e">off_31_16</a> : 16;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#ae800e44ad8dc731977a727f009f2e228">  143</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#ae800e44ad8dc731977a727f009f2e228">off_63_32</a> : 32;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="struct_gate_desc64.html#a5c5d68350191dc26727218ef0ce86f1d">  144</a></span>  uint32_t <a class="code hl_variable" href="struct_gate_desc64.html#a5c5d68350191dc26727218ef0ce86f1d">rsv</a>       : 32;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>} <a class="code hl_struct" href="struct_gate_desc64.html">GateDesc64</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">// Task State Segment (TSS)</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="struct____attribute____.html">  148</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="struct____attribute____.html#a6163461798acb053ba062347095330e0">  149</a></span>  uint32_t <a class="code hl_variable" href="struct____attribute____.html#a6163461798acb053ba062347095330e0">link</a>;     <span class="comment">// Unused</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="struct____attribute____.html#ab8a56bd35e5f4765a5f6736fdd829a2f">  150</a></span>  uint32_t <a class="code hl_variable" href="struct____attribute____.html#ab8a56bd35e5f4765a5f6736fdd829a2f">esp0</a>;     <span class="comment">// Stack pointers and segment selectors</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="struct____attribute____.html#a7874b70fa3a93da1588513500cbdf1a8">  151</a></span>  uint32_t <a class="code hl_variable" href="struct____attribute____.html#a7874b70fa3a93da1588513500cbdf1a8">ss0</a>;      <span class="comment">//   after an increase in privilege level</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="struct____attribute____.html#a921e0057687e15967a13f55b31d21226">  152</a></span>  uint32_t padding[23];</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>} <a class="code hl_function" href="amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c">__attribute__</a>((packed)) TSS32;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="struct____attribute____.html#a5c5d68350191dc26727218ef0ce86f1d">  156</a></span>  uint32_t <a class="code hl_variable" href="struct____attribute____.html#a5c5d68350191dc26727218ef0ce86f1d">rsv</a>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="struct____attribute____.html#a72b38046f765f14ce3d8f74ead10766b">  157</a></span>  uint64_t <a class="code hl_variable" href="struct____attribute____.html#a72b38046f765f14ce3d8f74ead10766b">rsp0</a>, rsp1, rsp2;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  uint32_t padding[19];</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>} <a class="code hl_function" href="amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c">__attribute__</a>((packed)) TSS64;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">// Multiprocesor configuration</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html">  162</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{          <span class="comment">// configuration table header</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#acc0083ad3287215751869b2feff04b90">  163</a></span>  uint8_t  signature[4];  <span class="comment">// &quot;PCMP&quot;</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a1892eba2086d12ac2b09005aeb09ea3b">  164</a></span>  uint16_t <a class="code hl_variable" href="struct_m_p_conf.html#a1892eba2086d12ac2b09005aeb09ea3b">length</a>;        <span class="comment">// total table length</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#ab22abc2906422da61885ac6c8e6a1a59">  165</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_conf.html#ab22abc2906422da61885ac6c8e6a1a59">version</a>;       <span class="comment">// [14]</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a59eac9627282a484fbaf0aa7aa3b8a9a">  166</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_conf.html#a59eac9627282a484fbaf0aa7aa3b8a9a">checksum</a>;      <span class="comment">// all bytes must add up to 0</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a94b18f31252e3ad293ef06b73b10935a">  167</a></span>  uint8_t  product[20];   <span class="comment">// product id</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a028673c458d9656559cc436672f21b8a">  168</a></span>  uint32_t <a class="code hl_variable" href="struct_m_p_conf.html#a028673c458d9656559cc436672f21b8a">oemtable</a>;      <span class="comment">// OEM table pointer</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a64d93ea55964644db20d47bf18784017">  169</a></span>  uint16_t <a class="code hl_variable" href="struct_m_p_conf.html#a64d93ea55964644db20d47bf18784017">oemlength</a>;     <span class="comment">// OEM table length</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a749ffad87b8cee51dfdbbfdef6052868">  170</a></span>  uint16_t <a class="code hl_variable" href="struct_m_p_conf.html#a749ffad87b8cee51dfdbbfdef6052868">entry</a>;         <span class="comment">// entry count</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a88b4f1a474ca64b04c326b6bfdc7c78a">  171</a></span>  uint32_t <a class="code hl_variable" href="struct_m_p_conf.html#a88b4f1a474ca64b04c326b6bfdc7c78a">lapicaddr</a>;     <span class="comment">// address of local APIC</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#ac974b487b3b63da8a0b114543e2e1352">  172</a></span>  uint16_t <a class="code hl_variable" href="struct_m_p_conf.html#ac974b487b3b63da8a0b114543e2e1352">xlength</a>;       <span class="comment">// extended table length</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#a4338b864de2415af6bf674f6d9dbb8a6">  173</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_conf.html#a4338b864de2415af6bf674f6d9dbb8a6">xchecksum</a>;     <span class="comment">// extended table checksum</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="struct_m_p_conf.html#acb7bc06bed6f6408d719334fc41698c7">  174</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_conf.html#acb7bc06bed6f6408d719334fc41698c7">reserved</a>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>} <a class="code hl_struct" href="struct_m_p_conf.html">MPConf</a>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html">  177</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#a6480f97b5704e0c84200f69c08d46870">  178</a></span>  <span class="keywordtype">int</span>      <a class="code hl_variable" href="struct_m_p_desc.html#a6480f97b5704e0c84200f69c08d46870">magic</a>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#a63f43efc112580f0d3e6f36c8248fd4b">  179</a></span>  uint32_t <a class="code hl_variable" href="struct_m_p_desc.html#a63f43efc112580f0d3e6f36c8248fd4b">conf</a>;     <span class="comment">// MP config table addr</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#ab2b3adeb2a67e656ff030b56727fd0ac">  180</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_desc.html#ab2b3adeb2a67e656ff030b56727fd0ac">length</a>;   <span class="comment">// 1</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#a5f0068a2f554b57ffc431ea623192ec9">  181</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_desc.html#a5f0068a2f554b57ffc431ea623192ec9">specrev</a>;  <span class="comment">// [14]</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#a59eac9627282a484fbaf0aa7aa3b8a9a">  182</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_desc.html#a59eac9627282a484fbaf0aa7aa3b8a9a">checksum</a>; <span class="comment">// all bytes add to 0</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#a1d127017fb298b889f4ba24752d08b8e">  183</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_desc.html#a1d127017fb298b889f4ba24752d08b8e">type</a>;     <span class="comment">// config type</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#a55416a7ab5b7b0b86b66aac102408394">  184</a></span>  uint8_t  <a class="code hl_variable" href="struct_m_p_desc.html#a55416a7ab5b7b0b86b66aac102408394">imcrp</a>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="struct_m_p_desc.html#a72aca6ea6d8153b28ea8f139b932ec3e">  185</a></span>  uint8_t  reserved[3];</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>} <a class="code hl_struct" href="struct_m_p_desc.html">MPDesc</a>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="struct_boot_record.html">  188</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="struct_boot_record.html#a4b67ea3a24a2fbbf5721a8119742413f">  189</a></span>  uint32_t <a class="code hl_variable" href="struct_boot_record.html#a4b67ea3a24a2fbbf5721a8119742413f">jmp_code</a>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="struct_boot_record.html#aaf33de3902c182dccb8a9d9ed550e3ac">  190</a></span>  int32_t <a class="code hl_variable" href="struct_boot_record.html#aaf33de3902c182dccb8a9d9ed550e3ac">is_ap</a>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>} <a class="code hl_struct" href="struct_boot_record.html">BootRecord</a>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="x86_8h.html#abe69a1dd6290e2be017d58309495adb7">  193</a></span><span class="preprocessor">#define SEG16(type, base, lim, dpl) (SegDesc)        \</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">{ (lim) &amp; 0xffff, (uintptr_t)(base) &amp; 0xffff,        \</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">  ((uintptr_t)(base) &gt;&gt; 16) &amp; 0xff, type, 0, dpl, 1, \</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">  (uintptr_t)(lim) &gt;&gt; 16, 0, 0, 1, 0, (uintptr_t)(base) &gt;&gt; 24 }</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="x86_8h.html#ad57c97d8fce679888714cacd83a2b40b">  198</a></span><span class="preprocessor">#define SEG32(type, base, lim, dpl) (SegDesc)         \</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">{ ((lim) &gt;&gt; 12) &amp; 0xffff, (uintptr_t)(base) &amp; 0xffff, \</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">  ((uintptr_t)(base) &gt;&gt; 16) &amp; 0xff, type, 1, dpl, 1,  \</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">  (uintptr_t)(lim) &gt;&gt; 28, 0, 0, 1, 1, (uintptr_t)(base) &gt;&gt; 24 }</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="x86_8h.html#ab69e2f6a6e107905592373ffeb2e0e67">  203</a></span><span class="preprocessor">#define SEG64(type, dpl) (SegDesc) \</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">  { 0, 0, 0, type, 1, dpl, 1, 0, 0, 1, 0, 0 }</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="x86_8h.html#a71bca2b792b899582686d59fea9ded4a">  206</a></span><span class="preprocessor">#define SEGTSS64(type, base, lim, dpl) (SegDesc)    \</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">{ (lim) &amp; 0xffff, (uint32_t)(base) &amp; 0xffff,        \</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">  ((uint32_t)(base) &gt;&gt; 16) &amp; 0xff, type, 0, dpl, 1, \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">  (uint32_t)(lim) &gt;&gt; 16, 0, 0, 0, 0, (uint32_t)(base) &gt;&gt; 24 }</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="x86_8h.html#ade6e8f751fbca6dc41ec4f14e0dad889">  211</a></span><span class="preprocessor">#define GATE32(type, cs, entry, dpl) (GateDesc32)              \</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">  {  (uint32_t)(entry) &amp; 0xffff, (cs), 0, 0, (type), 0, (dpl), \</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">  1, (uint32_t)(entry) &gt;&gt; 16 }</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="x86_8h.html#a9ae3838aeb488df573d50b292975d76a">  215</a></span><span class="preprocessor">#define GATE64(type, cs, entry, dpl) (GateDesc64)             \</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">  { (uint64_t)(entry) &amp; 0xffff, (cs), 0, 0, (type), 0, (dpl), \</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">    1, ((uint64_t)(entry) &gt;&gt; 16) &amp; 0xffff, (uint64_t)(entry) &gt;&gt; 32, 0 }</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="comment">// Instruction wrappers</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="x86_8h.html#afdc603aa210ab8fd9995ce74940f5d7f">  221</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uint8_t <a class="code hl_function" href="x86_8h.html#afdc603aa210ab8fd9995ce74940f5d7f">inb</a>(<span class="keywordtype">int</span> port) {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  uint8_t <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;inb %1, %0&quot;</span> : <span class="stringliteral">&quot;=a&quot;</span>(<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>) : <span class="stringliteral">&quot;d&quot;</span>((uint16_t)port));</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="x86_8h.html#a2140f94851a8b17db07aa505613d9e3e">  227</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uint16_t <a class="code hl_function" href="x86_8h.html#a2140f94851a8b17db07aa505613d9e3e">inw</a>(<span class="keywordtype">int</span> port) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  uint16_t <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;inw %1, %0&quot;</span> : <span class="stringliteral">&quot;=a&quot;</span>(<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>) : <span class="stringliteral">&quot;d&quot;</span>((uint16_t)port));</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>}</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="x86_8h.html#a4dc39efad1eea8befe2658287ec39913">  233</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uint32_t <a class="code hl_function" href="x86_8h.html#a4dc39efad1eea8befe2658287ec39913">inl</a>(<span class="keywordtype">int</span> port) {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  uint32_t <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;inl %1, %0&quot;</span> : <span class="stringliteral">&quot;=a&quot;</span>(<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>) : <span class="stringliteral">&quot;d&quot;</span>((uint16_t)port));</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>}</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="x86_8h.html#ade961b44e45ddacbc3c3b7609cf36dc6">  239</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#ade961b44e45ddacbc3c3b7609cf36dc6">outb</a>(<span class="keywordtype">int</span> port, uint8_t <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;outb %%al, %%dx&quot;</span> : : <span class="stringliteral">&quot;a&quot;</span>(<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>), <span class="stringliteral">&quot;d&quot;</span>((uint16_t)port));</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="x86_8h.html#af92fc55c49437b9152499a13ba2b6585">  243</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#af92fc55c49437b9152499a13ba2b6585">outw</a>(<span class="keywordtype">int</span> port, uint16_t <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;outw %%ax, %%dx&quot;</span> : : <span class="stringliteral">&quot;a&quot;</span>(<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>), <span class="stringliteral">&quot;d&quot;</span>((uint16_t)port));</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>}</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="x86_8h.html#a6732a48aa03137d406ae5f7b346320f3">  247</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a6732a48aa03137d406ae5f7b346320f3">outl</a>(<span class="keywordtype">int</span> port, uint32_t <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;outl %%eax, %%dx&quot;</span> : : <span class="stringliteral">&quot;a&quot;</span>(<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>), <span class="stringliteral">&quot;d&quot;</span>((uint16_t)port));</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>}</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c">  251</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c">cli</a>() {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;cli&quot;</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>}</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2">  255</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2">sti</a>() {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;sti&quot;</span>);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="x86_8h.html#a2adfe40c0aadff727889d263815cb8ed">  259</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a2adfe40c0aadff727889d263815cb8ed">hlt</a>() {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;hlt&quot;</span>);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>}</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="x86_8h.html#a2948382efa6ca2d9520fa9bb11a63ff9">  263</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a2948382efa6ca2d9520fa9bb11a63ff9">pause</a>() {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;pause&quot;</span>);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>}</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee">  267</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uint32_t <a class="code hl_function" href="x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee">get_efl</a>() {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  <span class="keyword">volatile</span> uintptr_t efl;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;pushf; pop %0&quot;</span>: <span class="stringliteral">&quot;=r&quot;</span>(efl));</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keywordflow">return</span> efl;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>}</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="x86_8h.html#a0d3b02082a6db09da5dc3d4286a379d4">  273</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uintptr_t <a class="code hl_function" href="x86_8h.html#a0d3b02082a6db09da5dc3d4286a379d4">get_cr0</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="keyword">volatile</span> uintptr_t val;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;mov %%cr0, %0&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(val));</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="keywordflow">return</span> val;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>}</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="x86_8h.html#a190c25beee0716b8f20caf7b08d0f58e">  279</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a190c25beee0716b8f20caf7b08d0f58e">set_cr0</a>(uintptr_t cr0) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;mov %0, %%cr0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(cr0));</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>}</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="x86_8h.html#aec7546614338d8b90023fa2805432e22">  283</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#aec7546614338d8b90023fa2805432e22">set_idt</a>(<span class="keywordtype">void</span> *<a class="code hl_variable" href="x86_2qemu_2cte_8c.html#a1bd28188e653b5b2d4e47795f66b04e3">idt</a>, <span class="keywordtype">int</span> size) {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    int16_t size;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="x86_2qemu_2cte_8c.html#a1bd28188e653b5b2d4e47795f66b04e3">idt</a>;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  } <a class="code hl_function" href="amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c">__attribute__</a>((packed)) <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>.size = size;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>.idt = <a class="code hl_variable" href="x86_2qemu_2cte_8c.html#a1bd28188e653b5b2d4e47795f66b04e3">idt</a>;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;lidt (%0)&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(&amp;<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>));</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>}</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="x86_8h.html#a4dc007b346b1364320af9d9e1c105455">  293</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a4dc007b346b1364320af9d9e1c105455">set_gdt</a>(<span class="keywordtype">void</span> *gdt, <span class="keywordtype">int</span> size) {</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  <span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    int16_t size;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordtype">void</span> *gdt;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  } <a class="code hl_function" href="amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c">__attribute__</a>((packed)) <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>.size = size;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>.gdt = gdt;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;lgdt (%0)&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(&amp;<a class="code hl_variable" href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a>));</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>}</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="x86_8h.html#a2d9f7bff4b1a6ec6b994dffdc4172bef">  303</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a2d9f7bff4b1a6ec6b994dffdc4172bef">set_tr</a>(<span class="keywordtype">int</span> selector) {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;ltr %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>((uint16_t)selector));</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="x86_8h.html#a8ed96823526ebd47df1e444424549ae1">  307</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uintptr_t <a class="code hl_function" href="x86_8h.html#a8ed96823526ebd47df1e444424549ae1">get_cr2</a>() {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="keyword">volatile</span> uintptr_t val;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;mov %%cr2, %0&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(val));</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keywordflow">return</span> val;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>}</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="x86_8h.html#aa0cce706d7a3321fdd62e48a74284aa3">  313</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uintptr_t <a class="code hl_function" href="x86_8h.html#aa0cce706d7a3321fdd62e48a74284aa3">get_cr3</a>() {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  <span class="keyword">volatile</span> uintptr_t val;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;mov %%cr3, %0&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(val));</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>  <span class="keywordflow">return</span> val;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>}</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="x86_8h.html#adae289a554a15acb37df8b8ff3b8c80a">  319</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#adae289a554a15acb37df8b8ff3b8c80a">set_cr3</a>(<span class="keywordtype">void</span> *pdir) {</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;mov %0, %%cr3&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(pdir));</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>}</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112">  323</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112">xchg</a>(<span class="keywordtype">int</span> *addr, <span class="keywordtype">int</span> newval) {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <span class="keywordtype">int</span> result;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;lock xchg %0, %1&quot;</span>:</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="stringliteral">&quot;+m&quot;</span>(*addr), <span class="stringliteral">&quot;=a&quot;</span>(result) : <span class="stringliteral">&quot;1&quot;</span>(newval) : <span class="stringliteral">&quot;cc&quot;</span>, <span class="stringliteral">&quot;memory&quot;</span>);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>}</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="x86_8h.html#a47b9d70be3022fd0b5687d9794ca47bc">  330</a></span><span class="keyword">static</span> <span class="keyword">inline</span> uint64_t <a class="code hl_function" href="x86_8h.html#a47b9d70be3022fd0b5687d9794ca47bc">rdtsc</a>() {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  uint32_t lo, hi;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (<span class="stringliteral">&quot;rdtsc&quot;</span>: <span class="stringliteral">&quot;=a&quot;</span>(lo), <span class="stringliteral">&quot;=d&quot;</span>(hi));</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  <span class="keywordflow">return</span> ((uint64_t)hi &lt;&lt; 32) | lo;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>}</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="x86_8h.html#a8aa6a4a6f9a86c9cec17aa50ba731421">  336</a></span><span class="preprocessor">#define interrupt(id) \</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">  asm volatile (&quot;int $&quot;</span> #id);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="x86_8h.html#a3aca1d1b71fb9d7c716c378b77f78a67">  339</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="x86_8h.html#a3aca1d1b71fb9d7c716c378b77f78a67">stack_switch_call</a>(<span class="keywordtype">void</span> *sp, <span class="keywordtype">void</span> *entry, uintptr_t arg) {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  <span class="keyword">asm</span> <span class="keyword">volatile</span> (</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">#if __x86_64__</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="stringliteral">&quot;movq %0, %%rsp; movq %2, %%rdi; jmp *%1&quot;</span> : : <span class="stringliteral">&quot;b&quot;</span>((uintptr_t)sp),     <span class="stringliteral">&quot;d&quot;</span>(entry), <span class="stringliteral">&quot;a&quot;</span>(arg)</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="stringliteral">&quot;movl %0, %%esp; movl %2, 4(%0); jmp *%1&quot;</span> : : <span class="stringliteral">&quot;b&quot;</span>((uintptr_t)sp - 8), <span class="stringliteral">&quot;d&quot;</span>(entry), <span class="stringliteral">&quot;a&quot;</span>(arg)</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  );</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>}</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno"><a class="line" href="x86_8h.html#adfa01b89ceed9e7a87f185f4e441aa16">  349</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">volatile</span> <a class="code hl_struct" href="struct_boot_record.html">BootRecord</a> *<a class="code hl_function" href="x86_8h.html#adfa01b89ceed9e7a87f185f4e441aa16">boot_record</a>() {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  <span class="keywordflow">return</span> (<a class="code hl_struct" href="struct_boot_record.html">BootRecord</a> *)<a class="code hl_define" href="x86_8h.html#ac521cb17ae679a95547e6981812db7be">BOOTREC_ADDR</a>;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">#endif </span><span class="comment">// __ASSEMBLER__</span></div>
+<div class="ttc" id="aamdev_8h_html_ab31b92691e50ae7e3b7d50598fad2e8c"><div class="ttname"><a href="amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c">__attribute__</a></div><div class="ttdeci">struct gpu_texturedesc __attribute__((packed))</div></div>
+<div class="ttc" id="astruct____attribute_____html_a5c5d68350191dc26727218ef0ce86f1d"><div class="ttname"><a href="struct____attribute____.html#a5c5d68350191dc26727218ef0ce86f1d">__attribute__::rsv</a></div><div class="ttdeci">uint32_t rsv</div><div class="ttdef"><b>Definition:</b> x86.h:156</div></div>
+<div class="ttc" id="astruct____attribute_____html_a6163461798acb053ba062347095330e0"><div class="ttname"><a href="struct____attribute____.html#a6163461798acb053ba062347095330e0">__attribute__::link</a></div><div class="ttdeci">uint32_t link</div><div class="ttdef"><b>Definition:</b> x86.h:149</div></div>
+<div class="ttc" id="astruct____attribute_____html_a72b38046f765f14ce3d8f74ead10766b"><div class="ttname"><a href="struct____attribute____.html#a72b38046f765f14ce3d8f74ead10766b">__attribute__::rsp0</a></div><div class="ttdeci">uint64_t rsp0</div><div class="ttdef"><b>Definition:</b> x86.h:157</div></div>
+<div class="ttc" id="astruct____attribute_____html_a7874b70fa3a93da1588513500cbdf1a8"><div class="ttname"><a href="struct____attribute____.html#a7874b70fa3a93da1588513500cbdf1a8">__attribute__::ss0</a></div><div class="ttdeci">uint32_t ss0</div><div class="ttdef"><b>Definition:</b> x86.h:151</div></div>
+<div class="ttc" id="astruct____attribute_____html_ab8a56bd35e5f4765a5f6736fdd829a2f"><div class="ttname"><a href="struct____attribute____.html#ab8a56bd35e5f4765a5f6736fdd829a2f">__attribute__::esp0</a></div><div class="ttdeci">uint32_t esp0</div><div class="ttdef"><b>Definition:</b> x86.h:150</div></div>
+<div class="ttc" id="astruct_boot_record_html"><div class="ttname"><a href="struct_boot_record.html">BootRecord</a></div><div class="ttdef"><b>Definition:</b> x86.h:188</div></div>
+<div class="ttc" id="astruct_boot_record_html_a4b67ea3a24a2fbbf5721a8119742413f"><div class="ttname"><a href="struct_boot_record.html#a4b67ea3a24a2fbbf5721a8119742413f">BootRecord::jmp_code</a></div><div class="ttdeci">uint32_t jmp_code</div><div class="ttdef"><b>Definition:</b> x86.h:189</div></div>
+<div class="ttc" id="astruct_boot_record_html_aaf33de3902c182dccb8a9d9ed550e3ac"><div class="ttname"><a href="struct_boot_record.html#aaf33de3902c182dccb8a9d9ed550e3ac">BootRecord::is_ap</a></div><div class="ttdeci">int32_t is_ap</div><div class="ttdef"><b>Definition:</b> x86.h:190</div></div>
+<div class="ttc" id="astruct_gate_desc32_html"><div class="ttname"><a href="struct_gate_desc32.html">GateDesc32</a></div><div class="ttdef"><b>Definition:</b> x86.h:121</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_a2dee666f0c1fe072c549ff86b1d0a8ab"><div class="ttname"><a href="struct_gate_desc32.html#a2dee666f0c1fe072c549ff86b1d0a8ab">GateDesc32::s</a></div><div class="ttdeci">uint32_t s</div><div class="ttdef"><b>Definition:</b> x86.h:127</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_a60ddd92edfaca845a48488f7d294f0a6"><div class="ttname"><a href="struct_gate_desc32.html#a60ddd92edfaca845a48488f7d294f0a6">GateDesc32::dpl</a></div><div class="ttdeci">uint32_t dpl</div><div class="ttdef"><b>Definition:</b> x86.h:128</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_a815e2cd61a2dcdf08fcbe28120d938f8"><div class="ttname"><a href="struct_gate_desc32.html#a815e2cd61a2dcdf08fcbe28120d938f8">GateDesc32::rsv1</a></div><div class="ttdeci">uint32_t rsv1</div><div class="ttdef"><b>Definition:</b> x86.h:125</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_a8519dc239502dfcbac171b3128dc7054"><div class="ttname"><a href="struct_gate_desc32.html#a8519dc239502dfcbac171b3128dc7054">GateDesc32::cs</a></div><div class="ttdeci">uint32_t cs</div><div class="ttdef"><b>Definition:</b> x86.h:123</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_a93c7c40d4fc2b2a4e8fea0f75e81e856"><div class="ttname"><a href="struct_gate_desc32.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">GateDesc32::p</a></div><div class="ttdeci">uint32_t p</div><div class="ttdef"><b>Definition:</b> x86.h:129</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_aa327cf2984f25a01a5a8e3d4188b3cab"><div class="ttname"><a href="struct_gate_desc32.html#aa327cf2984f25a01a5a8e3d4188b3cab">GateDesc32::off_15_0</a></div><div class="ttdeci">uint32_t off_15_0</div><div class="ttdef"><b>Definition:</b> x86.h:122</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_ac4eda34e0186fdd496030d660371342e"><div class="ttname"><a href="struct_gate_desc32.html#ac4eda34e0186fdd496030d660371342e">GateDesc32::off_31_16</a></div><div class="ttdeci">uint32_t off_31_16</div><div class="ttdef"><b>Definition:</b> x86.h:130</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_acef4e7778f4539b08a274ba9f95860fd"><div class="ttname"><a href="struct_gate_desc32.html#acef4e7778f4539b08a274ba9f95860fd">GateDesc32::args</a></div><div class="ttdeci">uint32_t args</div><div class="ttdef"><b>Definition:</b> x86.h:124</div></div>
+<div class="ttc" id="astruct_gate_desc32_html_ad44b615021ed3ccb734fcaf583ef4a03"><div class="ttname"><a href="struct_gate_desc32.html#ad44b615021ed3ccb734fcaf583ef4a03">GateDesc32::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdef"><b>Definition:</b> x86.h:126</div></div>
+<div class="ttc" id="astruct_gate_desc64_html"><div class="ttname"><a href="struct_gate_desc64.html">GateDesc64</a></div><div class="ttdef"><b>Definition:</b> x86.h:133</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_a0d2831d72593d18076f5421cb1dd3c50"><div class="ttname"><a href="struct_gate_desc64.html#a0d2831d72593d18076f5421cb1dd3c50">GateDesc64::zero2</a></div><div class="ttdeci">uint32_t zero2</div><div class="ttdef"><b>Definition:</b> x86.h:139</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_a5c5d68350191dc26727218ef0ce86f1d"><div class="ttname"><a href="struct_gate_desc64.html#a5c5d68350191dc26727218ef0ce86f1d">GateDesc64::rsv</a></div><div class="ttdeci">uint32_t rsv</div><div class="ttdef"><b>Definition:</b> x86.h:144</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_a60ddd92edfaca845a48488f7d294f0a6"><div class="ttname"><a href="struct_gate_desc64.html#a60ddd92edfaca845a48488f7d294f0a6">GateDesc64::dpl</a></div><div class="ttdeci">uint32_t dpl</div><div class="ttdef"><b>Definition:</b> x86.h:140</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_a8519dc239502dfcbac171b3128dc7054"><div class="ttname"><a href="struct_gate_desc64.html#a8519dc239502dfcbac171b3128dc7054">GateDesc64::cs</a></div><div class="ttdeci">uint32_t cs</div><div class="ttdef"><b>Definition:</b> x86.h:135</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_a93c7c40d4fc2b2a4e8fea0f75e81e856"><div class="ttname"><a href="struct_gate_desc64.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">GateDesc64::p</a></div><div class="ttdeci">uint32_t p</div><div class="ttdef"><b>Definition:</b> x86.h:141</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_aa327cf2984f25a01a5a8e3d4188b3cab"><div class="ttname"><a href="struct_gate_desc64.html#aa327cf2984f25a01a5a8e3d4188b3cab">GateDesc64::off_15_0</a></div><div class="ttdeci">uint32_t off_15_0</div><div class="ttdef"><b>Definition:</b> x86.h:134</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_abf959d43bd7cc11467eaf24680a6c333"><div class="ttname"><a href="struct_gate_desc64.html#abf959d43bd7cc11467eaf24680a6c333">GateDesc64::isv</a></div><div class="ttdeci">uint32_t isv</div><div class="ttdef"><b>Definition:</b> x86.h:136</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_ac4eda34e0186fdd496030d660371342e"><div class="ttname"><a href="struct_gate_desc64.html#ac4eda34e0186fdd496030d660371342e">GateDesc64::off_31_16</a></div><div class="ttdeci">uint32_t off_31_16</div><div class="ttdef"><b>Definition:</b> x86.h:142</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_ad44b615021ed3ccb734fcaf583ef4a03"><div class="ttname"><a href="struct_gate_desc64.html#ad44b615021ed3ccb734fcaf583ef4a03">GateDesc64::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdef"><b>Definition:</b> x86.h:138</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_ae800e44ad8dc731977a727f009f2e228"><div class="ttname"><a href="struct_gate_desc64.html#ae800e44ad8dc731977a727f009f2e228">GateDesc64::off_63_32</a></div><div class="ttdeci">uint32_t off_63_32</div><div class="ttdef"><b>Definition:</b> x86.h:143</div></div>
+<div class="ttc" id="astruct_gate_desc64_html_aec7509bf6847788fe8aa7eabc848ff8d"><div class="ttname"><a href="struct_gate_desc64.html#aec7509bf6847788fe8aa7eabc848ff8d">GateDesc64::zero1</a></div><div class="ttdeci">uint32_t zero1</div><div class="ttdef"><b>Definition:</b> x86.h:137</div></div>
+<div class="ttc" id="astruct_m_p_conf_html"><div class="ttname"><a href="struct_m_p_conf.html">MPConf</a></div><div class="ttdef"><b>Definition:</b> x86.h:162</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_a028673c458d9656559cc436672f21b8a"><div class="ttname"><a href="struct_m_p_conf.html#a028673c458d9656559cc436672f21b8a">MPConf::oemtable</a></div><div class="ttdeci">uint32_t oemtable</div><div class="ttdef"><b>Definition:</b> x86.h:168</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_a1892eba2086d12ac2b09005aeb09ea3b"><div class="ttname"><a href="struct_m_p_conf.html#a1892eba2086d12ac2b09005aeb09ea3b">MPConf::length</a></div><div class="ttdeci">uint16_t length</div><div class="ttdef"><b>Definition:</b> x86.h:164</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_a4338b864de2415af6bf674f6d9dbb8a6"><div class="ttname"><a href="struct_m_p_conf.html#a4338b864de2415af6bf674f6d9dbb8a6">MPConf::xchecksum</a></div><div class="ttdeci">uint8_t xchecksum</div><div class="ttdef"><b>Definition:</b> x86.h:173</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_a59eac9627282a484fbaf0aa7aa3b8a9a"><div class="ttname"><a href="struct_m_p_conf.html#a59eac9627282a484fbaf0aa7aa3b8a9a">MPConf::checksum</a></div><div class="ttdeci">uint8_t checksum</div><div class="ttdef"><b>Definition:</b> x86.h:166</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_a64d93ea55964644db20d47bf18784017"><div class="ttname"><a href="struct_m_p_conf.html#a64d93ea55964644db20d47bf18784017">MPConf::oemlength</a></div><div class="ttdeci">uint16_t oemlength</div><div class="ttdef"><b>Definition:</b> x86.h:169</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_a749ffad87b8cee51dfdbbfdef6052868"><div class="ttname"><a href="struct_m_p_conf.html#a749ffad87b8cee51dfdbbfdef6052868">MPConf::entry</a></div><div class="ttdeci">uint16_t entry</div><div class="ttdef"><b>Definition:</b> x86.h:170</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_a88b4f1a474ca64b04c326b6bfdc7c78a"><div class="ttname"><a href="struct_m_p_conf.html#a88b4f1a474ca64b04c326b6bfdc7c78a">MPConf::lapicaddr</a></div><div class="ttdeci">uint32_t lapicaddr</div><div class="ttdef"><b>Definition:</b> x86.h:171</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_ab22abc2906422da61885ac6c8e6a1a59"><div class="ttname"><a href="struct_m_p_conf.html#ab22abc2906422da61885ac6c8e6a1a59">MPConf::version</a></div><div class="ttdeci">uint8_t version</div><div class="ttdef"><b>Definition:</b> x86.h:165</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_ac974b487b3b63da8a0b114543e2e1352"><div class="ttname"><a href="struct_m_p_conf.html#ac974b487b3b63da8a0b114543e2e1352">MPConf::xlength</a></div><div class="ttdeci">uint16_t xlength</div><div class="ttdef"><b>Definition:</b> x86.h:172</div></div>
+<div class="ttc" id="astruct_m_p_conf_html_acb7bc06bed6f6408d719334fc41698c7"><div class="ttname"><a href="struct_m_p_conf.html#acb7bc06bed6f6408d719334fc41698c7">MPConf::reserved</a></div><div class="ttdeci">uint8_t reserved</div><div class="ttdef"><b>Definition:</b> x86.h:174</div></div>
+<div class="ttc" id="astruct_m_p_desc_html"><div class="ttname"><a href="struct_m_p_desc.html">MPDesc</a></div><div class="ttdef"><b>Definition:</b> x86.h:177</div></div>
+<div class="ttc" id="astruct_m_p_desc_html_a1d127017fb298b889f4ba24752d08b8e"><div class="ttname"><a href="struct_m_p_desc.html#a1d127017fb298b889f4ba24752d08b8e">MPDesc::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>Definition:</b> x86.h:183</div></div>
+<div class="ttc" id="astruct_m_p_desc_html_a55416a7ab5b7b0b86b66aac102408394"><div class="ttname"><a href="struct_m_p_desc.html#a55416a7ab5b7b0b86b66aac102408394">MPDesc::imcrp</a></div><div class="ttdeci">uint8_t imcrp</div><div class="ttdef"><b>Definition:</b> x86.h:184</div></div>
+<div class="ttc" id="astruct_m_p_desc_html_a59eac9627282a484fbaf0aa7aa3b8a9a"><div class="ttname"><a href="struct_m_p_desc.html#a59eac9627282a484fbaf0aa7aa3b8a9a">MPDesc::checksum</a></div><div class="ttdeci">uint8_t checksum</div><div class="ttdef"><b>Definition:</b> x86.h:182</div></div>
+<div class="ttc" id="astruct_m_p_desc_html_a5f0068a2f554b57ffc431ea623192ec9"><div class="ttname"><a href="struct_m_p_desc.html#a5f0068a2f554b57ffc431ea623192ec9">MPDesc::specrev</a></div><div class="ttdeci">uint8_t specrev</div><div class="ttdef"><b>Definition:</b> x86.h:181</div></div>
+<div class="ttc" id="astruct_m_p_desc_html_a63f43efc112580f0d3e6f36c8248fd4b"><div class="ttname"><a href="struct_m_p_desc.html#a63f43efc112580f0d3e6f36c8248fd4b">MPDesc::conf</a></div><div class="ttdeci">uint32_t conf</div><div class="ttdef"><b>Definition:</b> x86.h:179</div></div>
+<div class="ttc" id="astruct_m_p_desc_html_a6480f97b5704e0c84200f69c08d46870"><div class="ttname"><a href="struct_m_p_desc.html#a6480f97b5704e0c84200f69c08d46870">MPDesc::magic</a></div><div class="ttdeci">int magic</div><div class="ttdef"><b>Definition:</b> x86.h:178</div></div>
+<div class="ttc" id="astruct_m_p_desc_html_ab2b3adeb2a67e656ff030b56727fd0ac"><div class="ttname"><a href="struct_m_p_desc.html#ab2b3adeb2a67e656ff030b56727fd0ac">MPDesc::length</a></div><div class="ttdeci">uint8_t length</div><div class="ttdef"><b>Definition:</b> x86.h:180</div></div>
+<div class="ttc" id="astruct_seg_desc_html"><div class="ttname"><a href="struct_seg_desc.html">SegDesc</a></div><div class="ttdef"><b>Definition:</b> x86.h:104</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a16eb11c869751ae18d8b77466933a526"><div class="ttname"><a href="struct_seg_desc.html#a16eb11c869751ae18d8b77466933a526">SegDesc::avl</a></div><div class="ttdeci">uint32_t avl</div><div class="ttdef"><b>Definition:</b> x86.h:113</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a1b064e2f6a6eae2b71e0444d64736a36"><div class="ttname"><a href="struct_seg_desc.html#a1b064e2f6a6eae2b71e0444d64736a36">SegDesc::l</a></div><div class="ttdeci">uint32_t l</div><div class="ttdef"><b>Definition:</b> x86.h:114</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a1fab8d68d051eca3d118d5408e1200ca"><div class="ttname"><a href="struct_seg_desc.html#a1fab8d68d051eca3d118d5408e1200ca">SegDesc::g</a></div><div class="ttdeci">uint32_t g</div><div class="ttdef"><b>Definition:</b> x86.h:116</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a2dee666f0c1fe072c549ff86b1d0a8ab"><div class="ttname"><a href="struct_seg_desc.html#a2dee666f0c1fe072c549ff86b1d0a8ab">SegDesc::s</a></div><div class="ttdeci">uint32_t s</div><div class="ttdef"><b>Definition:</b> x86.h:109</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a2eb230347b872886f0919559966383ae"><div class="ttname"><a href="struct_seg_desc.html#a2eb230347b872886f0919559966383ae">SegDesc::base_31_24</a></div><div class="ttdeci">uint32_t base_31_24</div><div class="ttdef"><b>Definition:</b> x86.h:117</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a3b4809fdd6e26f84f6bf889aabea82a8"><div class="ttname"><a href="struct_seg_desc.html#a3b4809fdd6e26f84f6bf889aabea82a8">SegDesc::db</a></div><div class="ttdeci">uint32_t db</div><div class="ttdef"><b>Definition:</b> x86.h:115</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a60ddd92edfaca845a48488f7d294f0a6"><div class="ttname"><a href="struct_seg_desc.html#a60ddd92edfaca845a48488f7d294f0a6">SegDesc::dpl</a></div><div class="ttdeci">uint32_t dpl</div><div class="ttdef"><b>Definition:</b> x86.h:110</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a780643ea4031fcade7261a59d02caf7f"><div class="ttname"><a href="struct_seg_desc.html#a780643ea4031fcade7261a59d02caf7f">SegDesc::lim_19_16</a></div><div class="ttdeci">uint32_t lim_19_16</div><div class="ttdef"><b>Definition:</b> x86.h:112</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a787ad265c36d7901836de80f51849e2b"><div class="ttname"><a href="struct_seg_desc.html#a787ad265c36d7901836de80f51849e2b">SegDesc::base_15_0</a></div><div class="ttdeci">uint32_t base_15_0</div><div class="ttdef"><b>Definition:</b> x86.h:106</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a86c681617566161f0b1f0ccc66ff5636"><div class="ttname"><a href="struct_seg_desc.html#a86c681617566161f0b1f0ccc66ff5636">SegDesc::base_23_16</a></div><div class="ttdeci">uint32_t base_23_16</div><div class="ttdef"><b>Definition:</b> x86.h:107</div></div>
+<div class="ttc" id="astruct_seg_desc_html_a93c7c40d4fc2b2a4e8fea0f75e81e856"><div class="ttname"><a href="struct_seg_desc.html#a93c7c40d4fc2b2a4e8fea0f75e81e856">SegDesc::p</a></div><div class="ttdeci">uint32_t p</div><div class="ttdef"><b>Definition:</b> x86.h:111</div></div>
+<div class="ttc" id="astruct_seg_desc_html_ad44b615021ed3ccb734fcaf583ef4a03"><div class="ttname"><a href="struct_seg_desc.html#ad44b615021ed3ccb734fcaf583ef4a03">SegDesc::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdef"><b>Definition:</b> x86.h:108</div></div>
+<div class="ttc" id="astruct_seg_desc_html_ae87cd878f1dfb05b9ea7385aab0c0f95"><div class="ttname"><a href="struct_seg_desc.html#ae87cd878f1dfb05b9ea7385aab0c0f95">SegDesc::lim_15_0</a></div><div class="ttdeci">uint32_t lim_15_0</div><div class="ttdef"><b>Definition:</b> x86.h:105</div></div>
+<div class="ttc" id="ax86_2qemu_2cte_8c_html_a1bd28188e653b5b2d4e47795f66b04e3"><div class="ttname"><a href="x86_2qemu_2cte_8c.html#a1bd28188e653b5b2d4e47795f66b04e3">idt</a></div><div class="ttdeci">static GateDesc32 idt[NR_IRQ]</div><div class="ttdef"><b>Definition:</b> cte.c:8</div></div>
+<div class="ttc" id="ax86_2qemu_2ioe_8c_html_a1e43bf7d608e87228b625cca2c04d641"><div class="ttname"><a href="x86_2qemu_2ioe_8c.html#a1e43bf7d608e87228b625cca2c04d641">data</a></div><div class="ttdeci">uint32_t data</div><div class="ttdef"><b>Definition:</b> ioe.c:0</div></div>
+<div class="ttc" id="ax86_8h_html_a0d3b02082a6db09da5dc3d4286a379d4"><div class="ttname"><a href="x86_8h.html#a0d3b02082a6db09da5dc3d4286a379d4">get_cr0</a></div><div class="ttdeci">static uintptr_t get_cr0(void)</div><div class="ttdef"><b>Definition:</b> x86.h:273</div></div>
+<div class="ttc" id="ax86_8h_html_a190c25beee0716b8f20caf7b08d0f58e"><div class="ttname"><a href="x86_8h.html#a190c25beee0716b8f20caf7b08d0f58e">set_cr0</a></div><div class="ttdeci">static void set_cr0(uintptr_t cr0)</div><div class="ttdef"><b>Definition:</b> x86.h:279</div></div>
+<div class="ttc" id="ax86_8h_html_a2140f94851a8b17db07aa505613d9e3e"><div class="ttname"><a href="x86_8h.html#a2140f94851a8b17db07aa505613d9e3e">inw</a></div><div class="ttdeci">static uint16_t inw(int port)</div><div class="ttdef"><b>Definition:</b> x86.h:227</div></div>
+<div class="ttc" id="ax86_8h_html_a2948382efa6ca2d9520fa9bb11a63ff9"><div class="ttname"><a href="x86_8h.html#a2948382efa6ca2d9520fa9bb11a63ff9">pause</a></div><div class="ttdeci">static void pause()</div><div class="ttdef"><b>Definition:</b> x86.h:263</div></div>
+<div class="ttc" id="ax86_8h_html_a2adfe40c0aadff727889d263815cb8ed"><div class="ttname"><a href="x86_8h.html#a2adfe40c0aadff727889d263815cb8ed">hlt</a></div><div class="ttdeci">static void hlt()</div><div class="ttdef"><b>Definition:</b> x86.h:259</div></div>
+<div class="ttc" id="ax86_8h_html_a2d9f7bff4b1a6ec6b994dffdc4172bef"><div class="ttname"><a href="x86_8h.html#a2d9f7bff4b1a6ec6b994dffdc4172bef">set_tr</a></div><div class="ttdeci">static void set_tr(int selector)</div><div class="ttdef"><b>Definition:</b> x86.h:303</div></div>
+<div class="ttc" id="ax86_8h_html_a3aca1d1b71fb9d7c716c378b77f78a67"><div class="ttname"><a href="x86_8h.html#a3aca1d1b71fb9d7c716c378b77f78a67">stack_switch_call</a></div><div class="ttdeci">static void stack_switch_call(void *sp, void *entry, uintptr_t arg)</div><div class="ttdef"><b>Definition:</b> x86.h:339</div></div>
+<div class="ttc" id="ax86_8h_html_a4657e97b270d7af5a23da2c4d642ada2"><div class="ttname"><a href="x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2">sti</a></div><div class="ttdeci">static void sti()</div><div class="ttdef"><b>Definition:</b> x86.h:255</div></div>
+<div class="ttc" id="ax86_8h_html_a47b9d70be3022fd0b5687d9794ca47bc"><div class="ttname"><a href="x86_8h.html#a47b9d70be3022fd0b5687d9794ca47bc">rdtsc</a></div><div class="ttdeci">static uint64_t rdtsc()</div><div class="ttdef"><b>Definition:</b> x86.h:330</div></div>
+<div class="ttc" id="ax86_8h_html_a48b2a6a16dc8d7e09d327aa3803f1112"><div class="ttname"><a href="x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112">xchg</a></div><div class="ttdeci">static int xchg(int *addr, int newval)</div><div class="ttdef"><b>Definition:</b> x86.h:323</div></div>
+<div class="ttc" id="ax86_8h_html_a4dc007b346b1364320af9d9e1c105455"><div class="ttname"><a href="x86_8h.html#a4dc007b346b1364320af9d9e1c105455">set_gdt</a></div><div class="ttdeci">static void set_gdt(void *gdt, int size)</div><div class="ttdef"><b>Definition:</b> x86.h:293</div></div>
+<div class="ttc" id="ax86_8h_html_a4dc39efad1eea8befe2658287ec39913"><div class="ttname"><a href="x86_8h.html#a4dc39efad1eea8befe2658287ec39913">inl</a></div><div class="ttdeci">static uint32_t inl(int port)</div><div class="ttdef"><b>Definition:</b> x86.h:233</div></div>
+<div class="ttc" id="ax86_8h_html_a6732a48aa03137d406ae5f7b346320f3"><div class="ttname"><a href="x86_8h.html#a6732a48aa03137d406ae5f7b346320f3">outl</a></div><div class="ttdeci">static void outl(int port, uint32_t data)</div><div class="ttdef"><b>Definition:</b> x86.h:247</div></div>
+<div class="ttc" id="ax86_8h_html_a73d094f09c6a7dd3fc703aa8229933ee"><div class="ttname"><a href="x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee">get_efl</a></div><div class="ttdeci">static uint32_t get_efl()</div><div class="ttdef"><b>Definition:</b> x86.h:267</div></div>
+<div class="ttc" id="ax86_8h_html_a8ed96823526ebd47df1e444424549ae1"><div class="ttname"><a href="x86_8h.html#a8ed96823526ebd47df1e444424549ae1">get_cr2</a></div><div class="ttdeci">static uintptr_t get_cr2()</div><div class="ttdef"><b>Definition:</b> x86.h:307</div></div>
+<div class="ttc" id="ax86_8h_html_aa0cce706d7a3321fdd62e48a74284aa3"><div class="ttname"><a href="x86_8h.html#aa0cce706d7a3321fdd62e48a74284aa3">get_cr3</a></div><div class="ttdeci">static uintptr_t get_cr3()</div><div class="ttdef"><b>Definition:</b> x86.h:313</div></div>
+<div class="ttc" id="ax86_8h_html_ac521cb17ae679a95547e6981812db7be"><div class="ttname"><a href="x86_8h.html#ac521cb17ae679a95547e6981812db7be">BOOTREC_ADDR</a></div><div class="ttdeci">#define BOOTREC_ADDR</div><div class="ttdef"><b>Definition:</b> x86.h:95</div></div>
+<div class="ttc" id="ax86_8h_html_acc919e7809ef1db2b20aa3804f540b5c"><div class="ttname"><a href="x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c">cli</a></div><div class="ttdeci">static void cli()</div><div class="ttdef"><b>Definition:</b> x86.h:251</div></div>
+<div class="ttc" id="ax86_8h_html_adae289a554a15acb37df8b8ff3b8c80a"><div class="ttname"><a href="x86_8h.html#adae289a554a15acb37df8b8ff3b8c80a">set_cr3</a></div><div class="ttdeci">static void set_cr3(void *pdir)</div><div class="ttdef"><b>Definition:</b> x86.h:319</div></div>
+<div class="ttc" id="ax86_8h_html_ade961b44e45ddacbc3c3b7609cf36dc6"><div class="ttname"><a href="x86_8h.html#ade961b44e45ddacbc3c3b7609cf36dc6">outb</a></div><div class="ttdeci">static void outb(int port, uint8_t data)</div><div class="ttdef"><b>Definition:</b> x86.h:239</div></div>
+<div class="ttc" id="ax86_8h_html_adfa01b89ceed9e7a87f185f4e441aa16"><div class="ttname"><a href="x86_8h.html#adfa01b89ceed9e7a87f185f4e441aa16">boot_record</a></div><div class="ttdeci">static volatile BootRecord * boot_record()</div><div class="ttdef"><b>Definition:</b> x86.h:349</div></div>
+<div class="ttc" id="ax86_8h_html_aec7546614338d8b90023fa2805432e22"><div class="ttname"><a href="x86_8h.html#aec7546614338d8b90023fa2805432e22">set_idt</a></div><div class="ttdeci">static void set_idt(void *idt, int size)</div><div class="ttdef"><b>Definition:</b> x86.h:283</div></div>
+<div class="ttc" id="ax86_8h_html_af92fc55c49437b9152499a13ba2b6585"><div class="ttname"><a href="x86_8h.html#af92fc55c49437b9152499a13ba2b6585">outw</a></div><div class="ttdeci">static void outw(int port, uint16_t data)</div><div class="ttdef"><b>Definition:</b> x86.h:243</div></div>
+<div class="ttc" id="ax86_8h_html_afdc603aa210ab8fd9995ce74940f5d7f"><div class="ttname"><a href="x86_8h.html#afdc603aa210ab8fd9995ce74940f5d7f">inb</a></div><div class="ttdeci">static uint8_t inb(int port)</div><div class="ttdef"><b>Definition:</b> x86.h:221</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_57953e885fa30d3cda66aaff14f5e717.html">abstract-machine</a></li><li class="navelem"><a class="el" href="dir_221aa689d77dcd1abd530cb13a599f6c.html">am</a></li><li class="navelem"><a class="el" href="dir_ab9c339ca6939bbe6f6a41b1e4730185.html">src</a></li><li class="navelem"><a class="el" href="dir_84ebb354b97ad405f7394d9a50d5c853.html">x86</a></li><li class="navelem"><a class="el" href="x86_8h.html">x86.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

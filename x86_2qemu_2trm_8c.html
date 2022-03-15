@@ -1,0 +1,492 @@
+<!-- HTML header for doxygen 1.8.17-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SageOS: abstract-machine/am/src/x86/qemu/trm.c 文件参考</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeDarkModeToggle.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeParagraphLink.init()
+    </script>
+</head>
+<body>
+    <div id="top">
+        <!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">SageOS
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('x86_2qemu_2trm_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">trm.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="src_2x86_2qemu_2x86-qemu_8h_source.html">x86-qemu.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+trm.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c__incl.svg" width="367" height="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a00dbb3ab1c59e14699be9393693e2248"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a00dbb3ab1c59e14699be9393693e2248">COM1</a>&#160;&#160;&#160;0x3f8</td></tr>
+<tr class="separator:a00dbb3ab1c59e14699be9393693e2248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aa12a9403d4e36817688700b1c1bd442e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#aa12a9403d4e36817688700b1c1bd442e">main</a> (const char *args)</td></tr>
+<tr class="separator:aa12a9403d4e36817688700b1c1bd442e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a49ff4d3a586b2315e292c5da3df7e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a12a49ff4d3a586b2315e292c5da3df7e">call_main</a> (const char *args)</td></tr>
+<tr class="separator:a12a49ff4d3a586b2315e292c5da3df7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a85aeee6f6a8ef875d4cca663f9fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a54a85aeee6f6a8ef875d4cca663f9fd8">_start_c</a> (char *args)</td></tr>
+<tr class="separator:a54a85aeee6f6a8ef875d4cca663f9fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75e130ff99ad31f9a1df206b5ff8252a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a75e130ff99ad31f9a1df206b5ff8252a">__am_bootcpu_init</a> ()</td></tr>
+<tr class="separator:a75e130ff99ad31f9a1df206b5ff8252a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac650c2a0dd8b7f13349871fd6ab6ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#abac650c2a0dd8b7f13349871fd6ab6ee">__am_percpu_init</a> ()</td></tr>
+<tr class="separator:abac650c2a0dd8b7f13349871fd6ab6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6351d8706733262e7e325926b1a9aab7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a6351d8706733262e7e325926b1a9aab7">putch</a> (char ch)</td></tr>
+<tr class="separator:a6351d8706733262e7e325926b1a9aab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483cb97188e557c3c68d3a1572c2cc92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a483cb97188e557c3c68d3a1572c2cc92">halt</a> (int code)</td></tr>
+<tr class="separator:a483cb97188e557c3c68d3a1572c2cc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4d35ce31ec846cb9da5f17455f54c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_area.html">Area</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#afa4d35ce31ec846cb9da5f17455f54c0">__am_heap_init</a> ()</td></tr>
+<tr class="separator:afa4d35ce31ec846cb9da5f17455f54c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbc147226148b9a52e4ddb3fcfb3f9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a6dbc147226148b9a52e4ddb3fcfb3f9f">__am_lapic_init</a> ()</td></tr>
+<tr class="separator:a6dbc147226148b9a52e4ddb3fcfb3f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30657d927e0438fe41ba851aa9d7bc31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a30657d927e0438fe41ba851aa9d7bc31">__am_percpu_initgdt</a> ()</td></tr>
+<tr class="separator:a30657d927e0438fe41ba851aa9d7bc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a1e1b7250fe486b4222868bcc45cadd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_area.html">Area</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a1e1b7250fe486b4222868bcc45cadd10">heap</a> = {}</td></tr>
+<tr class="separator:a1e1b7250fe486b4222868bcc45cadd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a6ef2fefbc05e322a90f02b3fbbcf4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x86_2qemu_2trm_8c.html#a05a6ef2fefbc05e322a90f02b3fbbcf4">__am_ncpu</a> = 0</td></tr>
+<tr class="separator:a05a6ef2fefbc05e322a90f02b3fbbcf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a00dbb3ab1c59e14699be9393693e2248" name="a00dbb3ab1c59e14699be9393693e2248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00dbb3ab1c59e14699be9393693e2248">&#9670;&nbsp;</a></span>COM1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COM1&#160;&#160;&#160;0x3f8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a75e130ff99ad31f9a1df206b5ff8252a" name="a75e130ff99ad31f9a1df206b5ff8252a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e130ff99ad31f9a1df206b5ff8252a">&#9670;&nbsp;</a></span>__am_bootcpu_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __am_bootcpu_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a75e130ff99ad31f9a1df206b5ff8252a_cgraph.svg" width="846" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a75e130ff99ad31f9a1df206b5ff8252a_icgraph.svg" width="259" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afa4d35ce31ec846cb9da5f17455f54c0" name="afa4d35ce31ec846cb9da5f17455f54c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa4d35ce31ec846cb9da5f17455f54c0">&#9670;&nbsp;</a></span>__am_heap_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_area.html">Area</a> __am_heap_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_afa4d35ce31ec846cb9da5f17455f54c0_cgraph.svg" width="219" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_afa4d35ce31ec846cb9da5f17455f54c0_icgraph.svg" width="420" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6dbc147226148b9a52e4ddb3fcfb3f9f" name="a6dbc147226148b9a52e4ddb3fcfb3f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbc147226148b9a52e4ddb3fcfb3f9f">&#9670;&nbsp;</a></span>__am_lapic_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __am_lapic_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a6dbc147226148b9a52e4ddb3fcfb3f9f_icgraph.svg" width="419" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abac650c2a0dd8b7f13349871fd6ab6ee" name="abac650c2a0dd8b7f13349871fd6ab6ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac650c2a0dd8b7f13349871fd6ab6ee">&#9670;&nbsp;</a></span>__am_percpu_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __am_percpu_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_abac650c2a0dd8b7f13349871fd6ab6ee_cgraph.svg" width="667" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_abac650c2a0dd8b7f13349871fd6ab6ee_icgraph.svg" width="602" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a30657d927e0438fe41ba851aa9d7bc31" name="a30657d927e0438fe41ba851aa9d7bc31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30657d927e0438fe41ba851aa9d7bc31">&#9670;&nbsp;</a></span>__am_percpu_initgdt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __am_percpu_initgdt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a30657d927e0438fe41ba851aa9d7bc31_cgraph.svg" width="412" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a30657d927e0438fe41ba851aa9d7bc31_icgraph.svg" width="792" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a54a85aeee6f6a8ef875d4cca663f9fd8" name="a54a85aeee6f6a8ef875d4cca663f9fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a85aeee6f6a8ef875d4cca663f9fd8">&#9670;&nbsp;</a></span>_start_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _start_c </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a54a85aeee6f6a8ef875d4cca663f9fd8_cgraph.svg" width="1158" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a12a49ff4d3a586b2315e292c5da3df7e" name="a12a49ff4d3a586b2315e292c5da3df7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a49ff4d3a586b2315e292c5da3df7e">&#9670;&nbsp;</a></span>call_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void call_main </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a12a49ff4d3a586b2315e292c5da3df7e_cgraph.svg" width="187" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a12a49ff4d3a586b2315e292c5da3df7e_icgraph.svg" width="206" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a483cb97188e557c3c68d3a1572c2cc92" name="a483cb97188e557c3c68d3a1572c2cc92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a483cb97188e557c3c68d3a1572c2cc92">&#9670;&nbsp;</a></span>halt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void halt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a483cb97188e557c3c68d3a1572c2cc92_cgraph.svg" width="540" height="418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a483cb97188e557c3c68d3a1572c2cc92_icgraph.svg" width="752" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa12a9403d4e36817688700b1c1bd442e" name="aa12a9403d4e36817688700b1c1bd442e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa12a9403d4e36817688700b1c1bd442e">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_aa12a9403d4e36817688700b1c1bd442e_icgraph.svg" width="304" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6351d8706733262e7e325926b1a9aab7" name="a6351d8706733262e7e325926b1a9aab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6351d8706733262e7e325926b1a9aab7">&#9670;&nbsp;</a></span>putch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void putch </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a6351d8706733262e7e325926b1a9aab7_cgraph.svg" width="160" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="x86_2qemu_2trm_8c_a6351d8706733262e7e325926b1a9aab7_icgraph.svg" width="334" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a05a6ef2fefbc05e322a90f02b3fbbcf4" name="a05a6ef2fefbc05e322a90f02b3fbbcf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a6ef2fefbc05e322a90f02b3fbbcf4">&#9670;&nbsp;</a></span>__am_ncpu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __am_ncpu = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e1b7250fe486b4222868bcc45cadd10" name="a1e1b7250fe486b4222868bcc45cadd10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1b7250fe486b4222868bcc45cadd10">&#9670;&nbsp;</a></span>heap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_area.html">Area</a> heap = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_57953e885fa30d3cda66aaff14f5e717.html">abstract-machine</a></li><li class="navelem"><a class="el" href="dir_221aa689d77dcd1abd530cb13a599f6c.html">am</a></li><li class="navelem"><a class="el" href="dir_ab9c339ca6939bbe6f6a41b1e4730185.html">src</a></li><li class="navelem"><a class="el" href="dir_84ebb354b97ad405f7394d9a50d5c853.html">x86</a></li><li class="navelem"><a class="el" href="dir_182591d9ec1b85284dfbe5e03d401e71.html">qemu</a></li><li class="navelem"><a class="el" href="x86_2qemu_2trm_8c.html">trm.c</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

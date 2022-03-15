@@ -1,0 +1,963 @@
+<!-- HTML header for doxygen 1.8.17-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SageOS: abstract-machine/klib/src/int64.c 文件参考</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeDarkModeToggle.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeParagraphLink.init()
+    </script>
+</head>
+<body>
+    <div id="top">
+        <!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">SageOS
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('int64_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">int64.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="am_8h_source.html">am.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+int64.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c__incl.svg" width="408" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniondwords.html">dwords</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionudwords.html">udwords</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionfloat__bits.html">float_bits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniondouble__bits.html">double_bits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuqwords.html">uqwords</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionlong__double__bits.html">long_double_bits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_fcomplex.html">Fcomplex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dcomplex.html">Dcomplex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_lcomplex.html">Lcomplex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a2bd7a25a3384fa411cf641573512b52b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a2bd7a25a3384fa411cf641573512b52b">FNALIAS</a>(alias,  name)&#160;&#160;&#160;_Pragma(&quot;GCC error(\&quot;alias unsupported on this file format\&quot;)&quot;)</td></tr>
+<tr class="separator:a2bd7a25a3384fa411cf641573512b52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92156e22bf86f2413788704a2083ac97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a92156e22bf86f2413788704a2083ac97">COMPILER_RT_ALIAS</a>(aliasee)&#160;&#160;&#160;_Pragma(&quot;GCC error(\&quot;alias unsupported on this file format\&quot;)&quot;)</td></tr>
+<tr class="separator:a92156e22bf86f2413788704a2083ac97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a36e79e78e8d1015af49c7e7150945"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a></td></tr>
+<tr class="separator:ac9a36e79e78e8d1015af49c7e7150945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f923b2291c988a0090246ec332530d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a62f923b2291c988a0090246ec332530d">AEABI_RTABI</a>&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((__pcs__(&quot;aapcs&quot;)))</td></tr>
+<tr class="separator:a62f923b2291c988a0090246ec332530d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1dec568e79152c892dcf63f445cbd7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#aa1dec568e79152c892dcf63f445cbd7a">ALWAYS_INLINE</a>&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((always_inline))</td></tr>
+<tr class="separator:aa1dec568e79152c892dcf63f445cbd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b173d22e57d9395897acbd8de62d505"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a1b173d22e57d9395897acbd8de62d505">NOINLINE</a>&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((noinline))</td></tr>
+<tr class="separator:a1b173d22e57d9395897acbd8de62d505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1728270d73c5d1598de1fd691762eb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#aa1728270d73c5d1598de1fd691762eb1">NORETURN</a>&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((noreturn))</td></tr>
+<tr class="separator:aa1728270d73c5d1598de1fd691762eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf5ec070e9499d36b7f2009ce736076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#addf5ec070e9499d36b7f2009ce736076">UNUSED</a>&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((unused))</td></tr>
+<tr class="separator:addf5ec070e9499d36b7f2009ce736076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdecbe8dd27a952b61c45a138f5a9b73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#afdecbe8dd27a952b61c45a138f5a9b73">COMPLEX_REAL</a>(x)&#160;&#160;&#160;(x).real</td></tr>
+<tr class="separator:afdecbe8dd27a952b61c45a138f5a9b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11126859f0b2b548a38014983a05443e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a11126859f0b2b548a38014983a05443e">COMPLEX_IMAGINARY</a>(x)&#160;&#160;&#160;(x).imaginary</td></tr>
+<tr class="separator:a11126859f0b2b548a38014983a05443e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4aabcb9d4f57c5a89c708a4a2a17064"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#ae4aabcb9d4f57c5a89c708a4a2a17064">compilerrt_abort</a>()&#160;&#160;&#160;<a class="el" href="int64_8c.html#a77317ba63ab13b1c27fcd15659d22e69">compilerrt_abort_impl</a>(__FILE__, __LINE__, __func__)</td></tr>
+<tr class="memdesc:ae4aabcb9d4f57c5a89c708a4a2a17064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger a program abort (or panic for kernel code).  <a href="int64_8c.html#ae4aabcb9d4f57c5a89c708a4a2a17064">更多...</a><br /></td></tr>
+<tr class="separator:ae4aabcb9d4f57c5a89c708a4a2a17064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a438f7b92e750fbfaaf26a884e96c95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a7a438f7b92e750fbfaaf26a884e96c95">COMPILE_TIME_ASSERT</a>(expr)&#160;&#160;&#160;<a class="el" href="int64_8c.html#af4b6ea9bae91faba34779ad13c048212">COMPILE_TIME_ASSERT1</a>(expr, __COUNTER__)</td></tr>
+<tr class="separator:a7a438f7b92e750fbfaaf26a884e96c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b6ea9bae91faba34779ad13c048212"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#af4b6ea9bae91faba34779ad13c048212">COMPILE_TIME_ASSERT1</a>(expr,  cnt)&#160;&#160;&#160;<a class="el" href="int64_8c.html#a93fafeb9693515432366daa47a7c968e">COMPILE_TIME_ASSERT2</a>(expr, cnt)</td></tr>
+<tr class="separator:af4b6ea9bae91faba34779ad13c048212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fafeb9693515432366daa47a7c968e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a93fafeb9693515432366daa47a7c968e">COMPILE_TIME_ASSERT2</a>(expr,  cnt)&#160;&#160;&#160;  typedef char ct_assert_##cnt[(expr) ? 1 : -1] <a class="el" href="int64_8c.html#addf5ec070e9499d36b7f2009ce736076">UNUSED</a></td></tr>
+<tr class="separator:a93fafeb9693515432366daa47a7c968e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a631e292730161ad5381eafff0013891e"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a></td></tr>
+<tr class="separator:a631e292730161ad5381eafff0013891e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80f361c8037aadb06208683492f5753"><td class="memItemLeft" align="right" valign="top">typedef unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a></td></tr>
+<tr class="separator:ac80f361c8037aadb06208683492f5753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61d8e40091c07135fee5e0f6a7ca723"><td class="memItemLeft" align="right" valign="top">typedef long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a></td></tr>
+<tr class="separator:ac61d8e40091c07135fee5e0f6a7ca723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c9c257fc96e5d8128ef845e11693f8"><td class="memItemLeft" align="right" valign="top">typedef unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a></td></tr>
+<tr class="separator:a86c9c257fc96e5d8128ef845e11693f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a77317ba63ab13b1c27fcd15659d22e69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#aa1728270d73c5d1598de1fd691762eb1">NORETURN</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a77317ba63ab13b1c27fcd15659d22e69">compilerrt_abort_impl</a> (const char *file, int line, const char *function)</td></tr>
+<tr class="separator:a77317ba63ab13b1c27fcd15659d22e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a4505820d9e0835bb5a3cb905ccb4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a45a4505820d9e0835bb5a3cb905ccb4e">__paritysi2</a> (<a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> a)</td></tr>
+<tr class="separator:a45a4505820d9e0835bb5a3cb905ccb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67848982b83314e4617b4d5f9196b75a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a67848982b83314e4617b4d5f9196b75a">__paritydi2</a> (<a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> a)</td></tr>
+<tr class="separator:a67848982b83314e4617b4d5f9196b75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b04495bb524d87bcbaea9b63325909"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a29b04495bb524d87bcbaea9b63325909">__divdi3</a> (<a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> a, <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>)</td></tr>
+<tr class="separator:a29b04495bb524d87bcbaea9b63325909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0761eadac1028d7b9fcf61f6f8aa8c55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a0761eadac1028d7b9fcf61f6f8aa8c55">__divsi3</a> (<a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> a, <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>)</td></tr>
+<tr class="separator:a0761eadac1028d7b9fcf61f6f8aa8c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c62483de1cd0c3fe72cc9fc744649bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a6c62483de1cd0c3fe72cc9fc744649bb">__udivsi3</a> (<a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> n, <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> d)</td></tr>
+<tr class="separator:a6c62483de1cd0c3fe72cc9fc744649bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a15861c4d7606282960544df4d21f51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a3a15861c4d7606282960544df4d21f51">__udivmodsi4</a> (<a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> a, <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>, <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> *rem)</td></tr>
+<tr class="separator:a3a15861c4d7606282960544df4d21f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd8eb25e99b81778abdf1872df039c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a9fd8eb25e99b81778abdf1872df039c9">__udivmoddi4</a> (<a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> a, <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>, <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> *rem)</td></tr>
+<tr class="separator:a9fd8eb25e99b81778abdf1872df039c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49dc27da4cda83dba3c1fee7d1f7fd00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a49dc27da4cda83dba3c1fee7d1f7fd00">__divmoddi4</a> (<a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> a, <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>, <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> *rem)</td></tr>
+<tr class="separator:a49dc27da4cda83dba3c1fee7d1f7fd00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0729dff5151e9d0a285f7ad8f5e9cffa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a0729dff5151e9d0a285f7ad8f5e9cffa">__moddi3</a> (<a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> a, <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>)</td></tr>
+<tr class="separator:a0729dff5151e9d0a285f7ad8f5e9cffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a06f4a28dd263c570a8aebdb4269225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a0a06f4a28dd263c570a8aebdb4269225">__udivdi3</a> (<a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> a, <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>)</td></tr>
+<tr class="separator:a0a06f4a28dd263c570a8aebdb4269225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fea4a7b9ebde888133aa19c564e66cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a1fea4a7b9ebde888133aa19c564e66cd">__umoddi3</a> (<a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> a, <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> <a class="el" href="x86_2qemu_2ioe_8c.html#a4313c9563516f94387762ab05763456b">b</a>)</td></tr>
+<tr class="separator:a1fea4a7b9ebde888133aa19c564e66cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a430d2bfe3e137282d4c9b29cdf5b58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a1a430d2bfe3e137282d4c9b29cdf5b58">__clzsi2</a> (<a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> a)</td></tr>
+<tr class="separator:a1a430d2bfe3e137282d4c9b29cdf5b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864f8c70ea08ea71a612891cea2c3f13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int64_8c.html#a864f8c70ea08ea71a612891cea2c3f13">__ctzsi2</a> (<a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> a)</td></tr>
+<tr class="separator:a864f8c70ea08ea71a612891cea2c3f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a62f923b2291c988a0090246ec332530d" name="a62f923b2291c988a0090246ec332530d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f923b2291c988a0090246ec332530d">&#9670;&nbsp;</a></span>AEABI_RTABI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AEABI_RTABI&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((__pcs__(&quot;aapcs&quot;)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1dec568e79152c892dcf63f445cbd7a" name="aa1dec568e79152c892dcf63f445cbd7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1dec568e79152c892dcf63f445cbd7a">&#9670;&nbsp;</a></span>ALWAYS_INLINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ALWAYS_INLINE&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((always_inline))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a438f7b92e750fbfaaf26a884e96c95" name="a7a438f7b92e750fbfaaf26a884e96c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a438f7b92e750fbfaaf26a884e96c95">&#9670;&nbsp;</a></span>COMPILE_TIME_ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPILE_TIME_ASSERT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="int64_8c.html#af4b6ea9bae91faba34779ad13c048212">COMPILE_TIME_ASSERT1</a>(expr, __COUNTER__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4b6ea9bae91faba34779ad13c048212" name="af4b6ea9bae91faba34779ad13c048212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b6ea9bae91faba34779ad13c048212">&#9670;&nbsp;</a></span>COMPILE_TIME_ASSERT1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPILE_TIME_ASSERT1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cnt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="int64_8c.html#a93fafeb9693515432366daa47a7c968e">COMPILE_TIME_ASSERT2</a>(expr, cnt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93fafeb9693515432366daa47a7c968e" name="a93fafeb9693515432366daa47a7c968e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fafeb9693515432366daa47a7c968e">&#9670;&nbsp;</a></span>COMPILE_TIME_ASSERT2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPILE_TIME_ASSERT2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cnt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  typedef char ct_assert_##cnt[(expr) ? 1 : -1] <a class="el" href="int64_8c.html#addf5ec070e9499d36b7f2009ce736076">UNUSED</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9a36e79e78e8d1015af49c7e7150945" name="ac9a36e79e78e8d1015af49c7e7150945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a36e79e78e8d1015af49c7e7150945">&#9670;&nbsp;</a></span>COMPILER_RT_ABI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPILER_RT_ABI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92156e22bf86f2413788704a2083ac97" name="a92156e22bf86f2413788704a2083ac97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92156e22bf86f2413788704a2083ac97">&#9670;&nbsp;</a></span>COMPILER_RT_ALIAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPILER_RT_ALIAS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">aliasee</td><td>)</td>
+          <td>&#160;&#160;&#160;_Pragma(&quot;GCC error(\&quot;alias unsupported on this file format\&quot;)&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4aabcb9d4f57c5a89c708a4a2a17064" name="ae4aabcb9d4f57c5a89c708a4a2a17064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4aabcb9d4f57c5a89c708a4a2a17064">&#9670;&nbsp;</a></span>compilerrt_abort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define compilerrt_abort</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="int64_8c.html#a77317ba63ab13b1c27fcd15659d22e69">compilerrt_abort_impl</a>(__FILE__, __LINE__, __func__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trigger a program abort (or panic for kernel code). </p>
+
+</div>
+</div>
+<a id="a11126859f0b2b548a38014983a05443e" name="a11126859f0b2b548a38014983a05443e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11126859f0b2b548a38014983a05443e">&#9670;&nbsp;</a></span>COMPLEX_IMAGINARY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPLEX_IMAGINARY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(x).imaginary</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdecbe8dd27a952b61c45a138f5a9b73" name="afdecbe8dd27a952b61c45a138f5a9b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdecbe8dd27a952b61c45a138f5a9b73">&#9670;&nbsp;</a></span>COMPLEX_REAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPLEX_REAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(x).real</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bd7a25a3384fa411cf641573512b52b" name="a2bd7a25a3384fa411cf641573512b52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd7a25a3384fa411cf641573512b52b">&#9670;&nbsp;</a></span>FNALIAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNALIAS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">alias, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;_Pragma(&quot;GCC error(\&quot;alias unsupported on this file format\&quot;)&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b173d22e57d9395897acbd8de62d505" name="a1b173d22e57d9395897acbd8de62d505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b173d22e57d9395897acbd8de62d505">&#9670;&nbsp;</a></span>NOINLINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NOINLINE&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((noinline))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1728270d73c5d1598de1fd691762eb1" name="aa1728270d73c5d1598de1fd691762eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1728270d73c5d1598de1fd691762eb1">&#9670;&nbsp;</a></span>NORETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NORETURN&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((noreturn))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addf5ec070e9499d36b7f2009ce736076" name="addf5ec070e9499d36b7f2009ce736076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf5ec070e9499d36b7f2009ce736076">&#9670;&nbsp;</a></span>UNUSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNUSED&#160;&#160;&#160;<a class="el" href="struct____attribute____.html">__attribute__</a>((unused))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ac61d8e40091c07135fee5e0f6a7ca723" name="ac61d8e40091c07135fee5e0f6a7ca723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61d8e40091c07135fee5e0f6a7ca723">&#9670;&nbsp;</a></span>di_int</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef long long <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86c9c257fc96e5d8128ef845e11693f8" name="a86c9c257fc96e5d8128ef845e11693f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c9c257fc96e5d8128ef845e11693f8">&#9670;&nbsp;</a></span>du_int</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned long long <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a631e292730161ad5381eafff0013891e" name="a631e292730161ad5381eafff0013891e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631e292730161ad5381eafff0013891e">&#9670;&nbsp;</a></span>si_int</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac80f361c8037aadb06208683492f5753" name="ac80f361c8037aadb06208683492f5753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80f361c8037aadb06208683492f5753">&#9670;&nbsp;</a></span>su_int</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a1a430d2bfe3e137282d4c9b29cdf5b58" name="a1a430d2bfe3e137282d4c9b29cdf5b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a430d2bfe3e137282d4c9b29cdf5b58">&#9670;&nbsp;</a></span>__clzsi2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> __clzsi2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a864f8c70ea08ea71a612891cea2c3f13" name="a864f8c70ea08ea71a612891cea2c3f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864f8c70ea08ea71a612891cea2c3f13">&#9670;&nbsp;</a></span>__ctzsi2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> __ctzsi2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29b04495bb524d87bcbaea9b63325909" name="a29b04495bb524d87bcbaea9b63325909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b04495bb524d87bcbaea9b63325909">&#9670;&nbsp;</a></span>__divdi3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> __divdi3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c_a29b04495bb524d87bcbaea9b63325909_cgraph.svg" width="232" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c_a29b04495bb524d87bcbaea9b63325909_icgraph.svg" width="224" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a49dc27da4cda83dba3c1fee7d1f7fd00" name="a49dc27da4cda83dba3c1fee7d1f7fd00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49dc27da4cda83dba3c1fee7d1f7fd00">&#9670;&nbsp;</a></span>__divmoddi4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> __divmoddi4 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> *&#160;</td>
+          <td class="paramname"><em>rem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c_a49dc27da4cda83dba3c1fee7d1f7fd00_cgraph.svg" width="375" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0761eadac1028d7b9fcf61f6f8aa8c55" name="a0761eadac1028d7b9fcf61f6f8aa8c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0761eadac1028d7b9fcf61f6f8aa8c55">&#9670;&nbsp;</a></span>__divsi3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> __divsi3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0729dff5151e9d0a285f7ad8f5e9cffa" name="a0729dff5151e9d0a285f7ad8f5e9cffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0729dff5151e9d0a285f7ad8f5e9cffa">&#9670;&nbsp;</a></span>__moddi3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a> __moddi3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c_a0729dff5151e9d0a285f7ad8f5e9cffa_cgraph.svg" width="240" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a67848982b83314e4617b4d5f9196b75a" name="a67848982b83314e4617b4d5f9196b75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67848982b83314e4617b4d5f9196b75a">&#9670;&nbsp;</a></span>__paritydi2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> __paritydi2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac61d8e40091c07135fee5e0f6a7ca723">di_int</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45a4505820d9e0835bb5a3cb905ccb4e" name="a45a4505820d9e0835bb5a3cb905ccb4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a4505820d9e0835bb5a3cb905ccb4e">&#9670;&nbsp;</a></span>__paritysi2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a> __paritysi2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a631e292730161ad5381eafff0013891e">si_int</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a06f4a28dd263c570a8aebdb4269225" name="a0a06f4a28dd263c570a8aebdb4269225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a06f4a28dd263c570a8aebdb4269225">&#9670;&nbsp;</a></span>__udivdi3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> __udivdi3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c_a0a06f4a28dd263c570a8aebdb4269225_cgraph.svg" width="239" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9fd8eb25e99b81778abdf1872df039c9" name="a9fd8eb25e99b81778abdf1872df039c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fd8eb25e99b81778abdf1872df039c9">&#9670;&nbsp;</a></span>__udivmoddi4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> __udivmoddi4 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> *&#160;</td>
+          <td class="paramname"><em>rem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c_a9fd8eb25e99b81778abdf1872df039c9_icgraph.svg" width="390" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3a15861c4d7606282960544df4d21f51" name="a3a15861c4d7606282960544df4d21f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a15861c4d7606282960544df4d21f51">&#9670;&nbsp;</a></span>__udivmodsi4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> __udivmodsi4 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> *&#160;</td>
+          <td class="paramname"><em>rem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c62483de1cd0c3fe72cc9fc744649bb" name="a6c62483de1cd0c3fe72cc9fc744649bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c62483de1cd0c3fe72cc9fc744649bb">&#9670;&nbsp;</a></span>__udivsi3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a> __udivsi3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#ac80f361c8037aadb06208683492f5753">su_int</a>&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fea4a7b9ebde888133aa19c564e66cd" name="a1fea4a7b9ebde888133aa19c564e66cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fea4a7b9ebde888133aa19c564e66cd">&#9670;&nbsp;</a></span>__umoddi3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#ac9a36e79e78e8d1015af49c7e7150945">COMPILER_RT_ABI</a> <a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a> __umoddi3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int64_8c.html#a86c9c257fc96e5d8128ef845e11693f8">du_int</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="int64_8c_a1fea4a7b9ebde888133aa19c564e66cd_cgraph.svg" width="247" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a77317ba63ab13b1c27fcd15659d22e69" name="a77317ba63ab13b1c27fcd15659d22e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77317ba63ab13b1c27fcd15659d22e69">&#9670;&nbsp;</a></span>compilerrt_abort_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int64_8c.html#aa1728270d73c5d1598de1fd691762eb1">NORETURN</a> void compilerrt_abort_impl </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_57953e885fa30d3cda66aaff14f5e717.html">abstract-machine</a></li><li class="navelem"><a class="el" href="dir_aa3cdb1224707fe77b1419aa1c7e3873.html">klib</a></li><li class="navelem"><a class="el" href="dir_1be009763170158d3fb890e6ce68f3d2.html">src</a></li><li class="navelem"><a class="el" href="int64_8c.html">int64.c</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

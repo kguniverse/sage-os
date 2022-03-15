@@ -1,0 +1,463 @@
+<!-- HTML header for doxygen 1.8.17-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="generator" content="Doxygen 1.9.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SageOS: abstract-machine/klib/src/string.c 文件参考</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeDarkModeToggle.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeFragmentCopyButton.init()
+    </script>
+    <script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+    <script type="text/javascript">
+        DoxygenAwesomeParagraphLink.init()
+    </script>
+</head>
+<body>
+    <div id="top">
+        <!-- do not remove this div, it is closed by doxygen! -->
+        <div id="titlearea">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 56px;">
+                        <td id="projectalign" style="padding-left: 0.5em;">
+                            <div id="projectname">SageOS
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end header part --><!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('string_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">string.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="klib_8h_source.html">klib.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="klib-macros_8h_source.html">klib-macros.h</a>&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+string.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="string_8c__incl.svg" width="458" height="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aa383452fe445bfae989358c9d7d96f4f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#aa383452fe445bfae989358c9d7d96f4f">strlen</a> (const char *s)</td></tr>
+<tr class="separator:aa383452fe445bfae989358c9d7d96f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e363031a1cbf510d5eafe40d49a790"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a66e363031a1cbf510d5eafe40d49a790">strcpy</a> (char *dst, const char *src)</td></tr>
+<tr class="separator:a66e363031a1cbf510d5eafe40d49a790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f08f2390a9067f3c94b638e90e03bd"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a82f08f2390a9067f3c94b638e90e03bd">strncpy</a> (char *dst, const char *src, size_t n)</td></tr>
+<tr class="separator:a82f08f2390a9067f3c94b638e90e03bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9517a4a50477f651785c09b27826d8ce"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a9517a4a50477f651785c09b27826d8ce">strcat</a> (char *dst, const char *src)</td></tr>
+<tr class="separator:a9517a4a50477f651785c09b27826d8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bd144d7d44914099a3aeddf1c8567d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a11bd144d7d44914099a3aeddf1c8567d">strcmp</a> (const char *s1, const char *s2)</td></tr>
+<tr class="separator:a11bd144d7d44914099a3aeddf1c8567d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f4a84c11c106e95c32b6ab509346ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a07f4a84c11c106e95c32b6ab509346ef">strncmp</a> (const char *s1, const char *s2, size_t n)</td></tr>
+<tr class="separator:a07f4a84c11c106e95c32b6ab509346ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a313175102214d45434bf045db18dddf0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a313175102214d45434bf045db18dddf0">memset</a> (void *s, int c, size_t n)</td></tr>
+<tr class="separator:a313175102214d45434bf045db18dddf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ad5be721af7967095807a80038b4ef"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a82ad5be721af7967095807a80038b4ef">memmove</a> (void *dst, const void *src, size_t n)</td></tr>
+<tr class="separator:a82ad5be721af7967095807a80038b4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122fb623035cad42e3c35846be8923e1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a122fb623035cad42e3c35846be8923e1">memcpy</a> (void *out, const void *in, size_t n)</td></tr>
+<tr class="separator:a122fb623035cad42e3c35846be8923e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6df54ee04e18a3772335580e2ed872"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_8c.html#a9e6df54ee04e18a3772335580e2ed872">memcmp</a> (const void *s1, const void *s2, size_t n)</td></tr>
+<tr class="separator:a9e6df54ee04e18a3772335580e2ed872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a9e6df54ee04e18a3772335580e2ed872" name="a9e6df54ee04e18a3772335580e2ed872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6df54ee04e18a3772335580e2ed872">&#9670;&nbsp;</a></span>memcmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int memcmp </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>s2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a122fb623035cad42e3c35846be8923e1" name="a122fb623035cad42e3c35846be8923e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122fb623035cad42e3c35846be8923e1">&#9670;&nbsp;</a></span>memcpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * memcpy </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82ad5be721af7967095807a80038b4ef" name="a82ad5be721af7967095807a80038b4ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ad5be721af7967095807a80038b4ef">&#9670;&nbsp;</a></span>memmove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * memmove </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a313175102214d45434bf045db18dddf0" name="a313175102214d45434bf045db18dddf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313175102214d45434bf045db18dddf0">&#9670;&nbsp;</a></span>memset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * memset </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="string_8c_a313175102214d45434bf045db18dddf0_icgraph.svg" width="440" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9517a4a50477f651785c09b27826d8ce" name="a9517a4a50477f651785c09b27826d8ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9517a4a50477f651785c09b27826d8ce">&#9670;&nbsp;</a></span>strcat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * strcat </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11bd144d7d44914099a3aeddf1c8567d" name="a11bd144d7d44914099a3aeddf1c8567d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bd144d7d44914099a3aeddf1c8567d">&#9670;&nbsp;</a></span>strcmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int strcmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66e363031a1cbf510d5eafe40d49a790" name="a66e363031a1cbf510d5eafe40d49a790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e363031a1cbf510d5eafe40d49a790">&#9670;&nbsp;</a></span>strcpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * strcpy </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa383452fe445bfae989358c9d7d96f4f" name="aa383452fe445bfae989358c9d7d96f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa383452fe445bfae989358c9d7d96f4f">&#9670;&nbsp;</a></span>strlen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t strlen </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07f4a84c11c106e95c32b6ab509346ef" name="a07f4a84c11c106e95c32b6ab509346ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f4a84c11c106e95c32b6ab509346ef">&#9670;&nbsp;</a></span>strncmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int strncmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82f08f2390a9067f3c94b638e90e03bd" name="a82f08f2390a9067f3c94b638e90e03bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f08f2390a9067f3c94b638e90e03bd">&#9670;&nbsp;</a></span>strncpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * strncpy </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_57953e885fa30d3cda66aaff14f5e717.html">abstract-machine</a></li><li class="navelem"><a class="el" href="dir_aa3cdb1224707fe77b1419aa1c7e3873.html">klib</a></li><li class="navelem"><a class="el" href="dir_1be009763170158d3fb890e6ce68f3d2.html">src</a></li><li class="navelem"><a class="el" href="string_8c.html">string.c</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>
