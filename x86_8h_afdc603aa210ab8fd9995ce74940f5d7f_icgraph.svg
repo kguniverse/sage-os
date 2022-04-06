@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="x86_2qemu_2trm_8c.html#afa4d35ce31ec846cb9da5f17455f54c0" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="trm_8c.html#afa4d35ce31ec846cb9da5f17455f54c0" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="513,-190.5 513,-209.5 598,-209.5 598,-190.5 513,-190.5"/>
 <text text-anchor="middle" x="555.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">__am_heap_init</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="x86_2qemu_2ioe_8c.html#a9a985e3ea9e55d83a2a494ff3e1ca84b" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="ioe_8c.html#a9a985e3ea9e55d83a2a494ff3e1ca84b" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="519,-152.5 519,-171.5 592,-171.5 592,-152.5 519,-152.5"/>
 <text text-anchor="middle" x="555.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">__attribute__</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="x86_2qemu_2ioe_8c.html#a124b85735169c7add3c491093ffbc00e" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="ioe_8c.html#a124b85735169c7add3c491093ffbc00e" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="529.5,-114.5 529.5,-133.5 581.5,-133.5 581.5,-114.5 529.5,-114.5"/>
 <text text-anchor="middle" x="555.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">read_rtc</text>
 </a>
@@ -65,7 +65,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="x86_2qemu_2ioe_8c.html#aa6bed8ea45612252dec485e7a9331a9d" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="ioe_8c.html#aa6bed8ea45612252dec485e7a9331a9d" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="187.5,-76.5 187.5,-95.5 238.5,-95.5 238.5,-76.5 187.5,-76.5"/>
 <text text-anchor="middle" x="213" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">uart_init</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="x86_2qemu_2ioe_8c.html#a3eeca7b38eabb3bda0761e7713b35881" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="ioe_8c.html#a3eeca7b38eabb3bda0761e7713b35881" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="532.5,-38.5 532.5,-57.5 578.5,-57.5 578.5,-38.5 532.5,-38.5"/>
 <text text-anchor="middle" x="555.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">uart_rx</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="x86_2qemu_2ioe_8c.html#acbf8b730fa8737d9316857c2e9c16cb0" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="ioe_8c.html#acbf8b730fa8737d9316857c2e9c16cb0" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="526.5,-0.5 526.5,-19.5 584.5,-19.5 584.5,-0.5 526.5,-0.5"/>
 <text text-anchor="middle" x="555.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">wait_disk</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="x86_2qemu_2trm_8c.html#a75e130ff99ad31f9a1df206b5ff8252a" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="trm_8c.html#a75e130ff99ad31f9a1df206b5ff8252a" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="379,-190.5 379,-209.5 477,-209.5 477,-190.5 379,-190.5"/>
 <text text-anchor="middle" x="428" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">__am_bootcpu_init</text>
 </a>
@@ -125,7 +125,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="x86_2qemu_2trm_8c.html#a54a85aeee6f6a8ef875d4cca663f9fd8" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="trm_8c.html#a54a85aeee6f6a8ef875d4cca663f9fd8" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="289,-190.5 289,-209.5 341,-209.5 341,-190.5 289,-190.5"/>
 <text text-anchor="middle" x="315" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">_start_c</text>
 </a>
@@ -140,7 +140,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="x86_2qemu_2ioe_8c.html#ad0681f53bec9167d7a8d4d848b3ce2e0" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="ioe_8c.html#ad0681f53bec9167d7a8d4d848b3ce2e0" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="386.5,-114.5 386.5,-133.5 469.5,-133.5 469.5,-114.5 386.5,-114.5"/>
 <text text-anchor="middle" x="428" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">read_rtc_async</text>
 </a>
@@ -155,7 +155,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="x86_2qemu_2ioe_8c.html#a7b167e0bb31c8168406860a278ce693a" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="ioe_8c.html#a7b167e0bb31c8168406860a278ce693a" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="287.5,-152.5 287.5,-171.5 342.5,-171.5 342.5,-152.5 287.5,-152.5"/>
 <text text-anchor="middle" x="315" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">timer_rtc</text>
 </a>
@@ -176,7 +176,7 @@
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="x86_2qemu_2ioe_8c.html#a716ac8111009464db83866c3b49adbbb" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="ioe_8c.html#a716ac8111009464db83866c3b49adbbb" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="287,-114.5 287,-133.5 343,-133.5 343,-114.5 287,-114.5"/>
 <text text-anchor="middle" x="315" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">wait_sec</text>
 </a>
@@ -191,7 +191,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="x86_2qemu_2ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="83,-114.5 83,-133.5 139,-133.5 139,-114.5 83,-114.5"/>
 <text text-anchor="middle" x="111" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">timer_init</text>
 </a>
@@ -206,7 +206,7 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="x86_2qemu_2ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-95.5 0,-114.5 47,-114.5 47,-95.5 0,-95.5"/>
 <text text-anchor="middle" x="23.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">ioe_init</text>
 </a>
@@ -221,7 +221,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="x86_2qemu_2ioe_8c.html#a8f4d57167e8d4b53c00c84e504f330ef" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="ioe_8c.html#a8f4d57167e8d4b53c00c84e504f330ef" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="175,-114.5 175,-133.5 251,-133.5 251,-114.5 175,-114.5"/>
 <text text-anchor="middle" x="213" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">estimate_freq</text>
 </a>
@@ -254,7 +254,7 @@
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="x86_2qemu_2ioe_8c.html#a98996b418230bb2594578ebd944e682c" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="ioe_8c.html#a98996b418230bb2594578ebd944e682c" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="398,-0.5 398,-19.5 458,-19.5 458,-0.5 398,-0.5"/>
 <text text-anchor="middle" x="428" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">disk_blkio</text>
 </a>

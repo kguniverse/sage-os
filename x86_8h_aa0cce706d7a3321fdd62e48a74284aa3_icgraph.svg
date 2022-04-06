@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="x86_2qemu_2cte_8c.html#a10a4e011ab7b1f7e628c8b1f6b638067" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="cte_8c.html#a10a4e011ab7b1f7e628c8b1f6b638067" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 90,-19.5 90,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="45" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">__am_irq_handle</text>
 </a>

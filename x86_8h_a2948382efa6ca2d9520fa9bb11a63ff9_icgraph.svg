@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="x86_2qemu_2mpe_8c.html#a2e4a724e2d067425ff3fd49bc0bf42e1" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="mpe_8c.html#a2e4a724e2d067425ff3fd49bc0bf42e1" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="74,-0.5 74,-19.5 127,-19.5 127,-0.5 74,-0.5"/>
 <text text-anchor="middle" x="100.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">mpe_init</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="kernel_2framework_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 38,-19.5 38,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="19" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>

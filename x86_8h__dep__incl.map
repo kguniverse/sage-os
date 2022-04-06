@@ -1,10 +1,9 @@
 <map id="abstract&#45;machine/am/src/x86/x86.h" name="abstract&#45;machine/am/src/x86/x86.h">
-<area shape="rect" id="node1" title=" " alt="" coords="241,5,385,47"/>
-<area shape="rect" id="node2" href="$abstract-machine_2am_2src_2x86_2qemu_2boot_2main_8c.html" title=" " alt="" coords="127,95,302,136"/>
-<area shape="rect" id="node3" href="$src_2x86_2qemu_2x86-qemu_8h.html" title=" " alt="" coords="326,95,501,136"/>
-<area shape="rect" id="node4" href="$x86_2qemu_2cte_8c.html" title=" " alt="" coords="5,184,149,225"/>
-<area shape="rect" id="node5" href="$x86_2qemu_2ioe_8c.html" title=" " alt="" coords="173,184,317,225"/>
-<area shape="rect" id="node6" href="$x86_2qemu_2mpe_8c.html" title=" " alt="" coords="341,184,485,225"/>
-<area shape="rect" id="node7" href="$x86_2qemu_2trm_8c.html" title=" " alt="" coords="509,184,653,225"/>
-<area shape="rect" id="node8" href="$x86_2qemu_2vme_8c.html" title=" " alt="" coords="677,184,821,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="341,5,485,47"/>
+<area shape="rect" id="node2" href="$x86-qemu_8h.html" title=" " alt="" coords="326,95,501,136"/>
+<area shape="rect" id="node3" href="$cte_8c.html" title=" " alt="" coords="5,184,149,225"/>
+<area shape="rect" id="node4" href="$ioe_8c.html" title=" " alt="" coords="173,184,317,225"/>
+<area shape="rect" id="node5" href="$mpe_8c.html" title=" " alt="" coords="341,184,485,225"/>
+<area shape="rect" id="node6" href="$trm_8c.html" title=" " alt="" coords="509,184,653,225"/>
+<area shape="rect" id="node7" href="$vme_8c.html" title=" " alt="" coords="677,184,821,225"/>
 </map>

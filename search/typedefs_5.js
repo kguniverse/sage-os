@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pagemap_0',['PageMap',['../native_2vme_8c.html#a2fe0543176b583317f816bfbf7ba67aa',1,'vme.c']]]
+  ['si_5fint_0',['si_int',['../int64_8c.html#a631e292730161ad5381eafff0013891e',1,'int64.c']]],
+  ['su_5fint_1',['su_int',['../int64_8c.html#ac80f361c8037aadb06208683492f5753',1,'int64.c']]]
 ];

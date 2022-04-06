@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="x86_2qemu_2vme_8c.html#a102a03634ce449f78facc63eee85d9b8" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="vme_8c.html#a102a03634ce449f78facc63eee85d9b8" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 53,-19.5 53,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="26.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">vme_init</text>
 </a>

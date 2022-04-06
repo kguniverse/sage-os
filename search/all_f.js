@@ -8,7 +8,7 @@ var searchData=
   ['os_2ec_5',['os.c',['../os_8c.html',1,'']]],
   ['os_5finit_6',['os_init',['../os_8c.html#aef4448ba4711b237d8254529f2a4b621',1,'os.c']]],
   ['os_5frun_7',['os_run',['../os_8c.html#a5f9cb32664e017ca15c49ec66e5342e4',1,'os.c']]],
-  ['othercpu_5fentry_8',['othercpu_entry',['../x86_2qemu_2mpe_8c.html#aec8f7f25be4263648b704092672a566b',1,'mpe.c']]],
+  ['othercpu_5fentry_8',['othercpu_entry',['../mpe_8c.html#aec8f7f25be4263648b704092672a566b',1,'mpe.c']]],
   ['outb_9',['outb',['../x86_8h.html#ade961b44e45ddacbc3c3b7609cf36dc6',1,'x86.h']]],
   ['outl_10',['outl',['../x86_8h.html#a6732a48aa03137d406ae5f7b346320f3',1,'x86.h']]],
   ['outw_11',['outw',['../x86_8h.html#af92fc55c49437b9152499a13ba2b6585',1,'x86.h']]]

@@ -1,5 +1,5 @@
 <map id="set_cr3" name="set_cr3">
 <area shape="rect" id="node1" title=" " alt="" coords="173,31,239,57"/>
-<area shape="rect" id="node2" href="$x86_2qemu_2cte_8c.html#a10a4e011ab7b1f7e628c8b1f6b638067" title=" " alt="" coords="5,5,125,32"/>
-<area shape="rect" id="node3" href="$x86_2qemu_2vme_8c.html#a102a03634ce449f78facc63eee85d9b8" title=" " alt="" coords="30,56,101,83"/>
+<area shape="rect" id="node2" href="$cte_8c.html#a10a4e011ab7b1f7e628c8b1f6b638067" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node3" href="$vme_8c.html#a102a03634ce449f78facc63eee85d9b8" title=" " alt="" coords="30,56,101,83"/>
 </map>

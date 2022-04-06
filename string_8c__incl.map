@@ -1,11 +1,10 @@
 <map id="abstract&#45;machine/klib/src/string.c" name="abstract&#45;machine/klib/src/string.c">
-<area shape="rect" id="node1" title=" " alt="" coords="242,5,389,47"/>
-<area shape="rect" id="node2" href="$klib_8h.html" title=" " alt="" coords="160,95,212,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="293,244,357,271"/>
-<area shape="rect" id="node9" href="$klib-macros_8h.html" title=" " alt="" coords="353,95,451,121"/>
-<area shape="rect" id="node3" href="$am_8h.html" title=" " alt="" coords="118,169,169,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="57,5,203,47"/>
+<area shape="rect" id="node2" href="$klib_8h.html" title=" " alt="" coords="104,95,156,121"/>
+<area shape="rect" id="node3" href="$am_8h.html" title=" " alt="" coords="105,169,155,196"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,244,73,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="193,169,261,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="98,244,173,271"/>
-<area shape="rect" id="node7" href="$amdev_8h.html" title=" " alt="" coords="197,244,268,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="180,169,248,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="98,244,162,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="186,244,261,271"/>
+<area shape="rect" id="node7" href="$amdev_8h.html" title=" " alt="" coords="285,244,356,271"/>
 </map>

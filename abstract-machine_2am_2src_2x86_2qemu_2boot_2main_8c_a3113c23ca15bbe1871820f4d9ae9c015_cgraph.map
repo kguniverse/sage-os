@@ -1,9 +1,0 @@
-<map id="load_program" name="load_program">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,105,83"/>
-<area shape="rect" id="node2" href="$abstract-machine_2am_2src_2x86_2qemu_2boot_2main_8c.html#a053d271297a51949cf46c59a997e8621" title=" " alt="" coords="153,56,267,83"/>
-<area shape="rect" id="node3" href="$abstract-machine_2am_2src_2x86_2qemu_2boot_2main_8c.html#a5c78005e67963b2e5e1c05b5e462f186" title=" " alt="" coords="315,56,393,83"/>
-<area shape="rect" id="node4" href="$x86_8h.html#a4dc39efad1eea8befe2658287ec39913" title=" " alt="" coords="461,5,499,32"/>
-<area shape="rect" id="node5" href="$x86_8h.html#ade961b44e45ddacbc3c3b7609cf36dc6" title=" " alt="" coords="457,56,503,83"/>
-<area shape="rect" id="node6" href="$abstract-machine_2am_2src_2x86_2qemu_2boot_2main_8c.html#acbf8b730fa8737d9316857c2e9c16cb0" title=" " alt="" coords="441,107,519,133"/>
-<area shape="rect" id="node7" href="$x86_8h.html#afdc603aa210ab8fd9995ce74940f5d7f" title=" " alt="" coords="567,107,605,133"/>
-</map>

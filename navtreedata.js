@@ -26,24 +26,36 @@ var NAVTREE =
 [
   [ "SageOS", "index.html", [
     [ "Kernel 说明", "md_docs_kernel.html", null ],
-    [ "结构体", "annotated.html", [
-      [ "结构体", "annotated.html", "annotated_dup" ],
-      [ "结构体索引", "classes.html", null ],
-      [ "成员变量", "functions.html", [
-        [ "全部", "functions.html", "functions_dup" ],
-        [ "变量", "functions_vars.html", "functions_vars" ],
-        [ "枚举值", "functions_eval.html", null ]
+    [ "测试框架使用说明", "md_test__r_e_a_d_m_e.html", [
+      [ "介绍", "md_test__r_e_a_d_m_e.html#autotoc_md3", [
+        [ "目录结构说明", "md_test__r_e_a_d_m_e.html#autotoc_md4", null ],
+        [ "行为说明", "md_test__r_e_a_d_m_e.html#autotoc_md5", null ]
+      ] ],
+      [ "使用", "md_test__r_e_a_d_m_e.html#autotoc_md6", [
+        [ "编写单元测试", "md_test__r_e_a_d_m_e.html#autotoc_md7", null ],
+        [ "环境变量", "md_test__r_e_a_d_m_e.html#autotoc_md8", null ],
+        [ "运行测试", "md_test__r_e_a_d_m_e.html#autotoc_md9", null ]
+      ] ],
+      [ "问题和注意事项", "md_test__r_e_a_d_m_e.html#autotoc_md10", null ]
+    ] ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Enumerator", "functions_eval.html", null ]
       ] ]
     ] ],
-    [ "文件", "files.html", [
-      [ "文件列表", "files.html", "files_dup" ],
-      [ "全局定义", "globals.html", [
-        [ "全部", "globals.html", "globals_dup" ],
-        [ "函数", "globals_func.html", "globals_func" ],
-        [ "变量", "globals_vars.html", null ],
-        [ "类型定义", "globals_type.html", null ],
-        [ "枚举值", "globals_eval.html", null ],
-        [ "宏定义", "globals_defs.html", "globals_defs" ]
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -51,12 +63,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"abstract-machine_2am_2src_2x86_2qemu_2boot_2main_8c.html",
-"globals_r.html",
-"platform_8c.html#a9730b6fe94ece5291a8f4e78b5189304",
-"struct_seg_desc.html#a1b064e2f6a6eae2b71e0444d64736a36",
-"x86_2qemu_2trm_8c.html#a12a49ff4d3a586b2315e292c5da3df7e"
+"am_8h.html",
+"ioe_8c.html#a73f717b7aae31163c2a85f67883bf0ed",
+"struct_gate_desc32.html#a815e2cd61a2dcdf08fcbe28120d938f8",
+"x86_8h.html#aa899fa0a2a7dd414343fb2fada767622"
 ];
 
-var SYNCONMSG = '点击 关闭 面板同步';
-var SYNCOFFMSG = '点击 开启 面板同步';
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';

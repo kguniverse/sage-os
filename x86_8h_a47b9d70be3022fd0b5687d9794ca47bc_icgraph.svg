@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="x86_2qemu_2ioe_8c.html#a8f4d57167e8d4b53c00c84e504f330ef" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="ioe_8c.html#a8f4d57167e8d4b53c00c84e504f330ef" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="175,-76.5 175,-95.5 251,-95.5 251,-76.5 175,-76.5"/>
 <text text-anchor="middle" x="213" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">estimate_freq</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="x86_2qemu_2ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="83,-57.5 83,-76.5 139,-76.5 139,-57.5 83,-57.5"/>
 <text text-anchor="middle" x="111" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">timer_init</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="x86_2qemu_2ioe_8c.html#a0c6d0b706112737c1ef52d21ac07eb47" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="ioe_8c.html#a0c6d0b706112737c1ef52d21ac07eb47" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="176.5,-0.5 176.5,-19.5 249.5,-19.5 249.5,-0.5 176.5,-0.5"/>
 <text text-anchor="middle" x="213" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">timer_uptime</text>
 </a>
@@ -77,7 +77,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="x86_2qemu_2ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-57.5 0,-76.5 47,-76.5 47,-57.5 0,-57.5"/>
 <text text-anchor="middle" x="23.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">ioe_init</text>
 </a>

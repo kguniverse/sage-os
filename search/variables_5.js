@@ -1,20 +1,11 @@
 var searchData=
 [
-  ['eax_0',['eax',['../struct_context.html#a93d929ad1fc57af9d4f1793c361fb4f2',1,'Context::eax()'],['../struct_context.html#a71eac92916f34d89dd0bf2d5f057c269',1,'Context::eax()']]],
-  ['ebp_1',['ebp',['../struct_context.html#ac189ce0d785214fbb7126125640c6e9b',1,'Context::ebp()'],['../struct_context.html#aaba2ad0ff8ba480934feabfdab02b1e7',1,'Context::ebp()']]],
-  ['ebx_2',['ebx',['../struct_context.html#a27fded8d2320f45c64dfba02f3a8dfc7',1,'Context::ebx()'],['../struct_context.html#ae7c1e3339e4dead200cab41010e9127c',1,'Context::ebx()']]],
-  ['ecx_3',['ecx',['../struct_context.html#ab42bf9a38e751ef9398b09fc5bf497a7',1,'Context::ecx()'],['../struct_context.html#af2b16bef95c844028dd145264d1d3875',1,'Context::ecx()']]],
-  ['edi_4',['edi',['../struct_context.html#a86faadcb34955713e8d406621bf805d4',1,'Context::edi()'],['../struct_context.html#a36ffab8d34c6c411a7e5205ddb95eaf9',1,'Context::edi()']]],
-  ['edx_5',['edx',['../struct_context.html#ac2a170e91d36366ff1fc1131c5f4167f',1,'Context::edx()'],['../struct_context.html#ae6db045cebe7b4cf979120dccdee0d01',1,'Context::edx()']]],
-  ['eflags_6',['eflags',['../struct_context.html#ad645c76f71cfb3fee6ab5320693f4f6e',1,'Context::eflags()'],['../struct_context.html#aeedfc39703ec8e0a1f052a832e74acd3',1,'Context::eflags()'],['../structtrap__frame.html#aeedfc39703ec8e0a1f052a832e74acd3',1,'trap_frame::eflags()']]],
-  ['eip_7',['eip',['../struct_context.html#a21175754f2c7a0026a73d0e185a86a6c',1,'Context::eip()'],['../structtrap__frame.html#a1588906901fc3015e0865574669a56a6',1,'trap_frame::eip()'],['../struct_context.html#a1588906901fc3015e0865574669a56a6',1,'Context::eip()']]],
-  ['end_8',['end',['../struct_area.html#aad168ddc204737fe1805492e33d0e904',1,'Area']]],
-  ['entry_9',['entry',['../struct_m_p_conf.html#a749ffad87b8cee51dfdbbfdef6052868',1,'MPConf']]],
-  ['epc_10',['epc',['../struct_context.html#a47b8e2534c8c988bbfbe2330cae47dcb',1,'Context']]],
-  ['errcode_11',['errcode',['../structtrap__frame.html#af929a4e39b4837fff4e774eb942ffc47',1,'trap_frame']]],
-  ['esi_12',['esi',['../struct_context.html#aab24e1686baebba98c5d65f08cd376ad',1,'Context::esi()'],['../struct_context.html#ada78e3124de6adf5a5d212f9ebc4bbe0',1,'Context::esi()']]],
-  ['esp_13',['esp',['../struct_context.html#a29cc3d5d8e43192cb880f80091882d7d',1,'Context::esp()'],['../struct_context.html#a7534a179bc9cc0ef26f0468e0959ee5c',1,'Context::esp()'],['../structtrap__frame.html#a7534a179bc9cc0ef26f0468e0959ee5c',1,'trap_frame::esp()']]],
-  ['esp0_14',['esp0',['../struct_context.html#ab8a56bd35e5f4765a5f6736fdd829a2f',1,'Context::esp0()'],['../struct____attribute____.html#ab8a56bd35e5f4765a5f6736fdd829a2f',1,'__attribute__::esp0()']]],
-  ['ev_15',['ev',['../struct____am__cpu__t.html#a5ee80e4a8cc7f2646d2ff4f833531828',1,'__am_cpu_t']]],
-  ['event_16',['event',['../struct_event.html#a6363bb7485aba8ae7d44b5d8d17240d0',1,'Event']]]
+  ['eflags_0',['eflags',['../structtrap__frame.html#aeedfc39703ec8e0a1f052a832e74acd3',1,'trap_frame']]],
+  ['eip_1',['eip',['../structtrap__frame.html#a1588906901fc3015e0865574669a56a6',1,'trap_frame']]],
+  ['end_2',['end',['../struct_area.html#aad168ddc204737fe1805492e33d0e904',1,'Area']]],
+  ['entry_3',['entry',['../struct_m_p_conf.html#a749ffad87b8cee51dfdbbfdef6052868',1,'MPConf']]],
+  ['errcode_4',['errcode',['../structtrap__frame.html#af929a4e39b4837fff4e774eb942ffc47',1,'trap_frame']]],
+  ['esp_5',['esp',['../structtrap__frame.html#a7534a179bc9cc0ef26f0468e0959ee5c',1,'trap_frame']]],
+  ['esp0_6',['esp0',['../struct____attribute____.html#ab8a56bd35e5f4765a5f6736fdd829a2f',1,'__attribute__']]],
+  ['event_7',['event',['../struct_event.html#a6363bb7485aba8ae7d44b5d8d17240d0',1,'Event']]]
 ];

@@ -1,14 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghijklmnoprstuvwxyz",
+  0: "_abcdefghijklmnoprstuvwxyz测",
   1: "_abcdefgiklmpstuv",
-  2: "acdgikmnoprstvx",
+  2: "aciklmoprstvx",
   3: "_abcdefghiklmnoprstuvwxy",
   4: "_abcdefghijklmnoprstuvwxyz",
-  5: "cdghipsv",
+  5: "cdghis",
   6: "ae",
-  7: "_abcdefghiklmnprstuvwx",
-  8: "ks"
+  7: "_abcdefgiklmnprstuvwx",
+  8: "ks测"
 };
 
 var indexSectionNames =
@@ -26,14 +26,14 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "全部",
-  1: "结构体",
-  2: "文件",
-  3: "函数",
-  4: "变量",
-  5: "类型定义",
-  6: "枚举值",
-  7: "宏定义",
-  8: "页"
+  0: "All",
+  1: "Data Structures",
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Typedefs",
+  6: "Enumerator",
+  7: "Macros",
+  8: "Pages"
 };
 

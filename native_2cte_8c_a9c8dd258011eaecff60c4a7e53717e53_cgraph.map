@@ -1,8 +1,0 @@
-<map id="irq_handle" name="irq_handle">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,87,83"/>
-<area shape="rect" id="node2" href="$native_2cte_8c.html#af03a5d8431ed9f14db12fb73dd89e32a" title=" " alt="" coords="135,5,288,32"/>
-<area shape="rect" id="node3" href="$native_2vme_8c.html#a83098472fe0a6fda68a29d21636251a6" title=" " alt="" coords="162,56,261,83"/>
-<area shape="rect" id="node6" href="$stdio_8c.html#a55f3d956bb2ba20b5059e9e25484a47f" title=" " alt="" coords="186,107,237,133"/>
-<area shape="rect" id="node4" href="$platform_8c.html#ad487173c7af5aa14fbb84ab6e2df502d" title=" " alt="" coords="343,31,472,57"/>
-<area shape="rect" id="node5" href="$platform_8c.html#a8a63810f218980350b40e5b670693609" title=" " alt="" coords="336,81,479,108"/>
-</map>
