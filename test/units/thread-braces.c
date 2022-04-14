@@ -4,6 +4,7 @@
 #include <spinlock.h>
 #include <thread.h>
 #include <logger.h>
+#include <devices.h>
 
 #define MAX_COUNT 100
 
@@ -19,6 +20,7 @@ void consumer(void *arg) {
       cnt--;
       tot++;
       spin_lock(&print_lock);
+      cprintf("tty1", ")");
       printf(")");
       spin_unlock(&print_lock);
       if (cnt == 0 && tot > MAX_COUNT) {
@@ -29,6 +31,7 @@ void consumer(void *arg) {
     spin_unlock(&cnt_lock);
   }
   spin_lock(&print_lock);
+  cprintf("tty1", "C");
   printf("C");
   spin_unlock(&print_lock);
   _log_mask = LOG_ERROR | LOG_WARN;
@@ -46,11 +49,13 @@ void producer(void *arg) {
     cnt++;
     tot++;
     spin_lock(&print_lock);
+    cprintf("tty1", "(");
     printf("(");
     spin_unlock(&print_lock);
     spin_unlock(&cnt_lock);
   }
   spin_lock(&print_lock);
+  cprintf("tty1", "P");
   printf("P");
   spin_unlock(&print_lock);
   while (1)
