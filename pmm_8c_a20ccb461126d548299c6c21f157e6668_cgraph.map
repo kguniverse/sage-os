@@ -1,0 +1,22 @@
+<map id="kalloc_safe" name="kalloc_safe">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,93,121"/>
+<area shape="rect" id="node2" href="$cte_8c.html#a79659a2b801c42951e38f3a8821acbae" title=" " alt="" coords="141,25,212,52"/>
+<area shape="rect" id="node4" href="$cte_8c.html#a4a139958742786c5085172be1f69bfd0" title=" " alt="" coords="155,95,198,121"/>
+<area shape="rect" id="node7" href="$pmm_8c.html#a350a830083f55f1886e000edec454a99" title=" " alt="" coords="149,171,205,197"/>
+<area shape="rect" id="node3" href="$x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee" title=" " alt="" coords="275,5,335,32"/>
+<area shape="rect" id="node5" href="$x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c" title=" " alt="" coords="286,56,325,83"/>
+<area shape="rect" id="node6" href="$x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2" title=" " alt="" coords="286,107,325,133"/>
+<area shape="rect" id="node8" href="$buddy_8c.html#a7d6c4f020f51f2a621ca1ab5a4e6a5bb" title="translate chunk address to virtual address" alt="" coords="724,157,807,184"/>
+<area shape="rect" id="node9" href="$buddy_8c.html#a37436a565869aa245cb46355dab020e2" title=" " alt="" coords="260,220,351,247"/>
+<area shape="rect" id="node20" href="$common_8h.html#afec4cf52a3e70c488446a06ea604f9df" title=" " alt="" coords="267,271,344,297"/>
+<area shape="rect" id="node10" href="$buddy_8c.html#aff6f2614df5664434766dd9c23971227" title=" " alt="" coords="399,245,487,272"/>
+<area shape="rect" id="node12" href="$structfree__list.html#a338aea6183dad7ec975539e4e1def837" title=" " alt="" coords="705,360,825,387"/>
+<area shape="rect" id="node11" href="$buddy_8c.html#acd10ee3138eeeac7c91ef5928f2135ea" title="make a chunk added to free list." alt="" coords="543,309,649,336"/>
+<area shape="rect" id="node15" href="$buddy_8c.html#a8a4afbc5643993142db5ad65b87b8c62" title=" " alt="" coords="555,259,637,285"/>
+<area shape="rect" id="node18" href="$buddy_8c.html#a48594e69fff9b58d5f41dca7d576eb35" title="Get the buddy chunk." alt="" coords="535,208,657,235"/>
+<area shape="rect" id="node13" href="$list_8h.html#a06a80666b3364324fc601ab7ae1ff20b" title=" " alt="" coords="732,309,799,336"/>
+<area shape="rect" id="node14" href="$list_8h.html#a83ecb02c2209a8fd5f6470d45a07f875" title=" " alt="" coords="873,309,955,336"/>
+<area shape="rect" id="node16" href="$list_8h.html#ab1708206f0f7e0a56550b35372203ba5" title=" " alt="" coords="734,259,797,285"/>
+<area shape="rect" id="node17" href="$list_8h.html#a24b474717d65a296695e8b79b4adefda" title=" " alt="" coords="875,259,953,285"/>
+<area shape="rect" id="node19" href="$buddy_8c.html#ad1eda4b9fbb516f58586845217f68723" title="translate virtual address to chunk address" alt="" coords="724,208,807,235"/>
+</map>

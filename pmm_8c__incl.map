@@ -1,13 +1,17 @@
 <map id="kernel/src/pmm.c" name="kernel/src/pmm.c">
-<area shape="rect" id="node1" title=" " alt="" coords="251,5,373,32"/>
-<area shape="rect" id="node2" href="$common_8h.html" title=" " alt="" coords="271,80,353,107"/>
-<area shape="rect" id="node3" href="$kernel_8h.html" title=" " alt="" coords="195,155,261,181"/>
-<area shape="rect" id="node9" href="$klib_8h.html" title=" " alt="" coords="286,155,338,181"/>
-<area shape="rect" id="node11" href="$klib-macros_8h.html" title=" " alt="" coords="363,155,461,181"/>
-<area shape="rect" id="node4" href="$am_8h.html" title=" " alt="" coords="203,229,253,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,304,69,331"/>
-<area shape="rect" id="node6" title=" " alt="" coords="287,304,355,331"/>
-<area shape="rect" id="node7" title=" " alt="" coords="93,304,168,331"/>
-<area shape="rect" id="node8" href="$amdev_8h.html" title=" " alt="" coords="193,304,263,331"/>
-<area shape="rect" id="node10" title=" " alt="" coords="350,229,418,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="64,5,187,32"/>
+<area shape="rect" id="node2" href="$common_8h.html" title=" " alt="" coords="177,155,260,181"/>
+<area shape="rect" id="node12" href="$logger_8h.html" title=" " alt="" coords="5,229,72,256"/>
+<area shape="rect" id="node14" href="$buddy_8h.html" title=" " alt="" coords="92,80,159,107"/>
+<area shape="rect" id="node3" href="$am_8h.html" title=" " alt="" coords="255,304,305,331"/>
+<area shape="rect" id="node7" href="$amdev_8h.html" title=" " alt="" coords="461,379,531,405"/>
+<area shape="rect" id="node8" href="$kernel_8h.html" title=" " alt="" coords="96,229,163,256"/>
+<area shape="rect" id="node9" href="$klib_8h.html" title=" " alt="" coords="326,229,378,256"/>
+<area shape="rect" id="node11" href="$klib-macros_8h.html" title=" " alt="" coords="403,229,501,256"/>
+<area shape="rect" id="node13" title=" " alt="" coords="187,229,250,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="139,379,203,405"/>
+<area shape="rect" id="node5" title=" " alt="" coords="326,379,394,405"/>
+<area shape="rect" id="node6" title=" " alt="" coords="227,379,301,405"/>
+<area shape="rect" id="node10" title=" " alt="" coords="390,304,458,331"/>
+<area shape="rect" id="node15" href="$list_8h.html" title="double circular linked list impl without concurrency" alt="" coords="94,155,143,181"/>
 </map>

@@ -1,11 +1,9 @@
 <map id="boot_record" name="boot_record">
-<area shape="rect" id="node1" title=" " alt="" coords="585,107,676,133"/>
-<area shape="rect" id="node2" href="$mpe_8c.html#a0a540532023afb1f31b6f21ce053483b" title=" " alt="" coords="388,56,537,83"/>
-<area shape="rect" id="node5" href="$trm_8c.html#a54a85aeee6f6a8ef875d4cca663f9fd8" title=" " alt="" coords="26,81,95,108"/>
-<area shape="rect" id="node8" href="$mpe_8c.html#a2e4a724e2d067425ff3fd49bc0bf42e1" title=" " alt="" coords="427,157,498,184"/>
-<area shape="rect" id="node3" href="$trm_8c.html#a483cb97188e557c3c68d3a1572c2cc92" title=" " alt="" coords="293,56,336,83"/>
-<area shape="rect" id="node4" href="$trm_8c.html#a12a49ff4d3a586b2315e292c5da3df7e" title=" " alt="" coords="164,56,241,83"/>
-<area shape="rect" id="node6" href="$os_8c.html#a5f9cb32664e017ca15c49ec66e5342e4" title=" " alt="" coords="172,5,233,32"/>
-<area shape="rect" id="node7" href="$os_8c.html#aafec7046aa50c914df86d0d22d4fc1d1" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node9" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="289,157,340,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="544,56,635,83"/>
+<area shape="rect" id="node2" href="$mpe_8c.html#a0a540532023afb1f31b6f21ce053483b" title=" " alt="" coords="347,5,496,32"/>
+<area shape="rect" id="node5" href="$trm_8c.html#a54a85aeee6f6a8ef875d4cca663f9fd8" title=" " alt="" coords="5,31,75,57"/>
+<area shape="rect" id="node6" href="$mpe_8c.html#a2e4a724e2d067425ff3fd49bc0bf42e1" title=" " alt="" coords="386,107,457,133"/>
+<area shape="rect" id="node3" href="$trm_8c.html#a483cb97188e557c3c68d3a1572c2cc92" title=" " alt="" coords="252,5,295,32"/>
+<area shape="rect" id="node4" href="$trm_8c.html#a12a49ff4d3a586b2315e292c5da3df7e" title=" " alt="" coords="123,5,200,32"/>
+<area shape="rect" id="node7" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="248,107,299,133"/>
 </map>

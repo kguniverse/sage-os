@@ -1,0 +1,7 @@
+<map id="kmt_get_task" name="kmt_get_task">
+<area shape="rect" id="node1" title="get current cpu&#39;s tasks" alt="" coords="456,56,557,83"/>
+<area shape="rect" id="node2" href="$kmt_8c.html#af9c485ce0d89d6624e6e80e31d8ed207" title="handler: save context to current task" alt="" coords="280,5,408,32"/>
+<area shape="rect" id="node4" href="$kmt_8c.html#af360ef0d98ca30e481cc58ea3695fd58" title=" " alt="" coords="5,81,116,108"/>
+<area shape="rect" id="node5" href="$kmt_8c.html#ad4d70b4093829da1c0b0631abdff7747" title="handler: schedule next task to run Notice: this should be the only handler which returns real Context" alt="" coords="293,56,395,83"/>
+<area shape="rect" id="node3" href="$kmt_8c.html#a0c68a294cecc4be7cb4b495f15b883a0" title="initialize kmt module" alt="" coords="164,56,232,83"/>
+</map>

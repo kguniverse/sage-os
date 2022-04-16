@@ -1,0 +1,16 @@
+<map id="os_trap" name="os_trap">
+<area shape="rect" id="node1" title="System trap entry." alt="" coords="5,81,71,108"/>
+<area shape="rect" id="node2" href="$spinlock_8c.html#ad4be0d674a7ca4dc90c2dbf8b34562cc" title="check current cpu has the lock" alt="" coords="257,81,352,108"/>
+<area shape="rect" id="node11" href="$spinlock_8c.html#ab6f3c37ec37006951feccc3c05387cce" title="acquire spinlock to current cpu" alt="" coords="125,132,203,159"/>
+<area shape="rect" id="node14" href="$spinlock_8c.html#acdf118d615a4bc4064e991add9a80995" title="release spinlock from current cpu" alt="" coords="119,31,209,57"/>
+<area shape="rect" id="node3" href="$mpe_8c.html#ab701de78cad32896c923ce900087e714" title=" " alt="" coords="543,81,633,108"/>
+<area shape="rect" id="node4" href="$spinlock_8c.html#afc9565dc7a5ddf77e1fa76f5d91caf78" title="interrupt able" alt="" coords="404,31,491,57"/>
+<area shape="rect" id="node8" href="$spinlock_8c.html#ab213874cda54fdbbeb1bec1e5fa90b28" title="interrupt disable" alt="" coords="400,132,495,159"/>
+<area shape="rect" id="node5" href="$cte_8c.html#a4a139958742786c5085172be1f69bfd0" title=" " alt="" coords="567,31,609,57"/>
+<area shape="rect" id="node6" href="$x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c" title=" " alt="" coords="692,56,731,83"/>
+<area shape="rect" id="node7" href="$x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2" title=" " alt="" coords="692,5,731,32"/>
+<area shape="rect" id="node9" href="$cte_8c.html#a79659a2b801c42951e38f3a8821acbae" title=" " alt="" coords="553,132,623,159"/>
+<area shape="rect" id="node10" href="$x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee" title=" " alt="" coords="681,132,741,159"/>
+<area shape="rect" id="node12" href="$mpe_8c.html#aaaad47c97c82065cf463f83b98b23c30" title=" " alt="" coords="257,233,352,260"/>
+<area shape="rect" id="node13" href="$x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112" title=" " alt="" coords="423,233,472,260"/>
+</map>

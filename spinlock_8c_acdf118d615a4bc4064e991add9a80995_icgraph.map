@@ -1,0 +1,15 @@
+<map id="spin_unlock" name="spin_unlock">
+<area shape="rect" id="node1" title="release spinlock from current cpu" alt="" coords="683,178,773,205"/>
+<area shape="rect" id="node2" href="$kmt_8c.html#af9c485ce0d89d6624e6e80e31d8ed207" title="handler: save context to current task" alt="" coords="316,26,444,53"/>
+<area shape="rect" id="node4" href="$kmt_8c.html#af360ef0d98ca30e481cc58ea3695fd58" title=" " alt="" coords="5,134,116,161"/>
+<area shape="rect" id="node5" href="$kmt_8c.html#a5ddb8743298012e84cf9cb5faf22212b" title="create thread" alt="" coords="173,197,259,224"/>
+<area shape="rect" id="node6" href="$kmt_8c.html#a0ac321d3074b24b276695a080e835866" title="print all tasks notice: do not garantee concurrency safety" alt="" coords="496,77,631,104"/>
+<area shape="rect" id="node8" href="$kmt_8c.html#ad4d70b4093829da1c0b0631abdff7747" title="handler: schedule next task to run Notice: this should be the only handler which returns real Context" alt="" coords="329,128,431,154"/>
+<area shape="rect" id="node9" href="$kmt_8c.html#ac69761d0146d9aacda65da757868d3c7" title="print all current_tasks notice: do not garantee concurrency safety" alt="" coords="492,128,635,154"/>
+<area shape="rect" id="node10" href="$kmt_8c.html#a47d8887c87041abd5ea3148232b65c93" title="tear down a thread" alt="" coords="164,248,268,274"/>
+<area shape="rect" id="node11" href="$kernel_8h.html#a7ef2d722f9c7f8acc1801144a5188825" title=" " alt="" coords="524,330,603,357"/>
+<area shape="rect" id="node12" href="$os_8c.html#a2be1c9facb49d4439f41b1537d0f3ef8" title="System trap entry." alt="" coords="531,381,596,408"/>
+<area shape="rect" id="node3" href="$kmt_8c.html#a0c68a294cecc4be7cb4b495f15b883a0" title="initialize kmt module" alt="" coords="182,102,250,129"/>
+<area shape="rect" id="node7" href="$kmt_8c.html#ad3fbc643b7b6092120c5152b4c890354" title="handler: handle program errors" alt="" coords="341,77,419,104"/>
+<area shape="rect" id="node13" href="$os_8c.html#aafec7046aa50c914df86d0d22d4fc1d1" title=" " alt="" coords="325,381,435,408"/>
+</map>

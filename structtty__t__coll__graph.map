@@ -1,0 +1,9 @@
+<map id="tty_t" name="tty_t">
+<area shape="rect" id="node1" title=" " alt="" coords="215,213,261,240"/>
+<area shape="rect" id="node2" href="$structsemaphore.html" title=" " alt="" coords="5,95,92,121"/>
+<area shape="rect" id="node3" href="$structdevice.html" title=" " alt="" coords="116,95,176,121"/>
+<area shape="rect" id="node4" href="$structdevops.html" title=" " alt="" coords="114,5,178,32"/>
+<area shape="rect" id="node5" href="$structcharacter.html" title=" " alt="" coords="200,95,276,121"/>
+<area shape="rect" id="node6" href="$structtty__queue.html" title=" " alt="" coords="300,95,379,121"/>
+<area shape="rect" id="node7" href="$structsprite.html" title=" " alt="" coords="403,95,457,121"/>
+</map>

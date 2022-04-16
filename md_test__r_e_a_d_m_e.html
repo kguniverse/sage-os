@@ -114,6 +114,7 @@ $(document).ready(function(){initNavTree('md_test__r_e_a_d_m_e.html',''); initRe
 <div class="textblock"><h1><a class="anchor" id="autotoc_md3"></a>
 介绍</h1>
 <p >目前测试框架更名为 <code>test</code>，并且做了许多简化和使用改进。现在不再是每个测试一个子目录，而是所有测试都在这个目录中。</p>
+<p >**注意（2022/04/11更新）原有一键测试命令 <code>make run</code> 现更名为 <code>make test</code>，<code>make run</code> 现用于运行单一测试！</p>
 <p >注意：原有的 <code>tests</code> 文件夹已经删除，请不要再对它进行操作！</p>
 <p >测试框架支持以下功能：</p>
 <ul>
@@ -130,7 +131,7 @@ $(document).ready(function(){initNavTree('md_test__r_e_a_d_m_e.html',''); initRe
 <div class="line">└── units       # 存放单元测试</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
 行为说明</h2>
-<p >下面以 <code>make run</code> 为例，说明当你运行回归测试时发生了什么：</p>
+<p >下面以 <code>make test</code> 为例，说明当你运行回归测试时发生了什么：</p>
 <ol type="1">
 <li>GNU make 程序读取 <code>test/Makefile</code> 文件并执行 <code>run</code> target</li>
 <li>将会扫描 <code>units</code> 下的每一个 .c 文件，并为它生成对应的 <code>Makefile.xxx</code></li>
@@ -146,36 +147,37 @@ $(document).ready(function(){initNavTree('md_test__r_e_a_d_m_e.html',''); initRe
 使用</h1>
 <h2><a class="anchor" id="autotoc_md7"></a>
 编写单元测试</h2>
-<p >你可以在 <code>units</code> 目录下编写单元测试：</p>
-<ul>
-<li>新建 <code>xxx.c</code> 文件，这里的文件名 <code>xxx</code> 就是单元测试的名称</li>
-<li>编写单元测试时，使用 <code>check</code> 函数判断 condition</li>
+<p ><code>units</code> 下可以有两种文件：</p><ul>
+<li><code>test_</code> 开头的 c 程序将被视作自动化测试，要求不能陷入死循环</li>
+<li>其他程序将用于运行和展示，可以死循环</li>
 </ul>
-<p >你可以参考 <code>add.c</code> 文件，使用数组对多种输入输出进行判断。</p>
+<p >你可以参考 <code>test_add.c</code> 文件，使用数组对多种输入输出进行判断。</p>
 <p >在编写时，如果你的测试比较庞大，建议使用 <code>logger</code> 而不是 <code>printf</code> 打印结果。</p>
 <h2><a class="anchor" id="autotoc_md8"></a>
 环境变量</h2>
-<p >你可以直接执行 <code>export</code> 定义环境变量，也可以在 make 命令中加入环境变量。前者有时会更方便。</p>
-<p >可配置的环境变量有：</p>
+<p >你可以直接执行 <code>export</code> 定义环境变量，也可以在 make 命令中加入环境变量。建议使用前者，例如：</p>
+<div class="fragment"><div class="line">export smp=4</div>
+<div class="line">export LOG_MASK=15</div>
+</div><!-- fragment --><p >可配置的环境变量有：</p>
 <ul>
-<li><code>ARCH</code>: 当前支持 <code>native</code> 和 <code>x86_64-qemu</code>, 若 ARCH 不指定，则默认为 <code>native</code>.</li>
-<li><code>smp</code>: 处理器数量，默认为 1</li>
-<li><code>CFLAGS_EXTRA</code>: gcc 编译时的额外选项，默认为空。例如 <code>"-DSIMULATE_PMM"</code> （已默认加上 <code>-DTEST</code>）</li>
+<li><code>ARCH</code>: 当前支持 <code>native</code> 和 <code>x86_64-qemu</code>, 若 ARCH 不指定，则默认为 <code>x86_64-qemu</code>.</li>
+<li><code>smp</code>: 处理器数量，默认为 2</li>
+<li><code>CFLAGS_EXTRA</code>: gcc 编译时的额外选项，默认为空。例如 <code>"-DSIMULATE_PMM"</code> （已默认加上 <code>-DTEST</code> 和 <code>-DLOG_MASK=xxx</code>）</li>
+<li><code>LOG_MASK</code>: logger 输出mask, 详见 logger.h. 默认输出 <a class="el" href="logger_8h.html#a5b9a882fdc463a3d4dcc99840fd0adb8">error(8)</a>, <a class="el" href="logger_8h.html#aaa6ad2ce683c5c5f5984faef407531d7">warn(4)</a>, <a class="el" href="logger_8h.html#a8ee1f79b193a2069a4f74c155ce97f66">info(2)</a>, 也就是说默认值为14. 如果你要输出success(1)，设置为15即可</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md9"></a>
 运行测试</h2>
 <p ><b>运行全部测试：</b></p>
-<div class="fragment"><div class="line">make run ARCH=x86_64-qemu</div>
+<div class="fragment"><div class="line">make test</div>
 </div><!-- fragment --><p >如果出现错误，可以查看 <code>out</code> 文件夹内的输出内容。</p>
-<p ><b>编译单个测试：</b></p>
-<div class="fragment"><div class="line">make build ARCH=x86_64-qemu target=xxx</div>
+<p ><b>运行单个测试：</b></p>
+<div class="fragment"><div class="line">make run target=xxx</div>
 </div><!-- fragment --><p >必须要指定 <code>target=xxx</code>，其中 <code>xxx</code> 是在 <code>units</code> 目录下的文件名（没有 .c 后缀）。</p>
-<p >如果你想运行单个测试，在编译后直接运行 <code>build</code> 目录对应的可执行文件即可。</p>
 <p ><b>调试单个测试：</b></p>
 <p >为了便于调试单个测试，编写了 vscode 的相应调试配置，你只需要把 <code>.vscode</code> 目录下的模板文件复制一份（注意不要删除或直接改名）并更名为 <code>launch.json</code> 和 <code>tasks.json</code> 即可使用。</p>
 <p >如果你要调试native，在对应单元测试文件上直接调试，配置选择 <code>unit test (native)</code> 即可。</p>
 <p >如果你要调试QEMU，运行如下命令：</p>
-<div class="fragment"><div class="line">make debug ARCH=x86_64-qemu target=xxx</div>
+<div class="fragment"><div class="line">make debug target=xxx</div>
 </div><!-- fragment --><p >并在对应单元测试文件运行调试配置 <code>unit test (QEMU)</code> 即可。</p>
 <p ><b>清除编译文件</b></p>
 <div class="fragment"><div class="line">make clean</div>

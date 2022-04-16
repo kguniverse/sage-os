@@ -9,7 +9,7 @@ var amdev_8h =
     [ "AM_KEY_NAMES", "amdev_8h.html#ab33b5573880e95a61b449f6f181ef53c", null ],
     [ "AM_KEYS", "amdev_8h.html#a5aef801838afd1c022ac318ce993e7fe", null ],
     [ "gpuptr_t", "amdev_8h.html#a1007ff1de11221f98ef847d697f47ffd", null ],
-    [ "__attribute__", "amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c", null ],
+    [ "__attribute__", "amdev_8h.html#a94d52297e52229874013b3f9de38b3de", null ],
     [ "AM_DEVREG", "amdev_8h.html#a3e75a9c2b4b4263c5d629ccecc47f057", null ],
     [ "AM_DEVREG", "amdev_8h.html#a04b399529b27e30e43d94f042602f3cb", null ],
     [ "AM_DEVREG", "amdev_8h.html#a690ea4ae45967c4be398609738c71772", null ],

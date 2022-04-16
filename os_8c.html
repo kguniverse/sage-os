@@ -109,27 +109,75 @@ $(document).ready(function(){initNavTree('os_8c.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">os.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">common.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="spinlock_8h_source.html">spinlock.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for os.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c__incl.svg" width="467" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c__incl.svg" width="583" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structirq__handler.html">irq_handler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">wrap struct for handler_t, use in os_trap and os_on_irq; use as a linked list.  <a href="structirq__handler.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ae6e5dec51c5285a47b9c5050e959cc45"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structirq__handler.html">irq_handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#ae6e5dec51c5285a47b9c5050e959cc45">IRQ_handler</a></td></tr>
+<tr class="memdesc:ae6e5dec51c5285a47b9c5050e959cc45"><td class="mdescLeft">&#160;</td><td class="mdescRight">wrap struct for handler_t, use in os_trap and os_on_irq; use as a linked list.  <a href="os_8c.html#ae6e5dec51c5285a47b9c5050e959cc45">More...</a><br /></td></tr>
+<tr class="separator:ae6e5dec51c5285a47b9c5050e959cc45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aef4448ba4711b237d8254529f2a4b621"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#aef4448ba4711b237d8254529f2a4b621">os_init</a> ()</td></tr>
+<tr class="memdesc:aef4448ba4711b237d8254529f2a4b621"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialze system; will be executed only once (not per cpu)  <a href="os_8c.html#aef4448ba4711b237d8254529f2a4b621">More...</a><br /></td></tr>
 <tr class="separator:aef4448ba4711b237d8254529f2a4b621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9cb32664e017ca15c49ec66e5342e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#a5f9cb32664e017ca15c49ec66e5342e4">os_run</a> ()</td></tr>
+<tr class="memdesc:a5f9cb32664e017ca15c49ec66e5342e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">cpu start entry  <a href="os_8c.html#a5f9cb32664e017ca15c49ec66e5342e4">More...</a><br /></td></tr>
 <tr class="separator:a5f9cb32664e017ca15c49ec66e5342e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be1c9facb49d4439f41b1537d0f3ef8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#a2be1c9facb49d4439f41b1537d0f3ef8">os_trap</a> (<a class="el" href="struct_event.html">Event</a> ev, <a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *context)</td></tr>
+<tr class="memdesc:a2be1c9facb49d4439f41b1537d0f3ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">System trap entry.  <a href="os_8c.html#a2be1c9facb49d4439f41b1537d0f3ef8">More...</a><br /></td></tr>
+<tr class="separator:a2be1c9facb49d4439f41b1537d0f3ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e30995c99da2c7a7f7f6e7ea690b5aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#a5e30995c99da2c7a7f7f6e7ea690b5aa">os_on_irq</a> (int seq, int <a class="el" href="dev__input_8c.html#a563b481ccf29d84566d2d08d53a5ef78">event</a>, <a class="el" href="kernel_8h.html#a7382b09e9bf57ec8165b33b23a11c699">handler_t</a> handler)</td></tr>
+<tr class="memdesc:a5e30995c99da2c7a7f7f6e7ea690b5aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">register interrupt handlers.  <a href="os_8c.html#a5e30995c99da2c7a7f7f6e7ea690b5aa">More...</a><br /></td></tr>
+<tr class="separator:a5e30995c99da2c7a7f7f6e7ea690b5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafec7046aa50c914df86d0d22d4fc1d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#aafec7046aa50c914df86d0d22d4fc1d1">MODULE_DEF</a> (os)</td></tr>
 <tr class="separator:aafec7046aa50c914df86d0d22d4fc1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:acc99f5d09342caef3c3a5faf2e5b73fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="os_8c.html#ae6e5dec51c5285a47b9c5050e959cc45">IRQ_handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#acc99f5d09342caef3c3a5faf2e5b73fa">root_irq_handler</a> = {INT_MIN, EVENT_NULL, NULL, NULL}</td></tr>
+<tr class="separator:acc99f5d09342caef3c3a5faf2e5b73fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e82157cac4649d6aa7065584782fe23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="kernel_8h.html#a23e7982381ce4b480b250790ce149f3d">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os_8c.html#a5e82157cac4649d6aa7065584782fe23">ir_lock</a></td></tr>
+<tr class="separator:a5e82157cac4649d6aa7065584782fe23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ae6e5dec51c5285a47b9c5050e959cc45" name="ae6e5dec51c5285a47b9c5050e959cc45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e5dec51c5285a47b9c5050e959cc45">&#9670;&nbsp;</a></span>IRQ_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structirq__handler.html">irq_handler</a> <a class="el" href="os_8c.html#ae6e5dec51c5285a47b9c5050e959cc45">IRQ_handler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>wrap struct for handler_t, use in os_trap and os_on_irq; use as a linked list. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aafec7046aa50c914df86d0d22d4fc1d1" name="aafec7046aa50c914df86d0d22d4fc1d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafec7046aa50c914df86d0d22d4fc1d1">&#9670;&nbsp;</a></span>MODULE_DEF()</h2>
@@ -149,7 +197,7 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_aafec7046aa50c914df86d0d22d4fc1d1_cgraph.svg" width="816" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_aafec7046aa50c914df86d0d22d4fc1d1_cgraph.svg" width="919" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -177,10 +225,82 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>initialze system; will be executed only once (not per cpu) </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_aef4448ba4711b237d8254529f2a4b621_cgraph.svg" width="190" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_aef4448ba4711b237d8254529f2a4b621_icgraph.svg" width="230" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5e30995c99da2c7a7f7f6e7ea690b5aa" name="a5e30995c99da2c7a7f7f6e7ea690b5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e30995c99da2c7a7f7f6e7ea690b5aa">&#9670;&nbsp;</a></span>os_on_irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void os_on_irq </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="kernel_8h.html#a7382b09e9bf57ec8165b33b23a11c699">handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>register interrupt handlers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seq</td><td>determines the order in which handlers are called。 smaller seq are called first。 </td></tr>
+    <tr><td class="paramname">event</td><td>event type, see am.h </td></tr>
+    <tr><td class="paramname">handler</td><td>interrupt handler </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_a5e30995c99da2c7a7f7f6e7ea690b5aa_cgraph.svg" width="192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_a5e30995c99da2c7a7f7f6e7ea690b5aa_icgraph.svg" width="248" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -208,10 +328,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>cpu start entry </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_a5f9cb32664e017ca15c49ec66e5342e4_cgraph.svg" width="658" height="408"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_a5f9cb32664e017ca15c49ec66e5342e4_cgraph.svg" width="299" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -220,6 +342,93 @@ Here is the caller graph for this function:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_a5f9cb32664e017ca15c49ec66e5342e4_icgraph.svg" width="231" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<a id="a2be1c9facb49d4439f41b1537d0f3ef8" name="a2be1c9facb49d4439f41b1537d0f3ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be1c9facb49d4439f41b1537d0f3ef8">&#9670;&nbsp;</a></span>os_trap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> * os_trap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_event.html">Event</a>&#160;</td>
+          <td class="paramname"><em>ev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>System trap entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ev</td><td></td></tr>
+    <tr><td class="paramname">context</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Context* </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_a2be1c9facb49d4439f41b1537d0f3ef8_cgraph.svg" width="747" height="266"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="os_8c_a2be1c9facb49d4439f41b1537d0f3ef8_icgraph.svg" width="235" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a5e82157cac4649d6aa7065584782fe23" name="a5e82157cac4649d6aa7065584782fe23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e82157cac4649d6aa7065584782fe23">&#9670;&nbsp;</a></span>ir_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="kernel_8h.html#a23e7982381ce4b480b250790ce149f3d">spinlock_t</a> ir_lock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc99f5d09342caef3c3a5faf2e5b73fa" name="acc99f5d09342caef3c3a5faf2e5b73fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc99f5d09342caef3c3a5faf2e5b73fa">&#9670;&nbsp;</a></span>root_irq_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="os_8c.html#ae6e5dec51c5285a47b9c5050e959cc45">IRQ_handler</a> root_irq_handler = {INT_MIN, EVENT_NULL, NULL, NULL}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

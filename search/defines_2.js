@@ -11,7 +11,9 @@ var searchData=
   ['bg_5fyellow_8',['BG_YELLOW',['../logger_8h.html#ab31fe3e74b1137650d30ede5c9b86218',1,'logger.h']]],
   ['blksz_9',['BLKSZ',['../ioe_8c.html#a3dda7d0cf7512782702ac17512fd2e30',1,'ioe.c']]],
   ['bootrec_5faddr_10',['BOOTREC_ADDR',['../x86_8h.html#ac521cb17ae679a95547e6981812db7be',1,'x86.h']]],
-  ['bug_11',['bug',['../x86-qemu_8h.html#a82e59fca1d69cfb5f8099aff9aa48810',1,'x86-qemu.h']]],
-  ['bug_5fon_12',['bug_on',['../x86-qemu_8h.html#adfdfa93a54271c26b83bb2c8aad1f5a2',1,'x86-qemu.h']]],
-  ['busy_13',['BUSY',['../ioe_8c.html#ab5be0aaddb58ffb9cb20c12530d66316',1,'ioe.c']]]
+  ['buddy_5fmax_5forder_11',['BUDDY_MAX_ORDER',['../buddy_8h.html#ae3b1d0d15fe8498f84384fe6f84ae74e',1,'buddy.h']]],
+  ['buddy_5fpage_5fsize_5forder_12',['BUDDY_PAGE_SIZE_ORDER',['../buddy_8c.html#af7da63ccb95517f90924acf5353c2e66',1,'buddy.c']]],
+  ['bug_13',['bug',['../x86-qemu_8h.html#a82e59fca1d69cfb5f8099aff9aa48810',1,'x86-qemu.h']]],
+  ['bug_5fon_14',['bug_on',['../x86-qemu_8h.html#adfdfa93a54271c26b83bb2c8aad1f5a2',1,'x86-qemu.h']]],
+  ['busy_15',['BUSY',['../ioe_8c.html#ab5be0aaddb58ffb9cb20c12530d66316',1,'ioe.c']]]
 ];

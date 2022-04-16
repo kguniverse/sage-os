@@ -1,0 +1,19 @@
+<map id="kernel/include/devices.h" name="kernel/include/devices.h">
+<area shape="rect" id="node1" title=" " alt="" coords="281,5,443,32"/>
+<area shape="rect" id="node2" href="$common_8h.html" title=" " alt="" coords="269,229,351,256"/>
+<area shape="rect" id="node14" href="$spinlock_8h.html" title=" " alt="" coords="270,155,350,181"/>
+<area shape="rect" id="node15" href="$sem_8h.html" title=" " alt="" coords="469,229,527,256"/>
+<area shape="rect" id="node16" href="$thread_8h.html" title=" " alt="" coords="215,80,283,107"/>
+<area shape="rect" id="node3" href="$am_8h.html" title=" " alt="" coords="193,379,243,405"/>
+<area shape="rect" id="node7" href="$amdev_8h.html" title=" " alt="" coords="320,453,391,480"/>
+<area shape="rect" id="node8" href="$kernel_8h.html" title=" " alt="" coords="486,304,553,331"/>
+<area shape="rect" id="node9" href="$klib_8h.html" title=" " alt="" coords="7,304,59,331"/>
+<area shape="rect" id="node11" href="$klib-macros_8h.html" title=" " alt="" coords="174,304,273,331"/>
+<area shape="rect" id="node12" href="$logger_8h.html" title=" " alt="" coords="83,304,150,331"/>
+<area shape="rect" id="node13" title=" " alt="" coords="399,304,461,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="219,453,283,480"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,453,73,480"/>
+<area shape="rect" id="node6" title=" " alt="" coords="121,453,195,480"/>
+<area shape="rect" id="node10" title=" " alt="" coords="71,379,139,405"/>
+<area shape="rect" id="node17" href="$list_8h.html" title="double circular linked list impl without concurrency" alt="" coords="132,155,181,181"/>
+</map>

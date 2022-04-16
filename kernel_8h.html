@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('kernel_8h.html',''); initResizable(); 
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">kernel.h File Reference</div></div>
 </div><!--header-->
@@ -124,7 +125,7 @@ Include dependency graph for kernel.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="kernel_8h__dep__incl.svg" width="414" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="kernel_8h__dep__incl.svg" width="1135" height="426"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -137,12 +138,29 @@ Macros</h2></td></tr>
 <tr class="memitem:abeb95e99b8b234249d79016bacac3523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#abeb95e99b8b234249d79016bacac3523">MODULE_DEF</a>(mod)</td></tr>
 <tr class="separator:abeb95e99b8b234249d79016bacac3523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a7382b09e9bf57ec8165b33b23a11c699"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#a7382b09e9bf57ec8165b33b23a11c699">handler_t</a>) (<a class="el" href="struct_event.html">Event</a>, <a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *)</td></tr>
+<tr class="separator:a7382b09e9bf57ec8165b33b23a11c699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade04e552d18bad454515b6a32d31bb7b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtask.html">task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#ade04e552d18bad454515b6a32d31bb7b">task_t</a></td></tr>
+<tr class="separator:ade04e552d18bad454515b6a32d31bb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e7982381ce4b480b250790ce149f3d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structspinlock.html">spinlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#a23e7982381ce4b480b250790ce149f3d">spinlock_t</a></td></tr>
+<tr class="separator:a23e7982381ce4b480b250790ce149f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae45b45406b418e90b69d59ec697cb4e2"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsemaphore.html">semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#ae45b45406b418e90b69d59ec697cb4e2">sem_t</a></td></tr>
+<tr class="separator:ae45b45406b418e90b69d59ec697cb4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b572d3f5a6e3ec7e00ecf487b0acf49"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structdevice.html">device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#a7b572d3f5a6e3ec7e00ecf487b0acf49">device_t</a></td></tr>
+<tr class="separator:a7b572d3f5a6e3ec7e00ecf487b0acf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa26eae0f4368a1b7b84898fccc5f4053"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#aa26eae0f4368a1b7b84898fccc5f4053">MODULE</a> (os)</td></tr>
 <tr class="separator:aa26eae0f4368a1b7b84898fccc5f4053"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5fefb42282ff313d6e6526fe793e1c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#ab5fefb42282ff313d6e6526fe793e1c0">MODULE</a> (pmm)</td></tr>
 <tr class="separator:ab5fefb42282ff313d6e6526fe793e1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef2d722f9c7f8acc1801144a5188825"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#a7ef2d722f9c7f8acc1801144a5188825">MODULE</a> (kmt)</td></tr>
+<tr class="separator:a7ef2d722f9c7f8acc1801144a5188825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfee56986108d7e34539023df7cce17d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8h.html#adfee56986108d7e34539023df7cce17d">MODULE</a> (dev)</td></tr>
+<tr class="separator:adfee56986108d7e34539023df7cce17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a18f346403cbf6431c83f71aa8a6d5bb6" name="a18f346403cbf6431c83f71aa8a6d5bb6"></a>
@@ -187,9 +205,122 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a7b572d3f5a6e3ec7e00ecf487b0acf49" name="a7b572d3f5a6e3ec7e00ecf487b0acf49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b572d3f5a6e3ec7e00ecf487b0acf49">&#9670;&nbsp;</a></span>device_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structdevice.html">device</a> <a class="el" href="kernel_8h.html#a7b572d3f5a6e3ec7e00ecf487b0acf49">device_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7382b09e9bf57ec8165b33b23a11c699" name="a7382b09e9bf57ec8165b33b23a11c699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7382b09e9bf57ec8165b33b23a11c699">&#9670;&nbsp;</a></span>handler_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *(* handler_t) (<a class="el" href="struct_event.html">Event</a>, <a class="el" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae45b45406b418e90b69d59ec697cb4e2" name="ae45b45406b418e90b69d59ec697cb4e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae45b45406b418e90b69d59ec697cb4e2">&#9670;&nbsp;</a></span>sem_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structsemaphore.html">semaphore</a> <a class="el" href="kernel_8h.html#ae45b45406b418e90b69d59ec697cb4e2">sem_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23e7982381ce4b480b250790ce149f3d" name="a23e7982381ce4b480b250790ce149f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e7982381ce4b480b250790ce149f3d">&#9670;&nbsp;</a></span>spinlock_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structspinlock.html">spinlock</a> <a class="el" href="kernel_8h.html#a23e7982381ce4b480b250790ce149f3d">spinlock_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade04e552d18bad454515b6a32d31bb7b" name="ade04e552d18bad454515b6a32d31bb7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade04e552d18bad454515b6a32d31bb7b">&#9670;&nbsp;</a></span>task_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structtask.html">task</a> <a class="el" href="kernel_8h.html#ade04e552d18bad454515b6a32d31bb7b">task_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="adfee56986108d7e34539023df7cce17d" name="adfee56986108d7e34539023df7cce17d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfee56986108d7e34539023df7cce17d">&#9670;&nbsp;</a></span>MODULE() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE </td>
+          <td>(</td>
+          <td class="paramtype">dev&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ef2d722f9c7f8acc1801144a5188825" name="a7ef2d722f9c7f8acc1801144a5188825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef2d722f9c7f8acc1801144a5188825">&#9670;&nbsp;</a></span>MODULE() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE </td>
+          <td>(</td>
+          <td class="paramtype">kmt&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="kernel_8h_a7ef2d722f9c7f8acc1801144a5188825_cgraph.svg" width="760" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="aa26eae0f4368a1b7b84898fccc5f4053" name="aa26eae0f4368a1b7b84898fccc5f4053"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa26eae0f4368a1b7b84898fccc5f4053">&#9670;&nbsp;</a></span>MODULE() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26eae0f4368a1b7b84898fccc5f4053">&#9670;&nbsp;</a></span>MODULE() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,11 +334,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="kernel_8h_aa26eae0f4368a1b7b84898fccc5f4053_cgraph.svg" width="192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
 <a id="ab5fefb42282ff313d6e6526fe793e1c0" name="ab5fefb42282ff313d6e6526fe793e1c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5fefb42282ff313d6e6526fe793e1c0">&#9670;&nbsp;</a></span>MODULE() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5fefb42282ff313d6e6526fe793e1c0">&#9670;&nbsp;</a></span>MODULE() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

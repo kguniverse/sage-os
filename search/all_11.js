@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['r_0',['r',['../structpixel.html#a4c5c6ceb8ed33456261fa907136e0c3a',1,'pixel::r()'],['../ioe_8c.html#a4c5c6ceb8ed33456261fa907136e0c3a',1,'r():&#160;ioe.c']]],
-  ['r_1',['R',['../ioe_8c.html#a283a97eb969495ff8d6c70d7cff572d6',1,'ioe.c']]],
-  ['rand_2',['rand',['../stdlib_8c.html#ae23144bcbb8e3742b00eb687c36654d1',1,'rand(void):&#160;stdlib.c'],['../klib_8h.html#ae23144bcbb8e3742b00eb687c36654d1',1,'rand(void):&#160;stdlib.c']]],
-  ['range_3',['RANGE',['../klib-macros_8h.html#a88ba2ef36e68c59ef4fc8b27ad8e6336',1,'klib-macros.h']]],
-  ['rdtsc_4',['rdtsc',['../x86_8h.html#a47b9d70be3022fd0b5687d9794ca47bc',1,'x86.h']]],
-  ['read_5frtc_5',['read_rtc',['../ioe_8c.html#a124b85735169c7add3c491093ffbc00e',1,'ioe.c']]],
-  ['read_5frtc_5fasync_6',['read_rtc_async',['../ioe_8c.html#ad0681f53bec9167d7a8d4d848b3ce2e0',1,'ioe.c']]],
-  ['readme_2emd_7',['README.md',['../test_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../_r_e_a_d_m_e_8md.html',1,'(Global Namespace)']]],
-  ['real_8',['real',['../struct_fcomplex.html#a06ed4269b34924d748f2f77b17db7d21',1,'Fcomplex::real()'],['../struct_dcomplex.html#a51c821fcf95975271abfc49311e983d4',1,'Dcomplex::real()'],['../struct_lcomplex.html#a520606ccd2dd5b8bd3f20ee1ba898dd1',1,'Lcomplex::real()']]],
-  ['ref_9',['ref',['../struct_event.html#a95744ca80b9365526d8f19ceb8546061',1,'Event']]],
-  ['reg_10',['reg',['../ioe_8c.html#a6b91636401516a477989a336376d7b40',1,'reg():&#160;ioe.c'],['../struct_i_o_a_p_i_c.html#a6b91636401516a477989a336376d7b40',1,'IOAPIC::reg()']]],
-  ['reg_5fid_11',['REG_ID',['../ioe_8c.html#a91339a8293cb53b81407c016bc41e2b1',1,'ioe.c']]],
-  ['reg_5ftable_12',['REG_TABLE',['../ioe_8c.html#ad31b206e97e5e8cc5c70f8713669b27f',1,'ioe.c']]],
-  ['reg_5fver_13',['REG_VER',['../ioe_8c.html#ac56cc95ec46071699b119b24d6d808f9',1,'ioe.c']]],
-  ['render_14',['render',['../ioe_8c.html#a9322ebd04418ae42e1488cc280ce1297',1,'ioe.c']]],
-  ['reserved_15',['reserved',['../struct_m_p_desc.html#a72aca6ea6d8153b28ea8f139b932ec3e',1,'MPDesc::reserved()'],['../struct_m_p_conf.html#acb7bc06bed6f6408d719334fc41698c7',1,'MPConf::reserved()']]],
-  ['rounddown_16',['ROUNDDOWN',['../klib-macros_8h.html#a7581bedda4af7a238da39edbd10fe129',1,'klib-macros.h']]],
-  ['roundup_17',['ROUNDUP',['../klib-macros_8h.html#a4db5e3abb22880f357de7cc6694d3a26',1,'klib-macros.h']]],
-  ['rsp0_18',['rsp0',['../struct____attribute____.html#a72b38046f765f14ce3d8f74ead10766b',1,'__attribute__']]],
-  ['rsp1_19',['rsp1',['../struct____attribute____.html#a01fe81e8371ef1ebbf418968c24938af',1,'__attribute__']]],
-  ['rsp2_20',['rsp2',['../struct____attribute____.html#a15cb2c4ffbfbf962c70a94c7519ef51f',1,'__attribute__']]],
-  ['rsv_21',['rsv',['../struct____attribute____.html#a5c5d68350191dc26727218ef0ce86f1d',1,'__attribute__::rsv()'],['../struct_gate_desc64.html#a5c5d68350191dc26727218ef0ce86f1d',1,'GateDesc64::rsv()']]],
-  ['rsv1_22',['rsv1',['../struct_gate_desc32.html#a815e2cd61a2dcdf08fcbe28120d938f8',1,'GateDesc32']]]
+  ['queue_0',['queue',['../structtty__t.html#a83aa8c42cb7ecffa926e35dc1e1ff6b2',1,'tty_t']]]
 ];

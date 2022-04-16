@@ -7,7 +7,7 @@ var searchData=
   ['in_5frange_4',['IN_RANGE',['../klib-macros_8h.html#af023a69fc8dfa6727b33ed9c9527f144',1,'klib-macros.h']]],
   ['info_5',['info',['../logger_8h.html#a8ee1f79b193a2069a4f74c155ce97f66',1,'logger.h']]],
   ['info_5fdetail_6',['info_detail',['../logger_8h.html#a95e904ba645fa61eb09794f6ea6233ea',1,'logger.h']]],
-  ['init_7',['INIT',['../ioe_8c.html#ab5889105dcd019008c9448dff61323f6',1,'ioe.c']]],
+  ['init_7',['INIT',['../ioe_8c.html#ab5889105dcd019008c9448dff61323f6',1,'INIT():&#160;ioe.c'],['../dev_8c.html#a90b2f78958be55fe4d80d20a12c75dd3',1,'INIT():&#160;dev.c']]],
   ['int_5factivelow_8',['INT_ACTIVELOW',['../ioe_8c.html#a516778548109f98ff313d8753d030d37',1,'ioe.c']]],
   ['int_5fdisabled_9',['INT_DISABLED',['../ioe_8c.html#ab26e186261a82b907e024126fafbff1f',1,'ioe.c']]],
   ['int_5flevel_10',['INT_LEVEL',['../ioe_8c.html#aed01298d37e73ed9737c8a6b70e67caa',1,'ioe.c']]],

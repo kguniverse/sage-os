@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['zero1_0',['zero1',['../struct_gate_desc64.html#aec7509bf6847788fe8aa7eabc848ff8d',1,'GateDesc64']]],
-  ['zero2_1',['zero2',['../struct_gate_desc64.html#a0d2831d72593d18076f5421cb1dd3c50',1,'GateDesc64']]]
+  ['y_0',['y',['../structsprite.html#ab0580f504a7428539be299fa71565f30',1,'sprite::y()'],['../devices_8h.html#ab0580f504a7428539be299fa71565f30',1,'y():&#160;devices.h']]],
+  ['y1_1',['y1',['../structgpu__canvas.html#a47ada631c22a9d40348069145654f255',1,'gpu_canvas::y1()'],['../amdev_8h.html#a47ada631c22a9d40348069145654f255',1,'y1():&#160;amdev.h']]]
 ];

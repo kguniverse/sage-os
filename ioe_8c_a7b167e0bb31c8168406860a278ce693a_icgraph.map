@@ -1,5 +1,6 @@
 <map id="timer_rtc" name="timer_rtc">
-<area shape="rect" id="node1" title=" " alt="" coords="239,5,312,32"/>
-<area shape="rect" id="node2" href="$ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" title=" " alt="" coords="116,5,191,32"/>
-<area shape="rect" id="node3" href="$ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" title=" " alt="" coords="5,5,68,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="337,5,411,32"/>
+<area shape="rect" id="node2" href="$ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" title=" " alt="" coords="215,5,289,32"/>
+<area shape="rect" id="node3" href="$ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" title=" " alt="" coords="104,5,167,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>

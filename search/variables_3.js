@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['cause_0',['cause',['../struct_event.html#a9a0869529fdace29e611a6511efcee29',1,'Event']]],
-  ['chararg_1',['chararg',['../unionarg.html#ab17990a4e8cc60173404aa9b97b5707c',1,'arg']]],
-  ['checksum_2',['checksum',['../struct_m_p_conf.html#a59eac9627282a484fbaf0aa7aa3b8a9a',1,'MPConf::checksum()'],['../struct_m_p_desc.html#a59eac9627282a484fbaf0aa7aa3b8a9a',1,'MPDesc::checksum()']]],
-  ['child_3',['child',['../structgpu__canvas.html#a5845beb17c1d8da4a278184d5d343626',1,'gpu_canvas::child()'],['../amdev_8h.html#a5845beb17c1d8da4a278184d5d343626',1,'child():&#160;amdev.h']]],
-  ['conf_4',['conf',['../struct_m_p_desc.html#a63f43efc112580f0d3e6f36c8248fd4b',1,'MPDesc']]],
-  ['cs_5',['cs',['../structtrap__frame.html#a8519dc239502dfcbac171b3128dc7054',1,'trap_frame::cs()'],['../struct_gate_desc32.html#a8519dc239502dfcbac171b3128dc7054',1,'GateDesc32::cs()'],['../struct_gate_desc64.html#a8519dc239502dfcbac171b3128dc7054',1,'GateDesc64::cs()']]]
+  ['capslock_0',['capslock',['../structinput__t.html#a3885cb16cb84a73499763eac634e1207',1,'input_t']]],
+  ['cause_1',['cause',['../struct_event.html#a9a0869529fdace29e611a6511efcee29',1,'Event']]],
+  ['ch_2',['ch',['../structcharacter.html#a49725d2659c0161681c55e3763942f68',1,'character']]],
+  ['checksum_3',['checksum',['../struct_m_p_conf.html#a59eac9627282a484fbaf0aa7aa3b8a9a',1,'MPConf::checksum()'],['../struct_m_p_desc.html#a59eac9627282a484fbaf0aa7aa3b8a9a',1,'MPDesc::checksum()']]],
+  ['child_4',['child',['../structgpu__canvas.html#a5845beb17c1d8da4a278184d5d343626',1,'gpu_canvas::child()'],['../amdev_8h.html#a5845beb17c1d8da4a278184d5d343626',1,'child():&#160;amdev.h']]],
+  ['chunk_5fmetadata_5',['chunk_metadata',['../structpmm__pool.html#a39a07aed72e36a9b49761a7d24342bf7',1,'pmm_pool']]],
+  ['columns_6',['columns',['../structtty__t.html#a341d2f00089fffc71eb6dbfd29f56c89',1,'tty_t']]],
+  ['conf_7',['conf',['../struct_m_p_desc.html#a63f43efc112580f0d3e6f36c8248fd4b',1,'MPDesc']]],
+  ['context_8',['context',['../structtask.html#aa254a98e2e3d77626823cad539eced2b',1,'task']]],
+  ['cooked_9',['cooked',['../structtty__t.html#ad55ae5806351d7cffbd2bbc5bee0a058',1,'tty_t']]],
+  ['count_10',['count',['../structtask.html#a86988a65e0d3ece7990c032c159786d6',1,'task']]],
+  ['cpu_5ftasks_11',['cpu_tasks',['../kmt_8c.html#a1deab5e028bf110832375ed9ddf5d061',1,'kmt.c']]],
+  ['cs_12',['cs',['../structtrap__frame.html#a8519dc239502dfcbac171b3128dc7054',1,'trap_frame::cs()'],['../struct_gate_desc32.html#a8519dc239502dfcbac171b3128dc7054',1,'GateDesc32::cs()'],['../struct_gate_desc64.html#a8519dc239502dfcbac171b3128dc7054',1,'GateDesc64::cs()']]],
+  ['ctrl_13',['ctrl',['../structinput__event.html#a6b78d29adca390bd7470d86e41a59077',1,'input_event']]],
+  ['ctrl_5fdown_14',['ctrl_down',['../structinput__t.html#ab5d97d2265b2cd1cd90e97e386479815',1,'input_t']]],
+  ['current_15',['current',['../structdisplay__info.html#a3433c8f76a8083f3dd4b97de7810e0ea',1,'display_info']]],
+  ['cursor_16',['cursor',['../structtty__t.html#ae4a937b3cc888445968d5fbc0aaf0392',1,'tty_t']]]
 ];

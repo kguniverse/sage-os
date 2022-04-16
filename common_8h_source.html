@@ -111,12 +111,39 @@ $(document).ready(function(){initNavTree('common_8h_source.html',''); initResiza
   <div class="headertitle"><div class="title">common.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="common_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="kernel_8h.html">kernel.h</a>&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;<a class="code" href="klib_8h.html">klib.h</a>&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="klib-macros_8h.html">klib-macros.h</a>&gt;</span></div>
+<a href="common_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __COMMON_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __COMMON_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="am_8h.html">am.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="amdev_8h.html">amdev.h</a>&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="kernel_8h.html">kernel.h</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="klib_8h.html">klib.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="klib-macros_8h.html">klib-macros.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="logger_8h.html">logger.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;limits.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="common_8h.html#a163aa934e4e42ebaea98661d54c0af08">   12</a></span><span class="preprocessor">#define MAX_CPU 8  </span><span class="comment">// defined in x86.h</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="common_8h.html#afec4cf52a3e70c488446a06ea604f9df">   14</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="common_8h.html#afec4cf52a3e70c488446a06ea604f9df">power2ify</a>(uint64_t size) {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_define" href="klib_8h.html#a3153a272f18d0f805028fce7e4337b53">assert</a>((<span class="keywordtype">int</span>)size &gt; 0);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">int</span> order = 0;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  size--;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    size &gt;&gt;= 1;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    order++;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  } <span class="keywordflow">while</span> (size);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keywordflow">return</span> order;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aam_8h_html"><div class="ttname"><a href="am_8h.html">am.h</a></div></div>
+<div class="ttc" id="aamdev_8h_html"><div class="ttname"><a href="amdev_8h.html">amdev.h</a></div></div>
+<div class="ttc" id="acommon_8h_html_afec4cf52a3e70c488446a06ea604f9df"><div class="ttname"><a href="common_8h.html#afec4cf52a3e70c488446a06ea604f9df">power2ify</a></div><div class="ttdeci">static int power2ify(uint64_t size)</div><div class="ttdef"><b>Definition:</b> common.h:14</div></div>
 <div class="ttc" id="akernel_8h_html"><div class="ttname"><a href="kernel_8h.html">kernel.h</a></div></div>
 <div class="ttc" id="aklib-macros_8h_html"><div class="ttname"><a href="klib-macros_8h.html">klib-macros.h</a></div></div>
 <div class="ttc" id="aklib_8h_html"><div class="ttname"><a href="klib_8h.html">klib.h</a></div></div>
+<div class="ttc" id="aklib_8h_html_a3153a272f18d0f805028fce7e4337b53"><div class="ttname"><a href="klib_8h.html#a3153a272f18d0f805028fce7e4337b53">assert</a></div><div class="ttdeci">#define assert(cond)</div><div class="ttdef"><b>Definition:</b> klib.h:45</div></div>
+<div class="ttc" id="alogger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

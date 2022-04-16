@@ -1,6 +1,5 @@
 <map id="__am_percpu_initgdt" name="__am_percpu_initgdt">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,148,57"/>
 <area shape="rect" id="node2" href="$x86_8h.html#a4dc007b346b1364320af9d9e1c105455" title=" " alt="" coords="196,5,261,32"/>
-<area shape="rect" id="node4" href="$x86_8h.html#a2d9f7bff4b1a6ec6b994dffdc4172bef" title=" " alt="" coords="201,56,256,83"/>
-<area shape="rect" id="node3" href="$amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c" title=" " alt="" coords="309,5,407,32"/>
+<area shape="rect" id="node3" href="$x86_8h.html#a2d9f7bff4b1a6ec6b994dffdc4172bef" title=" " alt="" coords="201,56,256,83"/>
 </map>

@@ -124,7 +124,7 @@ Include dependency graph for logger.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="logger_8h__dep__incl.svg" width="158" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="logger_8h__dep__incl.svg" width="995" height="455"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -177,7 +177,6 @@ Macros</h2></td></tr>
 <tr class="memitem:aced66975c154ea0e2a8ec3bc818b4e08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#aced66975c154ea0e2a8ec3bc818b4e08">LOG_ERROR</a>&#160;&#160;&#160;0x08</td></tr>
 <tr class="separator:aced66975c154ea0e2a8ec3bc818b4e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7664625611df48781e4e2a234ee9c302"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a7664625611df48781e4e2a234ee9c302">LOG_MASK</a>&#160;&#160;&#160;  (<a class="el" href="logger_8h.html#aeb4f36db01bd128c7afeac5889dac311">LOG_INFO</a> | <a class="el" href="logger_8h.html#aea3f57d6dcc5b4ac957e2679e87dde27">LOG_WARN</a> | <a class="el" href="logger_8h.html#aced66975c154ea0e2a8ec3bc818b4e08">LOG_ERROR</a>)</td></tr>
-<tr class="memdesc:a7664625611df48781e4e2a234ee9c302"><td class="mdescLeft">&#160;</td><td class="mdescRight">LOG_MASK control whether to output log message.  <a href="logger_8h.html#a7664625611df48781e4e2a234ee9c302">More...</a><br /></td></tr>
 <tr class="separator:a7664625611df48781e4e2a234ee9c302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a579d10697d1c2bb395c3ce49dc020823"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a579d10697d1c2bb395c3ce49dc020823">log</a>(<a class="el" href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a>,  format, ...)</td></tr>
 <tr class="separator:a579d10697d1c2bb395c3ce49dc020823"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,6 +198,10 @@ Macros</h2></td></tr>
 <tr class="separator:ad7f0dd4b49e536be3e3430a76c2f933f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2f5d91b3c890dbad02bc3988e397cea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ac2f5d91b3c890dbad02bc3988e397cea">error_detail</a>(format, ...)&#160;&#160;&#160;<a class="el" href="logger_8h.html#ae094691a5e6acc45e0a05462219a8fb7">log_detail</a>(<a class="el" href="logger_8h.html#aced66975c154ea0e2a8ec3bc818b4e08">LOG_ERROR</a>, format, ##__VA_ARGS__)</td></tr>
 <tr class="separator:ac2f5d91b3c890dbad02bc3988e397cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab6bfe5db58074fd54a3c4952132ade"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a1ab6bfe5db58074fd54a3c4952132ade">assert_msg_block</a>(cond,  format, ...)</td></tr>
+<tr class="separator:a1ab6bfe5db58074fd54a3c4952132ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678f4cd7c86a601397a81eee1cf29785"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a678f4cd7c86a601397a81eee1cf29785">assert_msg</a>(cond,  format, ...)</td></tr>
+<tr class="separator:a678f4cd7c86a601397a81eee1cf29785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a467f50c2111ee062ca0db5d54c8d58f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a467f50c2111ee062ca0db5d54c8d58f6">TRACE_ENTRY</a>&#160;&#160;&#160;<a class="el" href="logger_8h.html#a8ee1f79b193a2069a4f74c155ce97f66">info</a>(&quot;[trace] %s:entry\n&quot;, __func__)</td></tr>
 <tr class="memdesc:a467f50c2111ee062ca0db5d54c8d58f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control whether enable function trace.  <a href="logger_8h.html#a467f50c2111ee062ca0db5d54c8d58f6">More...</a><br /></td></tr>
 <tr class="separator:a467f50c2111ee062ca0db5d54c8d58f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,10 +210,96 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:abdb32ac1c236ce3f953a081fc268fbc7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">_log_mask</a></td></tr>
+<tr class="memdesc:abdb32ac1c236ce3f953a081fc268fbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">LOG_MASK control whether to output log message.  <a href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">More...</a><br /></td></tr>
+<tr class="separator:abdb32ac1c236ce3f953a081fc268fbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40b77b435dfd1866d919d7750236417d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a> [10]</td></tr>
 <tr class="separator:a40b77b435dfd1866d919d7750236417d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a678f4cd7c86a601397a81eee1cf29785" name="a678f4cd7c86a601397a81eee1cf29785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678f4cd7c86a601397a81eee1cf29785">&#9670;&nbsp;</a></span>assert_msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define assert_msg</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cond, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">format, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (!(cond)) \</div>
+<div class="line">    printf(<span class="stringliteral">&quot;#%d &quot;</span> <a class="code hl_define" href="logger_8h.html#a1dc5215d084174df6f00a9267cec2f17">FG_RED</a> <span class="stringliteral">&quot;ASSERT_FAILED&quot;</span> <a class="code hl_define" href="logger_8h.html#a4a87cda90141a2c984921221701de0ab">COLOR_NONE</a> <span class="stringliteral">&quot;(%s:%d, %s):\n&quot;</span> format \</div>
+<div class="line">           <span class="stringliteral">&quot;\n&quot;</span>, \</div>
+<div class="line">           <a class="code hl_function" href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a>(), __FILE__, __LINE__, __func__, ##__VA_ARGS__); \</div>
+<div class="line">  assert((cond));</div>
+<div class="ttc" id="aam_8h_html_ab701de78cad32896c923ce900087e714"><div class="ttname"><a href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a></div><div class="ttdeci">int cpu_current(void)</div><div class="ttdef"><b>Definition:</b> mpe.c:40</div></div>
+<div class="ttc" id="alogger_8h_html_a1dc5215d084174df6f00a9267cec2f17"><div class="ttname"><a href="logger_8h.html#a1dc5215d084174df6f00a9267cec2f17">FG_RED</a></div><div class="ttdeci">#define FG_RED</div><div class="ttdef"><b>Definition:</b> logger.h:10</div></div>
+<div class="ttc" id="alogger_8h_html_a4a87cda90141a2c984921221701de0ab"><div class="ttname"><a href="logger_8h.html#a4a87cda90141a2c984921221701de0ab">COLOR_NONE</a></div><div class="ttdeci">#define COLOR_NONE</div><div class="ttdef"><b>Definition:</b> logger.h:25</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1ab6bfe5db58074fd54a3c4952132ade" name="a1ab6bfe5db58074fd54a3c4952132ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab6bfe5db58074fd54a3c4952132ade">&#9670;&nbsp;</a></span>assert_msg_block</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define assert_msg_block</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cond, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">format, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (!(cond)) { \</div>
+<div class="line">    printf(<span class="stringliteral">&quot;#%d &quot;</span> <a class="code hl_define" href="logger_8h.html#a1dc5215d084174df6f00a9267cec2f17">FG_RED</a> <span class="stringliteral">&quot;ASSERT_FAILED&quot;</span> <a class="code hl_define" href="logger_8h.html#a4a87cda90141a2c984921221701de0ab">COLOR_NONE</a> <span class="stringliteral">&quot;(%s:%d, %s):\n&quot;</span> format \</div>
+<div class="line">           <span class="stringliteral">&quot;\n&quot;</span>, \</div>
+<div class="line">           <a class="code hl_function" href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a>(), __FILE__, __LINE__, __func__, ##__VA_ARGS__); \</div>
+<div class="line">    while (1) \</div>
+<div class="line">      ; \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a0e5ebbe291d95cf1b8f1661252722fe0" name="a0e5ebbe291d95cf1b8f1661252722fe0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e5ebbe291d95cf1b8f1661252722fe0">&#9670;&nbsp;</a></span>BG_BLACK</h2>
 
@@ -594,14 +683,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a> &amp; <a class="code hl_define" href="logger_8h.html#a7664625611df48781e4e2a234ee9c302">LOG_MASK</a>) { \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a> &amp; <a class="code hl_variable" href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">_log_mask</a>) { \</div>
 <div class="line">    printf(<span class="stringliteral">&quot;#%d %s: &quot;</span> format <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_function" href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a>(), <a class="code hl_variable" href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a>[<a class="code hl_variable" href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a>], \</div>
 <div class="line">           ##__VA_ARGS__); \</div>
 <div class="line">  }</div>
-<div class="ttc" id="aam_8h_html_ab701de78cad32896c923ce900087e714"><div class="ttname"><a href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a></div><div class="ttdeci">int cpu_current(void)</div><div class="ttdef"><b>Definition:</b> mpe.c:40</div></div>
 <div class="ttc" id="aamdev_8h_html_acb5cfd209ba75c853d03f701e7f91679"><div class="ttname"><a href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a></div><div class="ttdeci">uint16_t type</div><div class="ttdef"><b>Definition:</b> amdev.h:0</div></div>
-<div class="ttc" id="alogger_8h_html_a40b77b435dfd1866d919d7750236417d"><div class="ttname"><a href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a></div><div class="ttdeci">const char * type_str[10]</div><div class="ttdef"><b>Definition:</b> logger.c:3</div></div>
-<div class="ttc" id="alogger_8h_html_a7664625611df48781e4e2a234ee9c302"><div class="ttname"><a href="logger_8h.html#a7664625611df48781e4e2a234ee9c302">LOG_MASK</a></div><div class="ttdeci">#define LOG_MASK</div><div class="ttdoc">LOG_MASK control whether to output log message.</div><div class="ttdef"><b>Definition:</b> logger.h:48</div></div>
+<div class="ttc" id="alogger_8h_html_a40b77b435dfd1866d919d7750236417d"><div class="ttname"><a href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a></div><div class="ttdeci">const char * type_str[10]</div><div class="ttdef"><b>Definition:</b> logger.c:5</div></div>
+<div class="ttc" id="alogger_8h_html_abdb32ac1c236ce3f953a081fc268fbc7"><div class="ttname"><a href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">_log_mask</a></div><div class="ttdeci">int _log_mask</div><div class="ttdoc">LOG_MASK control whether to output log message.</div><div class="ttdef"><b>Definition:</b> logger.h:47</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -636,7 +724,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a> &amp; <a class="code hl_define" href="logger_8h.html#a7664625611df48781e4e2a234ee9c302">LOG_MASK</a>) { \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a> &amp; <a class="code hl_variable" href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">_log_mask</a>) { \</div>
 <div class="line">    printf(<span class="stringliteral">&quot;#%d %s (%s:%d, %s):\n&quot;</span> format <span class="stringliteral">&quot;\n&quot;</span>, <a class="code hl_function" href="am_8h.html#ab701de78cad32896c923ce900087e714">cpu_current</a>(), <a class="code hl_variable" href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a>[<a class="code hl_variable" href="amdev_8h.html#acb5cfd209ba75c853d03f701e7f91679">type</a>], \</div>
 <div class="line">           __FILE__, __LINE__, __func__, ##__VA_ARGS__); \</div>
 <div class="line">  }</div>
@@ -682,10 +770,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>LOG_MASK control whether to output log message. </p>
-<p >Function <a class="el" href="logger_8h.html#a579d10697d1c2bb395c3ce49dc020823">log()</a> will print the message only if (type &amp; LOG_MASK == true).</p>
-<p >0: disable 16: all 12: only WARN and ERROR 3: only INFO and SUCCESS </p>
 
 </div>
 </div>
@@ -862,6 +946,24 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="abdb32ac1c236ce3f953a081fc268fbc7" name="abdb32ac1c236ce3f953a081fc268fbc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb32ac1c236ce3f953a081fc268fbc7">&#9670;&nbsp;</a></span>_log_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _log_mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LOG_MASK control whether to output log message. </p>
+<p >Function <a class="el" href="logger_8h.html#a579d10697d1c2bb395c3ce49dc020823">log()</a> will print the message only if (type &amp; LOG_MASK == true).</p>
+<p >0: disable 16: all 12: only WARN and ERROR 3: only INFO and SUCCESS </p>
+
+</div>
+</div>
 <a id="a40b77b435dfd1866d919d7750236417d" name="a40b77b435dfd1866d919d7750236417d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40b77b435dfd1866d919d7750236417d">&#9670;&nbsp;</a></span>type_str</h2>
 

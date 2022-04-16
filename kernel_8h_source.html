@@ -111,31 +111,79 @@ $(document).ready(function(){initNavTree('kernel_8h_source.html',''); initResiza
   <div class="headertitle"><div class="title">kernel.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="kernel_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="am_8h.html">am.h</a>&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">    3</a></span><span class="preprocessor">#define MODULE(mod) \</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">  typedef struct mod_##mod##_t mod_##mod##_t; \</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">  extern mod_##mod##_t *mod; \</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">  struct mod_##mod##_t</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="kernel_8h.html#abeb95e99b8b234249d79016bacac3523">    8</a></span><span class="preprocessor">#define MODULE_DEF(mod) \</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">  extern mod_##mod##_t __##mod##_obj; \</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">  mod_##mod##_t *mod = &amp;__##mod##_obj; \</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">  mod_##mod##_t __##mod##_obj</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="kernel_8h.html#aa26eae0f4368a1b7b84898fccc5f4053">   13</a></span><a class="code hl_define" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a>(os) {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  void (*init)();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  void (*run)();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="kernel_8h.html#ab5fefb42282ff313d6e6526fe793e1c0">   18</a></span><a class="code hl_define" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a>(pmm) {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  void (*init)();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordtype">void</span> *(*alloc)(<span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  void (*<a class="code hl_function" href="klib_8h.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>)(<span class="keywordtype">void</span> *ptr);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<a href="kernel_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __KERNEL_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __KERNEL_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="am_8h.html">am.h</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">    5</a></span><span class="preprocessor">#define MODULE(mod) \</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">  typedef struct mod_##mod##_t mod_##mod##_t; \</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">  extern mod_##mod##_t *mod; \</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">  struct mod_##mod##_t</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="kernel_8h.html#abeb95e99b8b234249d79016bacac3523">   10</a></span><span class="preprocessor">#define MODULE_DEF(mod) \</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">  extern mod_##mod##_t __##mod##_obj; \</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">  mod_##mod##_t *mod = &amp;__##mod##_obj; \</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">  mod_##mod##_t __##mod##_obj</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="kernel_8h.html#a7382b09e9bf57ec8165b33b23a11c699">   15</a></span><span class="keyword">typedef</span> <a class="code hl_typedef" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *(*handler_t)(<a class="code hl_struct" href="struct_event.html">Event</a>, <a class="code hl_typedef" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="kernel_8h.html#aa26eae0f4368a1b7b84898fccc5f4053">   16</a></span><a class="code hl_define" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a>(os) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  void (*init)();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  void (*run)();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_typedef" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> *(*trap)(<a class="code hl_struct" href="struct_event.html">Event</a> ev, <a class="code hl_typedef" href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a> * context);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  void (*on_irq)(<span class="keywordtype">int</span> seq, <span class="keywordtype">int</span> <a class="code hl_function" href="dev__input_8c.html#a563b481ccf29d84566d2d08d53a5ef78">event</a>, <a class="code hl_typedef" href="kernel_8h.html#a7382b09e9bf57ec8165b33b23a11c699">handler_t</a> handler);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="kernel_8h.html#ab5fefb42282ff313d6e6526fe793e1c0">   23</a></span><a class="code hl_define" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a>(pmm) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  void (*init)();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordtype">void</span> *(*alloc)(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  void (*<a class="code hl_function" href="klib_8h.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>)(<span class="keywordtype">void</span> *ptr);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="kernel_8h.html#ade04e552d18bad454515b6a32d31bb7b">   29</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structtask.html">task</a> <a class="code hl_struct" href="structtask.html">task_t</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="kernel_8h.html#a23e7982381ce4b480b250790ce149f3d">   30</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structspinlock.html">spinlock</a> <a class="code hl_struct" href="structspinlock.html">spinlock_t</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="kernel_8h.html#ae45b45406b418e90b69d59ec697cb4e2">   31</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structsemaphore.html">semaphore</a> <a class="code hl_struct" href="structsemaphore.html">sem_t</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="kernel_8h.html#a7ef2d722f9c7f8acc1801144a5188825">   33</a></span><a class="code hl_define" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a>(kmt) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  void (*init)();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  int (*create)(<a class="code hl_struct" href="structtask.html">task_t</a> * <a class="code hl_struct" href="structtask.html">task</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, void (*entry)(<span class="keywordtype">void</span> *arg),</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  void (*<a class="code hl_function" href="vme_8c.html#a901011ff1d62f072db4208fa9c1971a2">teardown</a>)(<a class="code hl_struct" href="structtask.html">task_t</a> * <a class="code hl_struct" href="structtask.html">task</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_struct" href="structtask.html">task_t</a> *(*get_task)();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  void (*set_task)(<a class="code hl_struct" href="structtask.html">task_t</a> * <a class="code hl_struct" href="structtask.html">task</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  void (*<a class="code hl_function" href="spinlock_8h.html#ab80f529a7b9f49f09fc91a404731c869">spin_init</a>)(<a class="code hl_struct" href="structspinlock.html">spinlock_t</a> * lk, <span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  void (*<a class="code hl_function" href="spinlock_8h.html#ab6f3c37ec37006951feccc3c05387cce">spin_lock</a>)(<a class="code hl_struct" href="structspinlock.html">spinlock_t</a> * lk);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  void (*<a class="code hl_function" href="spinlock_8h.html#acdf118d615a4bc4064e991add9a80995">spin_unlock</a>)(<a class="code hl_struct" href="structspinlock.html">spinlock_t</a> * lk);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  void (*<a class="code hl_function" href="sem_8h.html#a07341aaf6201983d7c7b9ea1b69975f9">sem_init</a>)(<a class="code hl_struct" href="structsemaphore.html">sem_t</a> * sem, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  void (*<a class="code hl_function" href="sem_8h.html#a85ca67864bb0af1966a5c2463bd16fe8">sem_wait</a>)(<a class="code hl_struct" href="structsemaphore.html">sem_t</a> * sem);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  void (*<a class="code hl_function" href="sem_8h.html#ad994e433f3a6bf8626272437cb54c114">sem_signal</a>)(<a class="code hl_struct" href="structsemaphore.html">sem_t</a> * sem);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="kernel_8h.html#a7b572d3f5a6e3ec7e00ecf487b0acf49">   48</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structdevice.html">device</a> <a class="code hl_struct" href="structdevice.html">device_t</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="kernel_8h.html#adfee56986108d7e34539023df7cce17d">   49</a></span><a class="code hl_define" href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a>(dev) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  void (*init)();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_struct" href="structdevice.html">device_t</a> *(*lookup)(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structdevice.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aam_8h_html"><div class="ttname"><a href="am_8h.html">am.h</a></div></div>
-<div class="ttc" id="akernel_8h_html_a18f346403cbf6431c83f71aa8a6d5bb6"><div class="ttname"><a href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a></div><div class="ttdeci">#define MODULE(mod)</div><div class="ttdef"><b>Definition:</b> kernel.h:3</div></div>
+<div class="ttc" id="aam_8h_html_a7925e3baf84a3c60ae7f4ac180c2fd85"><div class="ttname"><a href="am_8h.html#a7925e3baf84a3c60ae7f4ac180c2fd85">Context</a></div><div class="ttdeci">struct Context Context</div><div class="ttdef"><b>Definition:</b> am.h:21</div></div>
+<div class="ttc" id="adev__input_8c_html_a563b481ccf29d84566d2d08d53a5ef78"><div class="ttname"><a href="dev__input_8c.html#a563b481ccf29d84566d2d08d53a5ef78">event</a></div><div class="ttdeci">static struct input_event event(int ctrl, int alt, int data)</div><div class="ttdef"><b>Definition:</b> dev_input.c:7</div></div>
+<div class="ttc" id="akernel_8h_html_a18f346403cbf6431c83f71aa8a6d5bb6"><div class="ttname"><a href="kernel_8h.html#a18f346403cbf6431c83f71aa8a6d5bb6">MODULE</a></div><div class="ttdeci">#define MODULE(mod)</div><div class="ttdef"><b>Definition:</b> kernel.h:5</div></div>
+<div class="ttc" id="akernel_8h_html_a7382b09e9bf57ec8165b33b23a11c699"><div class="ttname"><a href="kernel_8h.html#a7382b09e9bf57ec8165b33b23a11c699">handler_t</a></div><div class="ttdeci">Context *(* handler_t)(Event, Context *)</div><div class="ttdef"><b>Definition:</b> kernel.h:15</div></div>
 <div class="ttc" id="aklib_8h_html_afbedc913aa4651b3c3b4b3aecd9b4711"><div class="ttname"><a href="klib_8h.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a></div><div class="ttdeci">void free(void *ptr)</div><div class="ttdef"><b>Definition:</b> stdlib.c:38</div></div>
+<div class="ttc" id="asem_8h_html_a07341aaf6201983d7c7b9ea1b69975f9"><div class="ttname"><a href="sem_8h.html#a07341aaf6201983d7c7b9ea1b69975f9">sem_init</a></div><div class="ttdeci">void sem_init(sem_t *sem, const char *name, int value)</div><div class="ttdef"><b>Definition:</b> sem.c:3</div></div>
+<div class="ttc" id="asem_8h_html_a85ca67864bb0af1966a5c2463bd16fe8"><div class="ttname"><a href="sem_8h.html#a85ca67864bb0af1966a5c2463bd16fe8">sem_wait</a></div><div class="ttdeci">void sem_wait(sem_t *sem)</div><div class="ttdef"><b>Definition:</b> sem.c:6</div></div>
+<div class="ttc" id="asem_8h_html_ad994e433f3a6bf8626272437cb54c114"><div class="ttname"><a href="sem_8h.html#ad994e433f3a6bf8626272437cb54c114">sem_signal</a></div><div class="ttdeci">void sem_signal(sem_t *sem)</div><div class="ttdef"><b>Definition:</b> sem.c:9</div></div>
+<div class="ttc" id="aspinlock_8h_html_ab6f3c37ec37006951feccc3c05387cce"><div class="ttname"><a href="spinlock_8h.html#ab6f3c37ec37006951feccc3c05387cce">spin_lock</a></div><div class="ttdeci">void spin_lock(spinlock_t *lk)</div><div class="ttdoc">acquire spinlock to current cpu</div><div class="ttdef"><b>Definition:</b> spinlock.c:22</div></div>
+<div class="ttc" id="aspinlock_8h_html_ab80f529a7b9f49f09fc91a404731c869"><div class="ttname"><a href="spinlock_8h.html#ab80f529a7b9f49f09fc91a404731c869">spin_init</a></div><div class="ttdeci">void spin_init(spinlock_t *lk, const char *name)</div><div class="ttdoc">create spinlock</div><div class="ttdef"><b>Definition:</b> spinlock.c:11</div></div>
+<div class="ttc" id="aspinlock_8h_html_acdf118d615a4bc4064e991add9a80995"><div class="ttname"><a href="spinlock_8h.html#acdf118d615a4bc4064e991add9a80995">spin_unlock</a></div><div class="ttdeci">void spin_unlock(spinlock_t *lk)</div><div class="ttdoc">release spinlock from current cpu</div><div class="ttdef"><b>Definition:</b> spinlock.c:40</div></div>
+<div class="ttc" id="astruct_event_html"><div class="ttname"><a href="struct_event.html">Event</a></div><div class="ttdef"><b>Definition:</b> am.h:24</div></div>
+<div class="ttc" id="astructdevice_html"><div class="ttname"><a href="structdevice.html">device</a></div><div class="ttdef"><b>Definition:</b> devices.h:16</div></div>
+<div class="ttc" id="astructdevice_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="structdevice.html#a8f8f80d37794cde9472343e4487ba3eb">device::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> devices.h:17</div></div>
+<div class="ttc" id="astructsemaphore_html"><div class="ttname"><a href="structsemaphore.html">semaphore</a></div><div class="ttdef"><b>Definition:</b> sem.h:6</div></div>
+<div class="ttc" id="astructspinlock_html"><div class="ttname"><a href="structspinlock.html">spinlock</a></div><div class="ttdef"><b>Definition:</b> spinlock.h:7</div></div>
+<div class="ttc" id="astructtask_html"><div class="ttname"><a href="structtask.html">task</a></div><div class="ttdef"><b>Definition:</b> thread.h:27</div></div>
+<div class="ttc" id="avme_8c_html_a901011ff1d62f072db4208fa9c1971a2"><div class="ttname"><a href="vme_8c.html#a901011ff1d62f072db4208fa9c1971a2">teardown</a></div><div class="ttdeci">static void teardown(int level, uintptr_t *pt)</div><div class="ttdef"><b>Definition:</b> vme.c:77</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,0 +1,7 @@
+<map id="spin_init" name="spin_init">
+<area shape="rect" id="node1" title="create spinlock" alt="" coords="323,56,393,83"/>
+<area shape="rect" id="node2" href="$kernel_8h.html#a7ef2d722f9c7f8acc1801144a5188825" title=" " alt="" coords="180,5,259,32"/>
+<area shape="rect" id="node3" href="$kmt_8c.html#af360ef0d98ca30e481cc58ea3695fd58" title=" " alt="" coords="164,56,275,83"/>
+<area shape="rect" id="node4" href="$os_8c.html#aef4448ba4711b237d8254529f2a4b621" title="initialze system; will be executed only once (not per cpu)" alt="" coords="189,107,249,133"/>
+<area shape="rect" id="node5" href="$os_8c.html#aafec7046aa50c914df86d0d22d4fc1d1" title=" " alt="" coords="5,107,116,133"/>
+</map>

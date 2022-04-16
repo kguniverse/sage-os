@@ -139,50 +139,74 @@ $(document).ready(function(){initNavTree('logger_8h_source.html',''); initResiza
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="logger_8h.html#aea3f57d6dcc5b4ac957e2679e87dde27">   32</a></span><span class="preprocessor">#define LOG_WARN    0x04</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="logger_8h.html#aced66975c154ea0e2a8ec3bc818b4e08">   33</a></span><span class="preprocessor">#define LOG_ERROR   0x08</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef LOG_MASK</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="logger_8h.html#a7664625611df48781e4e2a234ee9c302">   48</a></span><span class="preprocessor">#define LOG_MASK \</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">  (LOG_INFO | LOG_WARN | LOG_ERROR)  </span><span class="comment">// defalt print INFO and above</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a>[10];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">   47</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">_log_mask</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#ifndef LOG_MASK</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="logger_8h.html#a7664625611df48781e4e2a234ee9c302">   50</a></span><span class="preprocessor">#define LOG_MASK \</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">  (LOG_INFO | LOG_WARN | LOG_ERROR)  </span><span class="comment">// defalt print INFO and above</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#ifdef NODEBUG</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define log(type, format, ...)        ;</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define log_detail(type, format, ...) ;</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="logger_8h.html#a579d10697d1c2bb395c3ce49dc020823">   58</a></span><span class="preprocessor">#define log(type, format, ...) \</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">  if (type &amp; LOG_MASK) { \</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">    printf(&quot;#%d %s: &quot;</span> format &quot;\n&quot;, cpu_current(), type_str[type], \</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>           ##__VA_ARGS__); \</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="logger_8h.html#ae094691a5e6acc45e0a05462219a8fb7">   63</a></span><span class="preprocessor">#define log_detail(type, format, ...) \</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">  if (type &amp; LOG_MASK) { \</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    printf(&quot;#%d %s (%s:%d, %s):\n&quot;</span> format &quot;\n&quot;, cpu_current(), type_str[type], \</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>           __FILE__, __LINE__, __func__, ##__VA_ARGS__); \</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a>[10];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#ifdef NODEBUG</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define log(type, format, ...)        ;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define log_detail(type, format, ...) ;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="logger_8h.html#a579d10697d1c2bb395c3ce49dc020823">   63</a></span><span class="preprocessor">#define log(type, format, ...) \</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">  if (type &amp; _log_mask) { \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    printf(&quot;#%d %s: &quot;</span> format &quot;\n&quot;, cpu_current(), type_str[type], \</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>           ##__VA_ARGS__); \</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="logger_8h.html#a5b7530a5e9f8f636a623592a951647dc">   70</a></span><span class="preprocessor">#define success(format, ...) log(LOG_SUCCESS, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="logger_8h.html#a8ee1f79b193a2069a4f74c155ce97f66">   71</a></span><span class="preprocessor">#define info(format, ...)    log(LOG_INFO, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="logger_8h.html#aaa6ad2ce683c5c5f5984faef407531d7">   72</a></span><span class="preprocessor">#define warn(format, ...)    log(LOG_WARN, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="logger_8h.html#a5b9a882fdc463a3d4dcc99840fd0adb8">   73</a></span><span class="preprocessor">#define error(format, ...)   log(LOG_ERROR, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="logger_8h.html#a99ee8e2eafd19315cb11afbe8bd0a9b5">   74</a></span><span class="preprocessor">#define success_detail(format, ...) \</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">  log_detail(LOG_SUCCESS, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="logger_8h.html#a95e904ba645fa61eb09794f6ea6233ea">   76</a></span><span class="preprocessor">#define info_detail(format, ...)  log_detail(LOG_INFO, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="logger_8h.html#ad7f0dd4b49e536be3e3430a76c2f933f">   77</a></span><span class="preprocessor">#define warn_detail(format, ...)  log_detail(LOG_WARN, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="logger_8h.html#ac2f5d91b3c890dbad02bc3988e397cea">   78</a></span><span class="preprocessor">#define error_detail(format, ...) log_detail(LOG_ERROR, format, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#ifdef NODEBUG</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define TRACE_ENTRY ((void)0)</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#define TRACE_EXIT  ((void)0)</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="logger_8h.html#a467f50c2111ee062ca0db5d54c8d58f6">   87</a></span><span class="preprocessor">#define TRACE_ENTRY info(&quot;[trace] %s:entry\n&quot;</span>, __func__)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="logger_8h.html#aefc1351ad1453affbdc3bf4fbda3be06">   88</a></span><span class="preprocessor">#define TRACE_EXIT  info(&quot;[trace] %s:exit\n&quot;</span>, __func__)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="logger_8h.html#ae094691a5e6acc45e0a05462219a8fb7">   69</a></span><span class="preprocessor">#define log_detail(type, format, ...) \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">  if (type &amp; _log_mask) { \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    printf(&quot;#%d %s (%s:%d, %s):\n&quot;</span> format &quot;\n&quot;, cpu_current(), type_str[type], \</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>           __FILE__, __LINE__, __func__, ##__VA_ARGS__); \</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="logger_8h.html#a5b7530a5e9f8f636a623592a951647dc">   77</a></span><span class="preprocessor">#define success(format, ...) log(LOG_SUCCESS, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="logger_8h.html#a8ee1f79b193a2069a4f74c155ce97f66">   78</a></span><span class="preprocessor">#define info(format, ...)    log(LOG_INFO, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="logger_8h.html#aaa6ad2ce683c5c5f5984faef407531d7">   79</a></span><span class="preprocessor">#define warn(format, ...)    log(LOG_WARN, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="logger_8h.html#a5b9a882fdc463a3d4dcc99840fd0adb8">   80</a></span><span class="preprocessor">#define error(format, ...)   log(LOG_ERROR, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="logger_8h.html#a99ee8e2eafd19315cb11afbe8bd0a9b5">   81</a></span><span class="preprocessor">#define success_detail(format, ...) \</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">  log_detail(LOG_SUCCESS, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="logger_8h.html#a95e904ba645fa61eb09794f6ea6233ea">   83</a></span><span class="preprocessor">#define info_detail(format, ...)  log_detail(LOG_INFO, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="logger_8h.html#ad7f0dd4b49e536be3e3430a76c2f933f">   84</a></span><span class="preprocessor">#define warn_detail(format, ...)  log_detail(LOG_WARN, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="logger_8h.html#ac2f5d91b3c890dbad02bc3988e397cea">   85</a></span><span class="preprocessor">#define error_detail(format, ...) log_detail(LOG_ERROR, format, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="logger_8h.html#a1ab6bfe5db58074fd54a3c4952132ade">   87</a></span><span class="preprocessor">#define assert_msg_block(cond, format, ...) \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">  if (!(cond)) { \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    printf(&quot;#%d &quot;</span> FG_RED &quot;ASSERT_FAILED&quot; COLOR_NONE &quot;(%s:%d, %s):\n&quot; format \</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>           &quot;\n&quot;, \</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>           cpu_current(), __FILE__, __LINE__, __func__, ##__VA_ARGS__); \</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    while (1) \</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      ; \</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="logger_8h.html#a678f4cd7c86a601397a81eee1cf29785">   96</a></span><span class="preprocessor">#define assert_msg(cond, format, ...) \</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">  if (!(cond)) \</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    printf(&quot;#%d &quot;</span> FG_RED &quot;ASSERT_FAILED&quot; COLOR_NONE &quot;(%s:%d, %s):\n&quot; format \</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>           &quot;\n&quot;, \</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>           cpu_current(), __FILE__, __LINE__, __func__, ##__VA_ARGS__); \</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  assert((cond));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#ifdef NODEBUG</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#define TRACE_ENTRY ((void)0)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#define TRACE_EXIT  ((void)0)</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="logger_8h.html#a467f50c2111ee062ca0db5d54c8d58f6">  110</a></span><span class="preprocessor">#define TRACE_ENTRY info(&quot;[trace] %s:entry\n&quot;</span>, __func__)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="logger_8h.html#aefc1351ad1453affbdc3bf4fbda3be06">  111</a></span><span class="preprocessor">#define TRACE_EXIT  info(&quot;[trace] %s:exit\n&quot;</span>, __func__)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aam_8h_html"><div class="ttname"><a href="am_8h.html">am.h</a></div></div>
-<div class="ttc" id="alogger_8h_html_a40b77b435dfd1866d919d7750236417d"><div class="ttname"><a href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a></div><div class="ttdeci">const char * type_str[10]</div><div class="ttdef"><b>Definition:</b> logger.c:3</div></div>
+<div class="ttc" id="alogger_8h_html_a40b77b435dfd1866d919d7750236417d"><div class="ttname"><a href="logger_8h.html#a40b77b435dfd1866d919d7750236417d">type_str</a></div><div class="ttdeci">const char * type_str[10]</div><div class="ttdef"><b>Definition:</b> logger.c:5</div></div>
+<div class="ttc" id="alogger_8h_html_abdb32ac1c236ce3f953a081fc268fbc7"><div class="ttname"><a href="logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7">_log_mask</a></div><div class="ttdeci">int _log_mask</div><div class="ttdoc">LOG_MASK control whether to output log message.</div><div class="ttdef"><b>Definition:</b> logger.h:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,16 +1,15 @@
 <map id="othercpu_entry" name="othercpu_entry">
 <area shape="rect" id="node1" title=" " alt="" coords="5,169,112,196"/>
 <area shape="rect" id="node2" href="$trm_8c.html#abac650c2a0dd8b7f13349871fd6ab6ee" title=" " alt="" coords="160,119,284,145"/>
-<area shape="rect" id="node13" href="$mpe_8c.html#afc800fc7438b6762f113c46d25cab75b" title=" " alt="" coords="167,169,277,196"/>
-<area shape="rect" id="node14" href="$x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112" title=" " alt="" coords="197,220,247,247"/>
+<area shape="rect" id="node12" href="$mpe_8c.html#afc800fc7438b6762f113c46d25cab75b" title=" " alt="" coords="167,169,277,196"/>
+<area shape="rect" id="node13" href="$x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112" title=" " alt="" coords="197,220,247,247"/>
 <area shape="rect" id="node3" href="$trm_8c.html#a30657d927e0438fe41ba851aa9d7bc31" title=" " alt="" coords="336,56,479,83"/>
-<area shape="rect" id="node7" href="$cte_8c.html#adb128cbf8cb1844d1fef62c3647a3f25" title=" " alt="" coords="338,119,477,145"/>
-<area shape="rect" id="node11" href="$ioe_8c.html#afd452a54c6657d504fdbc70af4adb9cf" title=" " alt="" coords="332,195,483,221"/>
+<area shape="rect" id="node6" href="$cte_8c.html#adb128cbf8cb1844d1fef62c3647a3f25" title=" " alt="" coords="338,119,477,145"/>
+<area shape="rect" id="node10" href="$ioe_8c.html#afd452a54c6657d504fdbc70af4adb9cf" title=" " alt="" coords="332,195,483,221"/>
 <area shape="rect" id="node4" href="$x86_8h.html#a4dc007b346b1364320af9d9e1c105455" title=" " alt="" coords="568,5,633,32"/>
-<area shape="rect" id="node6" href="$x86_8h.html#a2d9f7bff4b1a6ec6b994dffdc4172bef" title=" " alt="" coords="573,56,628,83"/>
-<area shape="rect" id="node5" href="$amdev_8h.html#ab31b92691e50ae7e3b7d50598fad2e8c" title=" " alt="" coords="719,56,816,83"/>
-<area shape="rect" id="node8" href="$ioe_8c.html#aaa8b5de13119943f63fd14ce0cbb748f" title=" " alt="" coords="531,157,671,184"/>
-<area shape="rect" id="node10" href="$x86_8h.html#aec7546614338d8b90023fa2805432e22" title=" " alt="" coords="570,107,631,133"/>
-<area shape="rect" id="node9" href="$ioe_8c.html#aef6c47d7966a31659d7e494efed1b15c" title=" " alt="" coords="725,157,809,184"/>
-<area shape="rect" id="node12" href="$ioe_8c.html#a72d9ed0bfe1066367763e044b7a7b7c3" title=" " alt="" coords="571,208,630,235"/>
+<area shape="rect" id="node5" href="$x86_8h.html#a2d9f7bff4b1a6ec6b994dffdc4172bef" title=" " alt="" coords="573,56,628,83"/>
+<area shape="rect" id="node7" href="$ioe_8c.html#aaa8b5de13119943f63fd14ce0cbb748f" title=" " alt="" coords="531,107,671,133"/>
+<area shape="rect" id="node9" href="$x86_8h.html#aec7546614338d8b90023fa2805432e22" title=" " alt="" coords="570,157,631,184"/>
+<area shape="rect" id="node8" href="$ioe_8c.html#aef6c47d7966a31659d7e494efed1b15c" title=" " alt="" coords="719,107,803,133"/>
+<area shape="rect" id="node11" href="$ioe_8c.html#a72d9ed0bfe1066367763e044b7a7b7c3" title=" " alt="" coords="571,208,630,235"/>
 </map>

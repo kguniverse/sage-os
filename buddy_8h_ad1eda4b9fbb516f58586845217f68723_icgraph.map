@@ -1,0 +1,15 @@
+<map id="virt2chunk" name="virt2chunk">
+<area shape="rect" id="node1" title="translate virtual address to chunk address" alt="" coords="885,81,968,108"/>
+<area shape="rect" id="node2" href="$buddy_8c.html#a48594e69fff9b58d5f41dca7d576eb35" title="Get the buddy chunk." alt="" coords="715,56,837,83"/>
+<area shape="rect" id="node8" href="$pmm_8c.html#a2cb876c0d76d35916d27ed1623195fbe" title=" " alt="" coords="315,107,365,133"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#a9ae41f7f508f07ceba45065973ce5507" title=" " alt="" coords="567,56,667,83"/>
+<area shape="rect" id="node10" href="$buddy_8c.html#aff6f2614df5664434766dd9c23971227" title=" " alt="" coords="573,5,661,32"/>
+<area shape="rect" id="node4" href="$buddy_8c.html#a77f7615f76209d4083ef2d0826d90a1e" title="free a chunk and process in deep." alt="" coords="430,56,517,83"/>
+<area shape="rect" id="node5" href="$buddy_8c.html#a571ce3de5539a52d40d9d11033519237" title="initialize the buddy system" alt="" coords="300,56,380,83"/>
+<area shape="rect" id="node6" href="$pmm_8c.html#a393796678826afd801058312f851ca43" title=" " alt="" coords="171,56,245,83"/>
+<area shape="rect" id="node7" href="$pmm_8c.html#a7ada9deb0ae8705f2cc158b0283aaeb3" title=" " alt="" coords="5,56,116,83"/>
+<area shape="rect" id="node9" href="$pmm_8c.html#af2f46f4bce6a599542ce4d462aec9e2f" title=" " alt="" coords="167,107,249,133"/>
+<area shape="rect" id="node11" href="$buddy_8c.html#a37436a565869aa245cb46355dab020e2" title=" " alt="" coords="428,5,519,32"/>
+<area shape="rect" id="node12" href="$pmm_8c.html#a350a830083f55f1886e000edec454a99" title=" " alt="" coords="312,5,368,32"/>
+<area shape="rect" id="node13" href="$pmm_8c.html#a20ccb461126d548299c6c21f157e6668" title=" " alt="" coords="164,5,252,32"/>
+</map>

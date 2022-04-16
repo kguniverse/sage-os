@@ -1,0 +1,27 @@
+<map id="kmt_schedule" name="kmt_schedule">
+<area shape="rect" id="node1" title="handler: schedule next task to run Notice: this should be the only handler which returns real Context" alt="" coords="5,246,108,272"/>
+<area shape="rect" id="node2" href="$mpe_8c.html#ab701de78cad32896c923ce900087e714" title=" " alt="" coords="777,170,868,196"/>
+<area shape="rect" id="node3" href="$kmt_8c.html#a031a09141c265954f2b609183e573d1c" title="get current cpu&#39;s tasks" alt="" coords="485,119,587,146"/>
+<area shape="rect" id="node4" href="$kmt_8c.html#a0ac321d3074b24b276695a080e835866" title="print all tasks notice: do not garantee concurrency safety" alt="" coords="160,322,295,348"/>
+<area shape="rect" id="node11" href="$spinlock_8c.html#ad4be0d674a7ca4dc90c2dbf8b34562cc" title="check current cpu has the lock" alt="" coords="489,322,583,348"/>
+<area shape="rect" id="node19" href="$spinlock_8c.html#ab6f3c37ec37006951feccc3c05387cce" title="acquire spinlock to current cpu" alt="" coords="353,220,431,247"/>
+<area shape="rect" id="node22" href="$spinlock_8c.html#acdf118d615a4bc4064e991add9a80995" title="release spinlock from current cpu" alt="" coords="347,372,437,399"/>
+<area shape="rect" id="node23" href="$kmt_8c.html#ac69761d0146d9aacda65da757868d3c7" title="print all current_tasks notice: do not garantee concurrency safety" alt="" coords="156,423,299,450"/>
+<area shape="rect" id="node25" href="$kmt_8c.html#a9ddca6d133a84154c98607bf0ee82c76" title="set cpu&#39;s current task" alt="" coords="177,18,278,44"/>
+<area shape="rect" id="node5" href="$stdio_8c.html#a55f3d956bb2ba20b5059e9e25484a47f" title=" " alt="" coords="367,474,417,500"/>
+<area shape="rect" id="node6" href="$stdio_8c.html#a44a6734c6f8f81d8e1fa3b9d476c5134" title="write bytes (including the terminating null byte (&#39;\0&#39;)) to out." alt="" coords="503,474,569,500"/>
+<area shape="rect" id="node7" href="$stdio_8c.html#abf852e417a205348767989f2940059ad" title="write at most n bytes (including the terminating null byte (&#39;\0&#39;)) to out." alt="" coords="646,474,718,500"/>
+<area shape="rect" id="node8" href="$stdio_8c.html#a0e2811092b514de48ac2dd675d6cf2b4" title="print decimal into buffer,return length" alt="" coords="783,423,862,450"/>
+<area shape="rect" id="node9" href="$string_8c.html#aa383452fe445bfae989358c9d7d96f4f" title=" " alt="" coords="795,474,850,500"/>
+<area shape="rect" id="node10" href="$string_8c.html#a82f08f2390a9067f3c94b638e90e03bd" title=" " alt="" coords="791,524,855,551"/>
+<area shape="rect" id="node12" href="$spinlock_8c.html#afc9565dc7a5ddf77e1fa76f5d91caf78" title="interrupt able" alt="" coords="639,372,725,399"/>
+<area shape="rect" id="node16" href="$spinlock_8c.html#ab213874cda54fdbbeb1bec1e5fa90b28" title="interrupt disable" alt="" coords="635,322,729,348"/>
+<area shape="rect" id="node13" href="$cte_8c.html#a4a139958742786c5085172be1f69bfd0" title=" " alt="" coords="801,372,844,399"/>
+<area shape="rect" id="node14" href="$x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c" title=" " alt="" coords="927,423,965,450"/>
+<area shape="rect" id="node15" href="$x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2" title=" " alt="" coords="927,372,965,399"/>
+<area shape="rect" id="node17" href="$cte_8c.html#a79659a2b801c42951e38f3a8821acbae" title=" " alt="" coords="787,322,858,348"/>
+<area shape="rect" id="node18" href="$x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee" title=" " alt="" coords="916,322,976,348"/>
+<area shape="rect" id="node20" href="$mpe_8c.html#aaaad47c97c82065cf463f83b98b23c30" title=" " alt="" coords="489,220,583,247"/>
+<area shape="rect" id="node21" href="$x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112" title=" " alt="" coords="657,220,707,247"/>
+<area shape="rect" id="node24" href="$mpe_8c.html#af486ec575d47720d28eee63644206110" title=" " alt="" coords="351,524,433,551"/>
+</map>

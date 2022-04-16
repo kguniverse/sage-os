@@ -1,8 +1,6 @@
 <map id="hlt" name="hlt">
-<area shape="rect" id="node1" title=" " alt="" coords="380,31,419,57"/>
-<area shape="rect" id="node2" href="$trm_8c.html#a483cb97188e557c3c68d3a1572c2cc92" title=" " alt="" coords="289,31,332,57"/>
-<area shape="rect" id="node3" href="$trm_8c.html#a12a49ff4d3a586b2315e292c5da3df7e" title=" " alt="" coords="164,5,241,32"/>
-<area shape="rect" id="node5" href="$os_8c.html#a5f9cb32664e017ca15c49ec66e5342e4" title=" " alt="" coords="172,56,233,83"/>
-<area shape="rect" id="node4" href="$trm_8c.html#a54a85aeee6f6a8ef875d4cca663f9fd8" title=" " alt="" coords="26,5,95,32"/>
-<area shape="rect" id="node6" href="$os_8c.html#aafec7046aa50c914df86d0d22d4fc1d1" title=" " alt="" coords="5,56,116,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="339,5,377,32"/>
+<area shape="rect" id="node2" href="$trm_8c.html#a483cb97188e557c3c68d3a1572c2cc92" title=" " alt="" coords="248,5,291,32"/>
+<area shape="rect" id="node3" href="$trm_8c.html#a12a49ff4d3a586b2315e292c5da3df7e" title=" " alt="" coords="123,5,200,32"/>
+<area shape="rect" id="node4" href="$trm_8c.html#a54a85aeee6f6a8ef875d4cca663f9fd8" title=" " alt="" coords="5,5,75,32"/>
 </map>

@@ -1,7 +1,10 @@
 <map id="printf" name="printf">
-<area shape="rect" id="node1" title=" " alt="" coords="287,31,337,57"/>
-<area shape="rect" id="node2" href="$os_8c.html#a5f9cb32664e017ca15c49ec66e5342e4" title=" " alt="" coords="171,5,232,32"/>
-<area shape="rect" id="node4" href="$pmm_8c.html#a393796678826afd801058312f851ca43" title=" " alt="" coords="164,56,239,83"/>
-<area shape="rect" id="node3" href="$os_8c.html#aafec7046aa50c914df86d0d22d4fc1d1" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node5" href="$pmm_8c.html#a7ada9deb0ae8705f2cc158b0283aaeb3" title=" " alt="" coords="5,56,116,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="621,56,672,83"/>
+<area shape="rect" id="node2" href="$dev__tty_8c.html#a1f58ad55bfbcfcb3de4088f34f76c976" title=" " alt="" coords="454,5,550,32"/>
+<area shape="rect" id="node3" href="$kmt_8c.html#a0ac321d3074b24b276695a080e835866" title="print all tasks notice: do not garantee concurrency safety" alt="" coords="435,107,569,133"/>
+<area shape="rect" id="node8" href="$kmt_8c.html#ac69761d0146d9aacda65da757868d3c7" title="print all current_tasks notice: do not garantee concurrency safety" alt="" coords="431,56,573,83"/>
+<area shape="rect" id="node4" href="$kmt_8c.html#ad3fbc643b7b6092120c5152b4c890354" title="handler: handle program errors" alt="" coords="293,56,370,83"/>
+<area shape="rect" id="node7" href="$kmt_8c.html#ad4d70b4093829da1c0b0631abdff7747" title="handler: schedule next task to run Notice: this should be the only handler which returns real Context" alt="" coords="280,107,383,133"/>
+<area shape="rect" id="node5" href="$kmt_8c.html#a0c68a294cecc4be7cb4b495f15b883a0" title="initialize kmt module" alt="" coords="164,81,232,108"/>
+<area shape="rect" id="node6" href="$kmt_8c.html#af360ef0d98ca30e481cc58ea3695fd58" title=" " alt="" coords="5,81,116,108"/>
 </map>

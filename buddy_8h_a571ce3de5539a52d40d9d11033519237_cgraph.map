@@ -1,0 +1,17 @@
+<map id="buddy_init" name="buddy_init">
+<area shape="rect" id="node1" title="initialize the buddy system" alt="" coords="5,233,85,260"/>
+<area shape="rect" id="node2" href="$buddy_8c.html#a77f7615f76209d4083ef2d0826d90a1e" title="free a chunk and process in deep." alt="" coords="153,157,240,184"/>
+<area shape="rect" id="node4" href="$structfree__list.html#a338aea6183dad7ec975539e4e1def837" title=" " alt="" coords="627,208,747,235"/>
+<area shape="rect" id="node14" href="$list_8h.html#aea85dd50b9129ddaa3e3c67ed55804e4" title=" " alt="" coords="133,259,260,285"/>
+<area shape="rect" id="node15" href="$string_8c.html#a7a8fd43b209c9ea19addab23a5f23995" title=" " alt="" coords="162,309,231,336"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#acd10ee3138eeeac7c91ef5928f2135ea" title="make a chunk added to free list." alt="" coords="464,157,571,184"/>
+<area shape="rect" id="node7" href="$buddy_8c.html#a9ae41f7f508f07ceba45065973ce5507" title=" " alt="" coords="308,107,408,133"/>
+<area shape="rect" id="node5" href="$list_8h.html#a06a80666b3364324fc601ab7ae1ff20b" title=" " alt="" coords="653,157,720,184"/>
+<area shape="rect" id="node6" href="$list_8h.html#a83ecb02c2209a8fd5f6470d45a07f875" title=" " alt="" coords="795,157,876,184"/>
+<area shape="rect" id="node8" href="$buddy_8c.html#a8a4afbc5643993142db5ad65b87b8c62" title=" " alt="" coords="477,31,558,57"/>
+<area shape="rect" id="node11" href="$buddy_8c.html#a48594e69fff9b58d5f41dca7d576eb35" title="Get the buddy chunk." alt="" coords="456,107,579,133"/>
+<area shape="rect" id="node9" href="$list_8h.html#ab1708206f0f7e0a56550b35372203ba5" title=" " alt="" coords="655,5,718,32"/>
+<area shape="rect" id="node10" href="$list_8h.html#a24b474717d65a296695e8b79b4adefda" title=" " alt="" coords="797,5,874,32"/>
+<area shape="rect" id="node12" href="$buddy_8c.html#a7d6c4f020f51f2a621ca1ab5a4e6a5bb" title="translate chunk address to virtual address" alt="" coords="645,107,728,133"/>
+<area shape="rect" id="node13" href="$buddy_8c.html#ad1eda4b9fbb516f58586845217f68723" title="translate virtual address to chunk address" alt="" coords="645,56,728,83"/>
+</map>

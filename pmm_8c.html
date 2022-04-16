@@ -109,15 +109,18 @@ $(document).ready(function(){initNavTree('pmm_8c.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">pmm.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">common.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="buddy_8h_source.html">buddy.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">logger.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for pmm.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c__incl.svg" width="467" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c__incl.svg" width="538" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -125,12 +128,21 @@ Include dependency graph for pmm.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a350a830083f55f1886e000edec454a99"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmm_8c.html#a350a830083f55f1886e000edec454a99">kalloc</a> (size_t size)</td></tr>
 <tr class="separator:a350a830083f55f1886e000edec454a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ccb461126d548299c6c21f157e6668"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmm_8c.html#a20ccb461126d548299c6c21f157e6668">kalloc_safe</a> (size_t size)</td></tr>
+<tr class="separator:a20ccb461126d548299c6c21f157e6668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cb876c0d76d35916d27ed1623195fbe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmm_8c.html#a2cb876c0d76d35916d27ed1623195fbe">kfree</a> (void *ptr)</td></tr>
 <tr class="separator:a2cb876c0d76d35916d27ed1623195fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f46f4bce6a599542ce4d462aec9e2f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmm_8c.html#af2f46f4bce6a599542ce4d462aec9e2f">kfree_safe</a> (void *ptr)</td></tr>
+<tr class="separator:af2f46f4bce6a599542ce4d462aec9e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a393796678826afd801058312f851ca43"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmm_8c.html#a393796678826afd801058312f851ca43">pmm_init</a> ()</td></tr>
 <tr class="separator:a393796678826afd801058312f851ca43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ada9deb0ae8705f2cc158b0283aaeb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmm_8c.html#a7ada9deb0ae8705f2cc158b0283aaeb3">MODULE_DEF</a> (pmm)</td></tr>
 <tr class="separator:a7ada9deb0ae8705f2cc158b0283aaeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae4ae70e3fc3669a69eb3eb0c62214dd2"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpmm__pool.html">pmm_pool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmm_8c.html#ae4ae70e3fc3669a69eb3eb0c62214dd2">global_mm_pool</a></td></tr>
+<tr class="separator:ae4ae70e3fc3669a69eb3eb0c62214dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a350a830083f55f1886e000edec454a99" name="a350a830083f55f1886e000edec454a99"></a>
@@ -157,9 +169,53 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a350a830083f55f1886e000edec454a99_cgraph.svg" width="810" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a350a830083f55f1886e000edec454a99_icgraph.svg" width="226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a350a830083f55f1886e000edec454a99_icgraph.svg" width="362" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a20ccb461126d548299c6c21f157e6668" name="a20ccb461126d548299c6c21f157e6668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ccb461126d548299c6c21f157e6668">&#9670;&nbsp;</a></span>kalloc_safe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void * kalloc_safe </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a20ccb461126d548299c6c21f157e6668_cgraph.svg" width="960" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a20ccb461126d548299c6c21f157e6668_icgraph.svg" width="258" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -189,9 +245,53 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a2cb876c0d76d35916d27ed1623195fbe_cgraph.svg" width="812" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a2cb876c0d76d35916d27ed1623195fbe_icgraph.svg" width="220" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a2cb876c0d76d35916d27ed1623195fbe_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af2f46f4bce6a599542ce4d462aec9e2f" name="af2f46f4bce6a599542ce4d462aec9e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f46f4bce6a599542ce4d462aec9e2f">&#9670;&nbsp;</a></span>kfree_safe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void kfree_safe </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_af2f46f4bce6a599542ce4d462aec9e2f_cgraph.svg" width="963" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_af2f46f4bce6a599542ce4d462aec9e2f_icgraph.svg" width="252" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -215,7 +315,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a7ada9deb0ae8705f2cc158b0283aaeb3_cgraph.svg" width="686" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a7ada9deb0ae8705f2cc158b0283aaeb3_cgraph.svg" width="1176" height="542"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -246,7 +346,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a393796678826afd801058312f851ca43_cgraph.svg" width="527" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a393796678826afd801058312f851ca43_cgraph.svg" width="1004" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -255,6 +355,21 @@ Here is the caller graph for this function:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="pmm_8c_a393796678826afd801058312f851ca43_icgraph.svg" width="244" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ae4ae70e3fc3669a69eb3eb0c62214dd2" name="ae4ae70e3fc3669a69eb3eb0c62214dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ae70e3fc3669a69eb3eb0c62214dd2">&#9670;&nbsp;</a></span>global_mm_pool</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structpmm__pool.html">pmm_pool</a> global_mm_pool</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

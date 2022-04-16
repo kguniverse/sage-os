@@ -1,6 +1,7 @@
 <map id="wait_sec" name="wait_sec">
-<area shape="rect" id="node1" title=" " alt="" coords="388,29,463,56"/>
-<area shape="rect" id="node2" href="$ioe_8c.html#a8f4d57167e8d4b53c00c84e504f330ef" title=" " alt="" coords="239,29,340,56"/>
-<area shape="rect" id="node3" href="$ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" title=" " alt="" coords="116,29,191,56"/>
-<area shape="rect" id="node4" href="$ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" title=" " alt="" coords="5,29,68,56"/>
+<area shape="rect" id="node1" title=" " alt="" coords="487,29,561,56"/>
+<area shape="rect" id="node2" href="$ioe_8c.html#a8f4d57167e8d4b53c00c84e504f330ef" title=" " alt="" coords="337,29,439,56"/>
+<area shape="rect" id="node3" href="$ioe_8c.html#ac17b85035372c81a45e604e6b4783db2" title=" " alt="" coords="215,29,289,56"/>
+<area shape="rect" id="node4" href="$ioe_8c.html#a45ecef4130276c1c79d872c582cd3839" title=" " alt="" coords="104,29,167,56"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,56,56"/>
 </map>

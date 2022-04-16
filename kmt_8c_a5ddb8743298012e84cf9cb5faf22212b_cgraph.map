@@ -1,0 +1,19 @@
+<map id="kmt_create" name="kmt_create">
+<area shape="rect" id="node1" title="create thread" alt="" coords="5,107,92,133"/>
+<area shape="rect" id="node2" href="$cte_8c.html#a90a17e3cfc268f5b8ed0a92ffda13a58" title=" " alt="" coords="150,5,221,32"/>
+<area shape="rect" id="node4" href="$string_8c.html#a7a8fd43b209c9ea19addab23a5f23995" title=" " alt="" coords="151,56,220,83"/>
+<area shape="rect" id="node5" href="$spinlock_8c.html#ad4be0d674a7ca4dc90c2dbf8b34562cc" title="check current cpu has the lock" alt="" coords="303,157,397,184"/>
+<area shape="rect" id="node14" href="$spinlock_8c.html#ab6f3c37ec37006951feccc3c05387cce" title="acquire spinlock to current cpu" alt="" coords="147,208,224,235"/>
+<area shape="rect" id="node17" href="$spinlock_8c.html#acdf118d615a4bc4064e991add9a80995" title="release spinlock from current cpu" alt="" coords="140,107,231,133"/>
+<area shape="rect" id="node3" href="$cte_8c.html#a8a4bbd700f2686cea6a3f2d756580237" title=" " alt="" coords="279,5,421,32"/>
+<area shape="rect" id="node6" href="$mpe_8c.html#ab701de78cad32896c923ce900087e714" title=" " alt="" coords="612,157,703,184"/>
+<area shape="rect" id="node7" href="$spinlock_8c.html#afc9565dc7a5ddf77e1fa76f5d91caf78" title="interrupt able" alt="" coords="473,107,560,133"/>
+<area shape="rect" id="node11" href="$spinlock_8c.html#ab213874cda54fdbbeb1bec1e5fa90b28" title="interrupt disable" alt="" coords="469,208,564,235"/>
+<area shape="rect" id="node8" href="$cte_8c.html#a4a139958742786c5085172be1f69bfd0" title=" " alt="" coords="636,107,679,133"/>
+<area shape="rect" id="node9" href="$x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c" title=" " alt="" coords="761,132,800,159"/>
+<area shape="rect" id="node10" href="$x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2" title=" " alt="" coords="761,81,800,108"/>
+<area shape="rect" id="node12" href="$cte_8c.html#a79659a2b801c42951e38f3a8821acbae" title=" " alt="" coords="622,208,693,235"/>
+<area shape="rect" id="node13" href="$x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee" title=" " alt="" coords="751,208,811,235"/>
+<area shape="rect" id="node15" href="$mpe_8c.html#aaaad47c97c82065cf463f83b98b23c30" title=" " alt="" coords="303,309,397,336"/>
+<area shape="rect" id="node16" href="$x86_8h.html#a48b2a6a16dc8d7e09d327aa3803f1112" title=" " alt="" coords="492,309,541,336"/>
+</map>

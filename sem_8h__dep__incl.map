@@ -1,0 +1,11 @@
+<map id="kernel/include/sem.h" name="kernel/include/sem.h">
+<area shape="rect" id="node1" title=" " alt="" coords="493,5,635,32"/>
+<area shape="rect" id="node2" href="$devices_8h.html" title=" " alt="" coords="321,80,482,107"/>
+<area shape="rect" id="node8" href="$kmt_8c.html" title=" " alt="" coords="507,80,621,107"/>
+<area shape="rect" id="node9" href="$sem_8c.html" title=" " alt="" coords="646,80,765,107"/>
+<area shape="rect" id="node3" href="$dev_8c.html" title=" " alt="" coords="5,162,144,189"/>
+<area shape="rect" id="node4" href="$dev__input_8c.html" title=" " alt="" coords="169,155,298,196"/>
+<area shape="rect" id="node5" href="$dev__sd_8c.html" title=" " alt="" coords="321,162,481,189"/>
+<area shape="rect" id="node6" href="$dev__tty_8c.html" title=" " alt="" coords="505,155,634,196"/>
+<area shape="rect" id="node7" href="$dev__video_8c.html" title=" " alt="" coords="658,155,787,196"/>
+</map>

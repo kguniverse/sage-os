@@ -1,5 +1,7 @@
 var logger_8h =
 [
+    [ "assert_msg", "logger_8h.html#a678f4cd7c86a601397a81eee1cf29785", null ],
+    [ "assert_msg_block", "logger_8h.html#a1ab6bfe5db58074fd54a3c4952132ade", null ],
     [ "BG_BLACK", "logger_8h.html#a0e5ebbe291d95cf1b8f1661252722fe0", null ],
     [ "BG_BLUE", "logger_8h.html#a9afd14c731aa8c62d9471913c1b23b9f", null ],
     [ "BG_CYAN", "logger_8h.html#a21ef237e1c4d69656729da4b34c31d8b", null ],
@@ -34,5 +36,6 @@ var logger_8h =
     [ "TRACE_EXIT", "logger_8h.html#aefc1351ad1453affbdc3bf4fbda3be06", null ],
     [ "warn", "logger_8h.html#aaa6ad2ce683c5c5f5984faef407531d7", null ],
     [ "warn_detail", "logger_8h.html#ad7f0dd4b49e536be3e3430a76c2f933f", null ],
+    [ "_log_mask", "logger_8h.html#abdb32ac1c236ce3f953a081fc268fbc7", null ],
     [ "type_str", "logger_8h.html#a40b77b435dfd1866d919d7750236417d", null ]
 ];

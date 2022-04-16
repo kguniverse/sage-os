@@ -1,0 +1,4 @@
+<map id="os_init" name="os_init">
+<area shape="rect" id="node1" title="initialze system; will be executed only once (not per cpu)" alt="" coords="5,5,65,32"/>
+<area shape="rect" id="node2" href="$spinlock_8c.html#ab80f529a7b9f49f09fc91a404731c869" title="create spinlock" alt="" coords="113,5,184,32"/>
+</map>

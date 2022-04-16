@@ -1,0 +1,5 @@
+<map id="get_buddy_chunk" name="get_buddy_chunk">
+<area shape="rect" id="node1" title="Get the buddy chunk." alt="" coords="5,31,128,57"/>
+<area shape="rect" id="node2" href="$buddy_8c.html#a7d6c4f020f51f2a621ca1ab5a4e6a5bb" title="translate chunk address to virtual address" alt="" coords="176,5,259,32"/>
+<area shape="rect" id="node3" href="$buddy_8c.html#ad1eda4b9fbb516f58586845217f68723" title="translate virtual address to chunk address" alt="" coords="176,56,259,83"/>
+</map>

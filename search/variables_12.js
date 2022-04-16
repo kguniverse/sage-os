@@ -1,13 +1,17 @@
 var searchData=
 [
-  ['s_0',['s',['../struct_seg_desc.html#a2dee666f0c1fe072c549ff86b1d0a8ab',1,'SegDesc::s()'],['../struct_gate_desc32.html#a2dee666f0c1fe072c549ff86b1d0a8ab',1,'GateDesc32::s()'],['../uniondwords.html#a08bf2ae20d72d49cb5a70af26f286341',1,'dwords::s()'],['../unionudwords.html#ae4f25600af75495b69aa39a552b0bb17',1,'udwords::s()']]],
-  ['saved_5fcontext_1',['saved_context',['../structtrap__frame.html#acbbe251b05e093ec979f485dc4189837',1,'trap_frame']]],
-  ['shift_2',['shift',['../structmmu__config_1_1ptinfo.html#afd8d704fff636cf0234e92c1eade927c',1,'mmu_config::ptinfo']]],
-  ['sibling_3',['sibling',['../structgpu__canvas.html#a1776ad65282171142ef8aa5509213764',1,'gpu_canvas::sibling()'],['../amdev_8h.html#a1776ad65282171142ef8aa5509213764',1,'sibling():&#160;amdev.h']]],
-  ['signature_4',['signature',['../struct_m_p_conf.html#acc0083ad3287215751869b2feff04b90',1,'MPConf']]],
-  ['specrev_5',['specrev',['../struct_m_p_desc.html#a5f0068a2f554b57ffc431ea623192ec9',1,'MPDesc']]],
-  ['ss_6',['ss',['../structtrap__frame.html#a3c59346dd338708c94ca75cf21b78195',1,'trap_frame']]],
-  ['ss0_7',['ss0',['../struct____attribute____.html#a7874b70fa3a93da1588513500cbdf1a8',1,'__attribute__']]],
-  ['stack_8',['stack',['../structkernel__stack.html#a2f33deb4a1035b3db9fad10ba6a36551',1,'kernel_stack::stack()'],['../structcpu__local.html#adfbebeeca7d5eeaefe0c0322bd1d7f9f',1,'cpu_local::stack()']]],
-  ['start_9',['start',['../struct_area.html#a53255b934b07b472175fbb8e847f9b5d',1,'Area']]]
+  ['r_0',['r',['../structpixel.html#a4c5c6ceb8ed33456261fa907136e0c3a',1,'pixel::r()'],['../ioe_8c.html#a4c5c6ceb8ed33456261fa907136e0c3a',1,'r():&#160;ioe.c']]],
+  ['read_1',['read',['../structdevops.html#a2a5b7905c660b7bb41a2cc1128d56215',1,'devops']]],
+  ['real_2',['real',['../struct_fcomplex.html#a06ed4269b34924d748f2f77b17db7d21',1,'Fcomplex::real()'],['../struct_dcomplex.html#a51c821fcf95975271abfc49311e983d4',1,'Dcomplex::real()'],['../struct_lcomplex.html#a520606ccd2dd5b8bd3f20ee1ba898dd1',1,'Lcomplex::real()']]],
+  ['rear_3',['rear',['../structinput__t.html#af866be352de659d624986cb76b8d45b6',1,'input_t::rear()'],['../structtty__queue.html#a972513fb453e2f3ad3309b01b7bb6384',1,'tty_queue::rear()']]],
+  ['ref_4',['ref',['../struct_event.html#a95744ca80b9365526d8f19ceb8546061',1,'Event']]],
+  ['reg_5',['reg',['../struct_i_o_a_p_i_c.html#a6b91636401516a477989a336376d7b40',1,'IOAPIC::reg()'],['../ioe_8c.html#a6b91636401516a477989a336376d7b40',1,'reg():&#160;ioe.c']]],
+  ['reserved_6',['reserved',['../struct_m_p_desc.html#a72aca6ea6d8153b28ea8f139b932ec3e',1,'MPDesc::reserved()'],['../struct_m_p_conf.html#acb7bc06bed6f6408d719334fc41698c7',1,'MPConf::reserved()']]],
+  ['root_5firq_5fhandler_7',['root_irq_handler',['../os_8c.html#acc99f5d09342caef3c3a5faf2e5b73fa',1,'os.c']]],
+  ['root_5ftask_8',['root_task',['../kmt_8c.html#a1eb275eb797e6738872d17fb84e6c64a',1,'kmt.c']]],
+  ['rsp0_9',['rsp0',['../struct____attribute____.html#a72b38046f765f14ce3d8f74ead10766b',1,'__attribute__']]],
+  ['rsp1_10',['rsp1',['../struct____attribute____.html#a01fe81e8371ef1ebbf418968c24938af',1,'__attribute__']]],
+  ['rsp2_11',['rsp2',['../struct____attribute____.html#a15cb2c4ffbfbf962c70a94c7519ef51f',1,'__attribute__']]],
+  ['rsv_12',['rsv',['../struct_gate_desc64.html#a5c5d68350191dc26727218ef0ce86f1d',1,'GateDesc64::rsv()'],['../struct____attribute____.html#a5c5d68350191dc26727218ef0ce86f1d',1,'__attribute__::rsv()']]],
+  ['rsv1_13',['rsv1',['../struct_gate_desc32.html#a815e2cd61a2dcdf08fcbe28120d938f8',1,'GateDesc32']]]
 ];

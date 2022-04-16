@@ -1,4 +1,20 @@
 <map id="abstract&#45;machine/klib/include/logger.h" name="abstract&#45;machine/klib/include/logger.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,152,47"/>
-<area shape="rect" id="node2" href="$logger_8c.html" title=" " alt="" coords="5,95,152,136"/>
+<area shape="rect" id="node1" title=" " alt="" coords="693,5,840,47"/>
+<area shape="rect" id="node2" href="$logger_8c.html" title=" " alt="" coords="337,95,484,136"/>
+<area shape="rect" id="node3" href="$common_8h.html" title=" " alt="" coords="508,102,675,129"/>
+<area shape="rect" id="node5" href="$buddy_8c.html" title="impl of buddy system" alt="" coords="863,259,990,285"/>
+<area shape="rect" id="node6" href="$pmm_8c.html" title=" " alt="" coords="701,259,824,285"/>
+<area shape="rect" id="node18" href="$list_8h.html" title="double circular linked list impl without concurrency" alt="" coords="700,102,833,129"/>
+<area shape="rect" id="node4" href="$buddy_8h.html" title=" " alt="" coords="687,184,838,211"/>
+<area shape="rect" id="node7" href="$devices_8h.html" title=" " alt="" coords="416,333,578,360"/>
+<area shape="rect" id="node13" href="$spinlock_8h.html" title=" " alt="" coords="244,184,408,211"/>
+<area shape="rect" id="node14" href="$thread_8h.html" title=" " alt="" coords="421,259,573,285"/>
+<area shape="rect" id="node15" href="$kmt_8c.html" title=" " alt="" coords="110,333,225,360"/>
+<area shape="rect" id="node16" href="$os_8c.html" title=" " alt="" coords="24,259,130,285"/>
+<area shape="rect" id="node8" href="$dev_8c.html" title=" " alt="" coords="101,415,240,442"/>
+<area shape="rect" id="node9" href="$dev__input_8c.html" title=" " alt="" coords="264,408,394,449"/>
+<area shape="rect" id="node10" href="$dev__sd_8c.html" title=" " alt="" coords="417,415,577,442"/>
+<area shape="rect" id="node11" href="$dev__tty_8c.html" title=" " alt="" coords="600,408,730,449"/>
+<area shape="rect" id="node12" href="$dev__video_8c.html" title=" " alt="" coords="754,408,883,449"/>
+<area shape="rect" id="node17" href="$spinlock_8c.html" title=" " alt="" coords="205,259,346,285"/>
 </map>

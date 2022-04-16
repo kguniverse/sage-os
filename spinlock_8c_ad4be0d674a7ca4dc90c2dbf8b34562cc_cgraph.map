@@ -1,0 +1,11 @@
+<map id="spin_holding" name="spin_holding">
+<area shape="rect" id="node1" title="check current cpu has the lock" alt="" coords="5,31,100,57"/>
+<area shape="rect" id="node2" href="$mpe_8c.html#ab701de78cad32896c923ce900087e714" title=" " alt="" coords="291,5,381,32"/>
+<area shape="rect" id="node3" href="$spinlock_8c.html#afc9565dc7a5ddf77e1fa76f5d91caf78" title="interrupt able" alt="" coords="152,31,239,57"/>
+<area shape="rect" id="node7" href="$spinlock_8c.html#ab213874cda54fdbbeb1bec1e5fa90b28" title="interrupt disable" alt="" coords="148,81,243,108"/>
+<area shape="rect" id="node4" href="$cte_8c.html#a4a139958742786c5085172be1f69bfd0" title=" " alt="" coords="315,56,357,83"/>
+<area shape="rect" id="node5" href="$x86_8h.html#acc919e7809ef1db2b20aa3804f540b5c" title=" " alt="" coords="440,56,479,83"/>
+<area shape="rect" id="node6" href="$x86_8h.html#a4657e97b270d7af5a23da2c4d642ada2" title=" " alt="" coords="440,5,479,32"/>
+<area shape="rect" id="node8" href="$cte_8c.html#a79659a2b801c42951e38f3a8821acbae" title=" " alt="" coords="301,107,371,133"/>
+<area shape="rect" id="node9" href="$x86_8h.html#a73d094f09c6a7dd3fc703aa8229933ee" title=" " alt="" coords="429,107,489,133"/>
+</map>
