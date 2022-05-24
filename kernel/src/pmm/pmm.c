@@ -22,16 +22,6 @@ static void* kalloc(size_t size) {
   return NULL;
 }
 
-int total_mem() {
-  return global_mm_pool.occupied;
-}
-
-int available_mem() {
-  return global_mm_pool.size - global_mm_pool.occupied;
-}
-int mem_sz(int pid) {
-  return mem_size[pid];
-}
 static void* pgalloc() {
   return kalloc(SZ_PAGE);
 }
@@ -50,6 +40,7 @@ static void kfree(void* ptr) {
     // printf("small:free in slab\n");
     free_in_slab(ptr);
   } else {
+    global_mm_pool.occupied -= (1 << chunk->order) * SZ_PAGE;
     chunk_free(&global_mm_pool, chunk);
     success("free successfully, address: 0x%x", ptr);
   }
