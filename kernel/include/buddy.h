@@ -49,17 +49,6 @@ struct pmm_pool {
   struct free_list free_lists[BUDDY_MAX_ORDER];
 };
 
-int total_mem() {
-  return global_mm_pool.occupied;
-}
-
-int available_mem() {
-  return global_mm_pool.size - global_mm_pool.occupied;
-}
-int mem_sz(int pid) {
-  return mem_size[pid];
-}
-
 struct pmm_pool global_mm_pool;
 
 void* chunk2virt(struct pmm_pool* mm_pool, struct chunk* chunk);
