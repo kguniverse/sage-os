@@ -59,6 +59,7 @@ void uproc_pgmap(task_t* proc, void* vaddr, void* paddr, int prot) {
     }
   }
   // need to introduce slab system, otherwise the waste of space is huge.
+  mem_size[proc->pid] += sizeof(mapnode_t);
   mapnode_t* node = pmm->alloc(sizeof(mapnode_t));
   node->pa        = paddr;
   node->va        = vaddr;
@@ -99,6 +100,7 @@ void inituvm(task_t* proc, unsigned char* init, int sz) {
   assert_msg(sz <= SZ_PAGE, "initcode size greater than 4KB");
   char* mem;
   mem = pmm->pgalloc();
+  mem_size[proc->pid] += SZ_PAGE;
   memset(mem, 0, sizeof(mem));
   memcpy(mem, init, sz);
   uproc_pgmap(proc, as->area.start, mem, MMAP_READ | MMAP_WRITE);
@@ -112,6 +114,7 @@ int allocuvm(task_t* proc, int newsz, int oldsz) {
   char* mem;
   for (; a < newsz; a += SZ_PAGE) {
     mem = pmm->pgalloc();
+    mem_size[proc->pid] += SZ_PAGE;
     if (mem == 0) {
       panic("memory overflowed");
     }
@@ -127,6 +130,7 @@ void copyuvm(task_t* proc, task_t* src, int sz) {
   mapnode_t* pos = NULL;
   list_for_each_entry(pos, &src->pg_map, list) {
     a = pmm->pgalloc();
+    mem_size[proc->pid] += SZ_PAGE;
     memcpy(a, (char*)pos->pa, SZ_PAGE);
     uproc_pgmap(proc, pos->va, a,
                 MMAP_READ | MMAP_WRITE);  // only read & write
@@ -144,6 +148,7 @@ int deallocuvm(task_t* proc, int newsz, int oldsz) {
       if (pos->va == a) {
         uporc_pgunmap(proc, a);
         pmm->free(pos->pa);
+        mem_size[proc->pid] -= SZ_PAGE;
         break;
       }
     }

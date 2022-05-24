@@ -15,6 +15,8 @@
 
 #define MAX_MAP_NUM 64
 
+int mem_size[20];
+
 enum task_states {
   ST_U,  // Unused
   ST_E,  // Embryo
@@ -49,7 +51,7 @@ struct task {
   char fenceB[STACK_FENCE_SIZE];  // 32 bytes fence
   Context* context;               // process user context
   struct task* next;
-  struct task* parent; 
+  struct task* parent;
   int* wait_subproc_status;
 
   AddrSpace as;

@@ -100,6 +100,7 @@ Context *uproc_pagefault(Event ev, Context *context) {
        (uint32_t)ref & ((1L << 24) - 1));
   AddrSpace *as = &cpu_tasks[cpu_current()]->as;
   void *paddr   = pmm->pgalloc();
+  mem_size[cpu_tasks[cpu_current()]->pid] += SZ_PAGE;
   // vaddr:  the start addr of that page
   uintptr_t vaddr = ref & ~(as->pgsize - 1L);
   success("get next page frame: 0x%x", (intptr_t)paddr);

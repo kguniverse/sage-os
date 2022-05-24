@@ -2,6 +2,7 @@
 #include <buddy.h>
 #include <logger.h>
 #include <slab.h>
+#include <thread.h>
 
 static void* kalloc(size_t size) {
   assert((int)size > 0);
@@ -14,12 +15,23 @@ static void* kalloc(size_t size) {
   struct chunk* page_addr = chunk_alloc(&global_mm_pool, acquire_order);
   if (page_addr != NULL) {
     success("allocate addr: 0x%x", chunk2virt(&global_mm_pool, page_addr));
+    global_mm_pool.occupied += npage * SZ_PAGE;
     return chunk2virt(&global_mm_pool, page_addr);
   }
   warn("fail to alloc addr");
   return NULL;
 }
 
+int total_mem() {
+  return global_mm_pool.occupied;
+}
+
+int available_mem() {
+  return global_mm_pool.size - global_mm_pool.occupied;
+}
+int mem_sz(int pid) {
+  return mem_size[pid];
+}
 static void* pgalloc() {
   return kalloc(SZ_PAGE);
 }

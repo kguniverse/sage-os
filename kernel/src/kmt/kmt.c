@@ -110,6 +110,7 @@ int kmt_create(task_t *task, const char *name, void (*entry)(void *arg),
   task->killed   = 0;
   task->next     = NULL;
 
+  mem_size[task->pid] = 0;
   memset(task->fenceA, FILL_FENCE, sizeof(task->fenceA));
   memset(task->stack, FILL_STACK, sizeof(task->stack));
   memset(task->fenceB, FILL_FENCE, sizeof(task->fenceB));
