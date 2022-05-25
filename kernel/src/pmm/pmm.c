@@ -59,6 +59,7 @@ static void pmm_init() {
 
   void* pg_start = NULL;
   void* pi_start = NULL;
+  allocinslab    = 0;
   int nr_page;
   nr_page =
       (uintptr_t)(heap.end - heap.start) / (SZ_PAGE + sizeof(struct chunk));

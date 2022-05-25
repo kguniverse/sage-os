@@ -22,17 +22,19 @@ static inline u64 order_to_size(u64 order) {
   return 1UL << order;
 }
 
-static void *alloc_slab_memory(u64 size)  // ok
+static void *alloc_slab_memory(uint64_t size)  // ok
 {
   struct chunk *p_chunk, *chunk;
   void *addr;
-  u64 order, chunk_num;
+  uint64_t order, chunk_num;
   void *chunk_addr;
   int i;
 
   order   = size_to_order(size / SZ_PAGE);
   p_chunk = chunk_alloc(&global_mm_pool, order);
-  global_mm_pool.occupied += order_to_size(order);
+  // global_mm_pool.occupied += order_to_size(order) * SZ_PAGE;
+  // printf("slab_alloc:\nsize:%d\noccupied:%d\norder to
+  // size:%d\norder:%d\n",size,global_mm_pool.occupied,order_to_size(order),order);
   if (p_chunk == NULL) {
     // kwarn("failed to alloc_slab_memory: out of memory\n");
     // BUG_ON(1);
@@ -41,7 +43,7 @@ static void *alloc_slab_memory(u64 size)  // ok
 
   chunk_num = order_to_size(order);
   for (i = 0; i < chunk_num; i++) {
-    chunk_addr  = (void *)((u64)addr + i * SZ_PAGE);
+    chunk_addr  = (void *)((uint64_t)addr + i * SZ_PAGE);
     chunk       = virt2chunk(&global_mm_pool, chunk_addr);
     chunk->slab = addr;
   }
@@ -92,6 +94,7 @@ static void *_alloc_in_slab_nolock(slab_header_t *slab_header, int order) {
     next_slot                   = first_slot->next_free;
     slab_header->free_list_head = next_slot;
     // printf("successfully alloc in slab:%llu\n",order_to_size(order));
+    allocinslab += (int)order_to_size(order);
     return first_slot;
   }
   // first_slot == NULL
@@ -102,6 +105,7 @@ static void *_alloc_in_slab_nolock(slab_header_t *slab_header, int order) {
       next_slot                 = first_slot->next_free;
       next_slab->free_list_head = next_slot;
       // printf("successfully alloc in slab:%llu\n",order_to_size(order));
+      allocinslab += (int)order_to_size(order);
       return first_slot;
     }
     next_slab = next_slab->next_slab;

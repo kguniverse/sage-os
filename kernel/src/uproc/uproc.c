@@ -157,7 +157,7 @@ int sys_exit(task_t *proc, int status) {
 
 int sys_wait(task_t *proc, int *status) {
   task_t *p;
-  int havekids, pid;
+  int havekids;
   havekids = 0;
   assert_msg(!spin_holding(&task_list_lock), "already hold task_list_lock");
   kmt->spin_lock(&task_list_lock);

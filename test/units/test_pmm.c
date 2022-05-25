@@ -2,11 +2,12 @@
 #include <trap.h>
 #include <logger.h>
 #include <buddy.h>
+#include <slab.h>
 
 void* alloc_addr[16];
 
 int total_mem() {
-  return global_mm_pool.occupied;
+  return global_mm_pool.occupied + allocinslab;
 }
 
 // static int available_mem() {
@@ -51,7 +52,7 @@ int main() {
     pmm->free(alloc_addr[i]);
     success("free %d: 0x%x", i, alloc_addr[i]);
   }
-
+  global_mm_pool.occupied = 0;
   // test < 4KB space
   apply = 0;
   for (int i = 0; i < 16; i++) {
@@ -61,13 +62,12 @@ int main() {
     // bool overlap = check_overlap(i, alloc_addr[i]);
     // check(!overlap);
   }
-  // int occupied = total_mem();
-  // info("apply: %d, alloc: %d", apply, occupied);
+  info("apply: %d, alloc: %d", apply, total_mem());
   for (int i = 0; i < 16; i++) {
     pmm->free(alloc_addr[i]);
     success("free %d: 0x%x", i, alloc_addr[i]);
   }
-
+  global_mm_pool.occupied = 0;
   // test trivial allocation
   apply = 0;
   for (int i = 0; i < 16; i++) {
@@ -78,10 +78,12 @@ int main() {
       check((intptr_t)alloc_addr[i] % 4096 == 0);
     }
   }
+  info("apply: %d, alloc: %d", apply, total_mem());
   for (int i = 0; i < 16; i++) {
     pmm->free(alloc_addr[i]);
     success("free %d: 0x%x", i, alloc_addr[i]);
   }
+  global_mm_pool.occupied = 0;
   printf("\ntest slab\n");
   void* small = pmm->alloc(1000);
   pmm->free(small);
