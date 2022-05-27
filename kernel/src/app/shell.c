@@ -10,8 +10,8 @@
 const cmd_t cmd_list[] = {
     {"man", man},     {"echo", echo},   {"ls", ls},       {"pwd", pwd},
     {"cd", cd},       {"cat", cat},     {"write", write}, {"link", link},
-    {"mkdir", mkdir}, {"rmdir", rmdir}, {"rm", rm}, 
-    {"ps", ps},       {"stat", stat},   {"mem", mem},
+    {"mkdir", mkdir}, {"rmdir", rmdir}, {"rm", rm},       {"ps", ps},
+    {"stat", stat},   {"mem", mem},
 };
 
 const int NR_CMD = sizeof(cmd_list) / sizeof(cmd_t);
@@ -105,26 +105,25 @@ bool get_dir(char *arg, char *pwd, char *dir) {
   size_t cur = 0;
   size_t len = strlen(buf);
 
-  if(arg[0] == '.') {
-    if(arg[1] == '\0') {
+  if (arg[0] == '.') {
+    if (arg[1] == '\0') {
       dir = pwd;
       return true;
     }
-    if(arg[1] == '.') {
+    if (arg[1] == '.') {
       int flag = 2;
-      while (flag)
-      {
-        if(buf[len] == '/') {
+      while (flag) {
+        if (buf[len] == '/') {
           flag--;
         }
-        if(flag == 0) {
+        if (flag == 0) {
           break;
         }
         len--;
       }
     }
   }
-  
+
   while (pos <= len) {
     if (buf[pos] == ' ') {
       break;
@@ -307,8 +306,9 @@ FUNC(ps) {
 }
 
 FUNC(stat) {
-  stat_t *targetFile = pmm->alloc(sizeof(stat_t));;
-  int fd = sys_open(proc, arg, O_RDONLY);
+  stat_t *targetFile = pmm->alloc(sizeof(stat_t));
+  ;
+  int fd     = sys_open(proc, arg, O_RDONLY);
   int status = sys_fstat(proc, fd, targetFile);
   if (!status) {
     char *typestring;
@@ -319,7 +319,8 @@ FUNC(stat) {
     } else {
       typestring = "unused";
     }
-    sprintf(ret, "file: %s: type=%s, link number=%d, size=%dbytes\n", arg, typestring, targetFile->links, targetFile->size);
+    sprintf(ret, "file: %s: type=%s, link number=%d, size=%dbytes\n", arg,
+            typestring, targetFile->links, targetFile->size);
   } else {
     sprintf(ret, "VFS ERROR: stat failed with status %d.\n", status);
   }
@@ -329,11 +330,9 @@ FUNC(stat) {
 FUNC(mem) {
   bool holding = spin_holding(&task_list_lock);
   if (!holding) spin_lock(&task_list_lock);
-  cprintf("tty1 total memory:", "%d\n", total_mem);
+  cprintf("tty1", "total memory: %d\n", total_mem);
   for (task_t *tp = &root_task; tp != NULL; tp = tp->next) {
-    cprintf("tty1", "pid %d <%s> pmsize: %d\n", tp->pid,
-            tp->name, tp->pmsize);
+    cprintf("tty1", "pid %d <%s> pmsize: %d\n", tp->pid, tp->name, tp->pmsize);
   }
   if (!holding) spin_unlock(&task_list_lock);
-
 }
